@@ -10,7 +10,7 @@
       $port = '3306';
       $username = 'root';
       $password = '123456';
-      $dbname = 'db_personal';
+      $dbname = 'lsx_db';
 
       $this->db = new mysqli($host, $username, $password, $dbname, $port);
       $this->db->set_charset("utf8");

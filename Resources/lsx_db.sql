@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 192.168.30.23
--- Generation Time: Apr 23, 2019 at 01:12 PM
+-- Generation Time: May 03, 2019 at 05:37 AM
 -- Server version: 8.0.3-rc-log
 -- PHP Version: 7.2.16-1+0~20190307202415.17+stretch~1.gbpa7be82
 
@@ -64,17 +64,6 @@ CREATE TABLE `Composer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Favorite_Song`
---
-
-CREATE TABLE `Favorite_Song` (
-  `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Song_Id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `History_Vote`
 --
 
@@ -130,9 +119,8 @@ CREATE TABLE `Song` (
   `Id` int(11) NOT NULL,
   `NameSong` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Composer_Id` int(11) NOT NULL,
-  `ComposerSecond_Id` int(11) NOT NULL,
   `Singer_Id` int(11) NOT NULL,
-  `SingerSecond_Id` int(11) NOT NULL
+  `Link` varchar(50) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -143,11 +131,8 @@ CREATE TABLE `Song` (
 
 CREATE TABLE `Vote_Song` (
   `Song_Id` int(11) NOT NULL,
-  `One_Star` int(11) NOT NULL,
-  `Two_Stars` int(11) NOT NULL,
-  `Three_Stars` int(11) NOT NULL,
-  `Four_Stars` int(11) NOT NULL,
-  `Five_Stars` int(11) NOT NULL
+  `Stars` int(11) NOT NULL,
+  `point` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
@@ -172,12 +157,6 @@ ALTER TABLE `Account_Detail`
 --
 ALTER TABLE `Composer`
   ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `Favorite_Song`
---
-ALTER TABLE `Favorite_Song`
-  ADD PRIMARY KEY (`Username_Id`,`Song_Id`);
 
 --
 -- Indexes for table `History_Vote`
@@ -258,6 +237,12 @@ ALTER TABLE `Account`
 --
 ALTER TABLE `Account_Detail`
   ADD CONSTRAINT `Account_Detail_ibfk_1` FOREIGN KEY (`Username_Id`) REFERENCES `Account` (`username`);
+
+--
+-- Constraints for table `Song`
+--
+ALTER TABLE `Song`
+  ADD CONSTRAINT `Song_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `Vote_Song` (`Song_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

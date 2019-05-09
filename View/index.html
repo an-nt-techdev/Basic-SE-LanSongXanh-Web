@@ -1,208 +1,538 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		
+		<title>Music | Feel with Eagle</title>
+		
+		<!-- Bootstrap CSS -->
+		<link href="libs/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	
+		<!-- -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	</head>
+	
+	<body class="bg-light">
+		
+		<div class="container-fluid">
+			<header class="row header justify-content-around">
+				<button class="navbar-toggler border rounded" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				
+				<h3 class="col-md-3 my-2 text-center">Eagle Team</h3>
+				
+				<form action="search.html" class="col-md-6 m-2 px-3 form-group form-row" method="get">
+					<div class="col">
+						<input type="text" class="align-center form-control" name="search" placeholder="Tìm kiếm bài hát...">
+					</div>
+					<div class="col-auto">
+						<button class="mx-2 px-4 btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+					</div>
+				</form>
+			</header>
+			<!-- End Header -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Oopss!!! Wrong way</title>
-  <style>
-    html,
-    body {
-      height: 100vh;
-    }
+			<div class="row">
+				<nav class="col-xl-2 col-lg-3 navbar navbar-expand-lg navbar-dark bg-black">
+					<div class="collapse navbar-collapse align-self-start position-fixed" id="navbarSupportedContent">
+						<ul class="navbar-nav flex-column bg-black">
+							<li class="nav-item py-1">
+								<a class="nav-link active" href="index.html"><i class="fas fa-home mr-3"></i>Trang chủ</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="rank.html"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="infor.html?person=1212"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="infor.html?person=1212"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="contact.html"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
+							</li>
+							<li class="nav-item py-1">
+								<h5>Tài khoản</h5>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="infor.html?user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href=""><i class="fas fa-music mr-3"></i>Playlist</a>
+							</li>
+							<li class="nav-item py-1">
+								<a class="nav-link" href="?logout=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
+							</li>
+							<li class="nav-item py-1">
+								<!-- Button trigger modal Sign In -->
+								<button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#signInModal">
+									Đăng nhập
+								</button>
+							</li>
+							<li class="nav-item py-1">
+								<!-- Button trigger modal Create New Account -->
+								<button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#newAccountModal">
+										Đăng ký
+									</button>
+							</li>
+						</ul>
+					</div>
 
-    html:before,
-    body:before,
-    html:after,
-    body:after {
-      content: '';
-      background: linear-gradient(#203075, #233581);
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+					<!-- Modal Sign In -->
+					<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-sm" role="document">
+							<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="signInModalLabel">Đăng nhập</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
 
-    html:before,
-    body:before {
-      background: linear-gradient(#233581, #203075);
-    }
+									<div class="modal-body">
+										<form class="" action="" method="POST">
+											<div class="form-group">
+												<label for="">Tên đăng nhập</label>
+												<input class="form-control" type="text" id="nameUser-SignIn">
+											</div>
+											<div class="form-group">
+												<label class="">Mật khẩ u</label>
+												<input class="form-control" type="password" id="nameUser-SignIn">
+											</div>
+											<button class="btn btn-primary" type="submit">Đăng nhập</button>
+										</form>
+									</div>
 
-    html {
-      background: linear-gradient(#203075, #233581);
-      overflow: hidden;
-    }
+									<div class="modal-footer">
+										<p class="m-auto">Bạn chưa có tài khoản? <a class="" href="">Đăng ký</a></p>
+									</div>
+								
+							</div>
+						</div>
+					</div>
 
-    html:before {
-      height: 105vmax;
-      width: 105vmax;
-      z-index: -4;
-    }
+					<!-- Modal Create New Account -->
+					<div class="modal fade" id="newAccountModal" tabindex="-1" role="dialog" aria-labelledby="newAccountModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3 class="modal-title m-auto" id="newAccountModalLabel">Đăng ký</h3>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="" action="" method="POST">
+											<div class="form-group">
+												<label>Tên đăng nhập</label>
+												<input class="form-control" name="" type="text" required>
+											</div>
 
-    html:after {
-      height: 80vmax;
-      width: 80vmax;
-      z-index: -3;
-    }
+											<div class="form-row">
+												<div class="form-group col-6">
+													<label>Mật khẩ u</label>
+													<input class="form-control" name="" type="password" required>
+												</div>
+												<div class="form-group col-6">
+													<label>Nhập lại</label>
+													<input class="form-control" name="" type="password" required>
+												</div>
+											</div>
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-family: 'Varela Round', Sans-serif;
-      text-shadow: 0 30px 10px rgba(0, 0, 0, .15);
-    }
+											<div class="form-group">
+												<label>Họ tên</label>
+												<input class="form-control" name="" type="text" required>
+											</div>
+											<div class="form-group">
+												<label>Email</label>
+												<input class="form-control" name="" type="email" required>
+											</div>
 
-    body:before {
-      height: 60vmax;
-      width: 60vmax;
-      z-index: -2;
-    }
+											<div class="form-row">
+												<div class="form-group col-6">
+													<label>Ngày sinh</label>
+													<input class="form-control" name="" type="date" required>
+												</div>
 
-    body:after {
-      height: 40vmax;
-      width: 40vmax;
-      z-index: -1;
-    }
+												<div class="form-group col-6">
+													<label>Giới tính</label> 
+													<select class="form-control" name="sex">
+														<option value="male">Male</option>
+														<option value="female">Female</option>
+													</select>
+												</div>
+											</div>
 
-    .main {
-      text-align: center;
-      z-index: 5;
-    }
+											<button class="btn btn-primary" type="submit">Đăng ký</button>
+										</form>
+								</div>
+								<div class="modal-footer m-auto">
+									<p class="">Bạn đã có tài khoản? <a href="" class="">Đăng nhập</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
 
-    p {
-      font-size: 18px;
-      margin-top: 0;
-    }
 
-    h1 {
-      font-size: 95px;
-      margin: 0;
-    }
+				<!-- End Siderbar -->
+				
+				<div class="col-xl-10 col-lg-9">
+					<div class="row">
+						<section class="col-xl-8 py-3">							
+							<div id="carouselExampleInterval" class="carousel slide bg-white border rounded" data-ride="carousel">
+							  <div class="carousel-inner">
+								<div class="carousel-item active" data-interval="10000">
+								  <a href="watch.html?v=chelinh-nhaclinh"><img src="images/feauture-chelinh.jpg" class="d-block w-100" alt="..."></a>
+								</div>
+								
+								<div class="carousel-item" data-interval="2000">
+								  <a href="watch.html?v=dsk-lamdeogi"><img src="images/feauture-lamdeogi-dsk.jpg" class="d-block w-100" alt="..."></a>
+								</div>
+								
+								<div class="carousel-item">
+								  <a href="watch.html?v=aimer-one"><img src="images/feauture-one-aimer.jpg" class="d-block w-100" alt="..."></a>
+								</div>
+							  </div>
+							  
+							  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  
+							  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>
+							<!-- End Slide -->
+							
+							<article class="mt-3 row justify-content-around bg-white">
+								
+								<div class="col-12 mt-2">
+									<h3>Mới nhất</h3>
+									<hr>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
 
-    a {
-      display: block;
-      background: linear-gradient(#ec5dc1, #d61a6f);
-      padding: 12px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
-      outline: none;
-      color: #fff;
-      font: 400 6.4px Nunito, 'Varela Round', Sans-serif;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-size: 15px;
-      font-weight: bold;
-      max-width: 90px;
-      margin: auto;
-      text-decoration: none;
-    }
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+							
+							</article>
+							<!-- New video -->
+							
+							<article class="mt-3 row justify-content-around bg-white">
+								
+								<div class="col-12 mt-2">
+									<h3>Giới thiệu</h3>
+									<hr>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
 
-    .bubble {
-      background: linear-gradient(#ec5dc1, #d61a6f);
-      border-radius: 50%;
-      box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
-      position: absolute;
-    }
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+								
+								<div class="col-lg-4 col-md-6">
+									<a class="card m-2" href="">
+									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+										<h5 class="card-title">Red - Taylor Swift</h5>
+										<p class="card-text">Taylor Swift</p>
+									  </div>
+									</a>
+								</div>
+							
+							</article>
+							<!-- Intro video -->
+							
+						</section>
+						<!-- End Content -->
+						
+						<aside class="col-xl-4">
+							<div class=" my-3 border border-dark rounded bg-white">
+								<h3 class="text-center">Top tuần</h3>
+								<table class="table rank">
+									<tbody>
+										<tr>
+											<td class="align-middle" scope="row"><b>1</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>2</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>3</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>4</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>5</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="my-3 border border-dark rounded bg-white">
+								<h3 class="text-center">Top tháng</h3>
+								<table class="table rank">
+									<tbody>
+										<tr>
+											<td class="align-middle" scope="row"><b>1</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>2</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>3</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>4</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+										
+										<tr>
+											<td class="align-middle" scope="row"><b>5</b></td>
+											<td>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+											</td>
+											<td class="align-bottom count-view">36,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</aside>
+						<!-- End aside -->
+					</div>
+					<!-- End Main Content -->
+					
+					<div class="row pt-3">
+						<div class="footer-top col-md-12">
+							<div class="row text-white">
+								<div class="col-md-6 p-3">
+									<h3 class="mb-3 ml-2">Liên hệ</h3>
+									<form>
+										<div class="form-group">
+											<label class="sr-only">Tên</label>
+											<input type="text" class="form-control" placeholder="Name" name="name">
+										</div>
+										
+										<div class="form-group">
+											<label class="sr-only">Email</label>
+											<input type="email" class="form-control" placeholder="Email" name="email">
+										</div>
+										
+										<div class="form-group">
+											<label class="sr-only">Chủ đề</label>
+											<input type="text" class="form-control" placeholder="Chủ đề" name="subject">
+										</div>
+										
+										<div class="form-group">
+											<label class="sr-only">Nội dung</label>
+											<textarea class="form-control" rows="5" placeholder="Nội dung" name="content"></textarea>
+										</div>
+										
+										<div class="form-group text-align-left">
+											<input type="submit" class="btn btn-primary w-100" value="Send">
+										</div>
+										
+									</form>
+								</div>
+								
+								<div class="col-md-6 p-3 px-5">
+									<h3 class="mb-3 px-4">Thông tin</h3>
+									
+									<div class="row p-5">
+										<a href="" class="text-white col-md-12 col-sm-4">
+											<h1 class="fab fa-twitter-square mr-3"></h1>
+											<span class="name-contact">Twitter</span>
+										</a>
+										<a href="" class="text-white col-md-12 col-sm-4">
+											<h1 class="fab fa-facebook mr-3"></h1>
+											<span class="name-contact">Facebook</span>
+										</a>
+										<a href="" class="text-white col-md-12 col-sm-4">
+											<h1 class="fab fa-linkedin mr-3"></h1>
+											<span class="name-contact">Linked</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<footer class="py-3 footer col-md-12">
+							<p class="text-center col-12 text-light mb-0">© 2019 Eagle | Design by Eagle</p>
+						</footer>
+					</div>
+					<!-- End footer -->
+					
+				</div>
+			</div>
+		</div>
 
-    .bubble:before,
-    .bubble:after {
-      content: '';
-      background: linear-gradient(#ec5dc1, #d61a6f);
-      border-radius: 50%;
-      box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
-      position: absolute;
-    }
-
-    .bubble:nth-child(1) {
-      top: 15vh;
-      left: 15vw;
-      height: 22vmin;
-      width: 22vmin;
-    }
-
-    .bubble:nth-child(1):before {
-      width: 13vmin;
-      height: 13vmin;
-      bottom: -25vh;
-      right: -10vmin;
-    }
-
-    .bubble:nth-child(2) {
-      top: 20vh;
-      left: 38vw;
-      height: 10vmin;
-      width: 10vmin;
-    }
-
-    .bubble:nth-child(2):before {
-      width: 5vmin;
-      height: 5vmin;
-      bottom: -10vh;
-      left: -8vmin;
-    }
-
-    .bubble:nth-child(3) {
-      top: 12vh;
-      right: 30vw;
-      height: 13vmin;
-      width: 13vmin;
-    }
-
-    .bubble:nth-child(3):before {
-      width: 3vmin;
-      height: 3vmin;
-      bottom: -15vh;
-      left: -18vmin;
-      z-index: 6;
-    }
-
-    .bubble:nth-child(4) {
-      top: 25vh;
-      right: 18vw;
-      height: 18vmin;
-      width: 18vmin;
-    }
-
-    .bubble:nth-child(4):before {
-      width: 7vmin;
-      height: 7vmin;
-      bottom: -10vmin;
-      left: -15vmin;
-    }
-
-    .bubble:nth-child(5) {
-      top: 60vh;
-      right: 18vw;
-      height: 28vmin;
-      width: 28vmin;
-    }
-
-    .bubble:nth-child(5):before {
-      width: 10vmin;
-      height: 10vmin;
-      bottom: 5vmin;
-      left: -25vmin;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="main">
-    <h1>404</h1>
-    <p>Có vẻ như bạn đã bị lạc...<br />
-      Quay về trang chủ</p>
-    <a href="../">TRANG CHỦ</a>
-  </div>
-</body>
-
+		<!-- load Bootstrap -->
+		<script src="libs/jquery-3.4.0/jquery-3.4.0.min.js"></script>
+		<script src="libs/popper/popper.min.js"></script>
+		<script src="libs/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
+		
+	</body>
 </html>

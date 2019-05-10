@@ -25,7 +25,8 @@ if  (isset($_GET['page']))
 else
 {
     loadHome:
-    require_once SITE_ROOT."/Controller/BangTin_Controller.php";
+	//require_once SITE_ROOT."/Controller/BangTin_Controller.php";
+	require_once SITE_ROOT."View/";
 }
 
 ?>

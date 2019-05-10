@@ -1,72 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
-		<meta charset="UTF-8">
-		
-		<title>Chế Linh - Nhạc Lính | Feel with Eagle</title>
-		
-		<!-- Bootstrap CSS -->
-		<link href="libs/bootstrap-4.3.1-dist/bootstrap.min.css" rel="stylesheet" type="text/css">
-		
-		<!-- Custom CSS -->
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<?php require_once('layout/head.php'); ?>
 	</head>
 	
 	<body class="bg-light">
 		
 		<div class="container-fluid">
-			<header class="row header justify-content-around">
-				<button class="navbar-toggler border rounded" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
-				</button>
-				
-				<h3 class="col-md-3 my-2 text-center">Eagle Team</h3>
-				
-				<form class="col-md-6 m-2 px-3 form-group form-row" method="get" >
-					<div class="col">
-						<input type="text" class="align-center form-control" placeholder="Tìm kiếm bài hát...">
-					</div>
-					<div class="col-auto">
-						<button class="mx-2 px-4 btn btn-light" type="button"><i class="fas fa-search"></i></button>
-					</div>
-				</form>
-			</header>
-			 <!-- End Header -->
+			<?php require_once('layout/header.php'); ?>
+			<!-- End Header -->
 			
 			<div class="row">
-				<nav class="col-xl-2 col-lg-3 navbar navbar-expand-lg navbar-dark bg-black">
-					<div class="collapse navbar-collapse align-self-start position-fixed" id="navbarSupportedContent">
-						<ul class="navbar-nav flex-column bg-black">
-							<li class="nav-item py-1">
-								<a class="nav-link active" href=""><i class="fas fa-home mr-3"></i>Trang chủ</a>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
-							</li>
-							<li class="nav-item py-1">
-								<h5>Tài khoản</h5>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="fas fa-music mr-3"></i>Playlist</a>
-							</li>
-							<li class="nav-item py-1">
-								<a class="nav-link" href=""><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+				<?php require_once('layout/sidebar.php'); ?>
 				<!-- End Siderbar -->
 				
 				<div class="col-xl-10 col-lg-9 pt-3">
@@ -190,9 +135,9 @@
 					</div>
 					<!-- Next video -->
 					
-						<footer class="row py-3 footer ">
-							<p class="text-center col-12 text-light mb-0">© 2019 Eagle | Design by Eagle</p>
-						</footer>
+						<div class="row pt-3">
+							<?php require_once('layout/footer.php'); ?>
+						</div>
 					</div>
 					<!-- End footer -->
 					
@@ -200,10 +145,7 @@
 			</div>
 		</div>
 		
-		<!-- load Bootstrap -->
-		<script src="libs/jquery-3.4.0/jquery-3.4.0.min.js"></script>
-		<script src="libs/popper/popper.min.js"></script>
-		<script src="libs/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
+		<?php require_once('layout/loadScript.php'); ?>
 		
 		<script src="js/script.js"></script>
 		

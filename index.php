@@ -1,8 +1,7 @@
 <?php 
 
-require_once __DIR__."Config/Config.php";
+require_once ("Config/Config.php");
 date_default_timezone_set('Asia/Ho_Chi_Minh');
-
 $homeUrl = $_SERVER['REQUEST_URI'];
 
 if  (isset($_GET['page']))
@@ -14,19 +13,30 @@ if  (isset($_GET['page']))
 			require_once SITE_ROOT."/View/ad/index.php";
 			break;
 			
-		case 'baidang': 
-			require_once SITE_ROOT."/Controller/BaiDang_Controller.php";
+		case 'infor':
+			require_once("Controller/inforController.php");
 			break;
-		
+
+		case 'rank': 
+			require_once("Controller/rankController.php");
+			break;
+
+		case 'search': 
+			require_once("Controller/searchController.php");
+			break;
+
+		case 'watch': 
+			require_once("Controller/watchController.php");
+			break;
+
 		default:
 			goto loadHome;
 	}
 }
 else
 {
-    loadHome:
-	//require_once SITE_ROOT."/Controller/BangTin_Controller.php";
-	require_once SITE_ROOT."View/";
+    loadHome:	
+	require_once("Controller/homeController.php");
 }
 
 ?>

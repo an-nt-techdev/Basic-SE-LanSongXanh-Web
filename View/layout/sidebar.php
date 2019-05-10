@@ -2,25 +2,25 @@
     <div class="collapse navbar-collapse align-self-start position-fixed" id="navbarSupportedContent">
         <ul class="navbar-nav flex-column bg-black">
             <li class="nav-item py-1">
-                <a class="nav-link active" href="index.html"><i class="fas fa-home mr-3"></i>Trang chủ</a>
+                <a class="nav-link active" href="."><i class="fas fa-home mr-3"></i>Trang chủ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="rank.html"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
+                <a class="nav-link" href="?page=rank"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="infor.html?person=1212"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
+                <a class="nav-link" href="?person=1212"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="infor.html?person=1212"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
+                <a class="nav-link" href="?person=1212"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="contact.html"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
+                <a class="nav-link" href="?page=contact"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
             </li>
             <li class="nav-item py-1">
                 <h5>Tài khoản</h5>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="infor.html?user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
+                <a class="nav-link" href="?page=infor&user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
             </li>
             <li class="nav-item py-1">
                 <a class="nav-link" href=""><i class="fas fa-music mr-3"></i>Playlist</a>
@@ -42,6 +42,8 @@
             </li>
         </ul>
     </div>
+
+
 
     <!-- Modal Sign In -->
     <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
@@ -137,4 +139,6 @@
             </div>
         </div>
     </div>
+
+
 </nav>

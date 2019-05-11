@@ -147,7 +147,7 @@
 		
 		<?php require_once('layout/loadScript.php'); ?>
 		
-		<script src="js/script.js"></script>
+		<script src="View/js/script.js"></script>
 		
 	</body>
 </html>

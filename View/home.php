@@ -20,15 +20,15 @@
 							<div id="carouselExampleInterval" class="carousel slide bg-white border rounded" data-ride="carousel">
 							  <div class="carousel-inner">
 								<div class="carousel-item active" data-interval="10000">
-								  <a href="watch.html?v=chelinh-nhaclinh"><img src="images/feauture-chelinh.jpg" class="d-block w-100" alt="..."></a>
+								  <a href="?v=chelinh-nhaclinh"><img src="View/images/feauture-chelinh.jpg" class="d-block w-100" alt="..."></a>
 								</div>
 								
 								<div class="carousel-item" data-interval="2000">
-								  <a href="watch.html?v=dsk-lamdeogi"><img src="images/feauture-lamdeogi-dsk.jpg" class="d-block w-100" alt="..."></a>
+								  <a href="?v=dsk-lamdeogi"><img src="View/images/feauture-lamdeogi-dsk.jpg" class="d-block w-100" alt="..."></a>
 								</div>
 								
 								<div class="carousel-item">
-								  <a href="watch.html?v=aimer-one"><img src="images/feauture-one-aimer.jpg" class="d-block w-100" alt="..."></a>
+								  <a href="?v=aimer-one"><img src="View/images/feauture-one-aimer.jpg" class="d-block w-100" alt="..."></a>
 								</div>
 							  </div>
 							  
@@ -52,8 +52,8 @@
 								</div>
 								
 								<div class="col-lg-4 col-md-6">
-									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									<a class="card m-2" href="?v=red-taylor">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -63,7 +63,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -73,7 +73,7 @@
 
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -83,7 +83,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -93,7 +93,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -103,7 +103,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -123,7 +123,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -133,7 +133,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -143,7 +143,7 @@
 
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -153,7 +153,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -163,7 +163,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>
@@ -173,7 +173,7 @@
 								
 								<div class="col-lg-4 col-md-6">
 									<a class="card m-2" href="">
-									  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
+									  <img src="View/images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
 									  <div class="card-body">
 										<h5 class="card-title">Red - Taylor Swift</h5>
 										<p class="card-text">Taylor Swift</p>

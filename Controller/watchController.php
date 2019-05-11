@@ -2,10 +2,14 @@
 
     $backHome = true;
 
-    if (isset($_GET['v']))
+    $id = $_GET['v'];
+    // find video have id
+    
+        
+    
+    // if have result
+    if (1)
     {
-        $id = $_GET['v'];
-
         $backHome = false;
         require_once('View/watch.php');
     }

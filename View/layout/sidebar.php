@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <p class="m-auto">Bạn chưa có tài khoản? <a class="" href="">Đăng ký</a></p>
+                        <p class="m-auto">Bạn chưa có tài khoản? <a class="a-link" onlick>Đăng ký</a></p>
                     </div>
                 
             </div>

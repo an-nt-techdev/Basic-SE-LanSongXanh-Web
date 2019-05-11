@@ -2,10 +2,10 @@
     <div class="row text-white">
         <div class="col-md-6 p-3">
             <h3 class="mb-3 ml-2">Liên hệ</h3>
-            <form>
+            <form action="" method="GET">
                 <div class="form-group">
                     <label class="sr-only">Tên</label>
-                    <input type="text" class="form-control" placeholder="Name" name="name">
+                    <input type="text" class="form-control" placeholder="Name" name="name" requied>
                 </div>
                 
                 <div class="form-group">

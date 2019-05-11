@@ -25,6 +25,5 @@
     {
         header("Location: http://localhost/LanXongXanh/");
     }
-
-        
+            
 ?>

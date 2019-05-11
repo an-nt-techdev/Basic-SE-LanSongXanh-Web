@@ -5,7 +5,7 @@
     
     <h3 class="col-md-3 my-2 text-center">Eagle Team</h3>
     
-    <form action="search.html" class="col-md-6 m-2 px-3 form-group form-row" method="get">
+    <form action="." class="col-md-6 m-2 px-3 form-group form-row" method="get">
         <div class="col">
             <input type="text" class="align-center form-control" name="search" placeholder="Tìm kiếm bài hát...">
         </div>

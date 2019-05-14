@@ -7,7 +7,7 @@ require_once SITE_ROOT."/Dao/SongDao.php";
 
         public function __construct() 
 	    {
-		    $songDao = new SongDao();
+		    $this->songDao = new SongDao();
 	    }
 
         //SONG FUNCTION

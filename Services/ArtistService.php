@@ -9,8 +9,8 @@ require_once SITE_ROOT."/Dao/SingerDao.php";
 
         public function __construct() 
 	    {
-		    $composerDao = new ComposerDao();
-            $singerDao = new SingerDao();
+		    $this->composerDao = new ComposerDao();
+            $this->singerDao = new SingerDao();
 	    }
 
         //COMPOSER FUNCTION

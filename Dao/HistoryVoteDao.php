@@ -9,27 +9,23 @@ class HistoryVoteDao extends DBConnection
 		parent::__construct();
 	}
 
-	// public function getAllHistoryVote()
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post");
-	// 	$HistoryVoteList = array();
-	// 	while ($row = $result->fetch_assoc())
-	// 	{
-	// 		$HistoryVote = new HistoryVote(
-	// 			$row['id'],
-	// 			$row['category_id'],
-	// 			$row['title'],
-	// 			$row['author'],
-	// 			$row['date_up'],
-	// 			$row['content'],
-	// 			$row['feature']
-	// 		);
-	// 		array_push($HistoryVoteList, $HistoryVote);
-	// 	}
-	// 	$result->free();
+	public function getHistoryVoteBySongId($id)
+	{
+		$result = $this->runQuery("SELECT *	FROM History_Vote WHERE song_id = {$id}");
+		$HistoryVoteList = array();
+		while ($row = $result->fetch_assoc())
+		{
+			$HistoryVote = new HistoryVote(
+				$row['username_id'],
+				$row['song_id'],
+				$row['stars']
+			);
+			array_push($HistoryVoteList, $HistoryVote);
+		}
+		$result->free();
 
-	// 	return $HistoryVoteList;
-	// }
+		return $HistoryVoteList;
+	}
 
 	// public function getHistoryVoteByTitle($title)
 	// {

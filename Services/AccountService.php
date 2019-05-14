@@ -13,10 +13,10 @@ require_once SITE_ROOT."/Dao/PlaylistDetailDao.php";
 
         public function __construct() 
 	    {
-		    $accountDao = new AccountDao();
-            $accountDetailDao = new AccountDetailDao();
-            $playlistDao = new PlaylistDao();
-            $playlistDetailDao = new PlaylistDetailDao();
+		    $this->accountDao = new AccountDao();
+            $this->accountDetailDao = new AccountDetailDao();
+            $this->playlistDao = new PlaylistDao();
+            $this->playlistDetailDao = new PlaylistDetailDao();
 	    }
 
         //ACCOUNT FUNCTION

@@ -63,7 +63,7 @@
                                 <input class="form-control" type="text" id="nameUser-SignIn">
                             </div>
                             <div class="form-group">
-                                <label class="">Mật khẩ u</label>
+                                <label class="">Mật khẩu</label>
                                 <input class="form-control" type="password" id="nameUser-SignIn">
                             </div>
                             <button class="btn btn-primary" type="submit">Đăng nhập</button>
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <p class="m-auto">Bạn chưa có tài khoản? <a class="a-link" onlick>Đăng ký</a></p>
+                        <p class="m-auto">Bạn chưa có tài khoản? <a href="" class="" data-toggle="modal" data-target="#newAccountModal">Đăng ký</a></p>
                     </div>
                 
             </div>
@@ -97,17 +97,17 @@
 
                             <div class="form-row">
                                 <div class="form-group col-6">
-                                    <label>Mật khẩ u</label>
+                                    <label>Mật khẩu</label>
                                     <input class="form-control" name="" type="password" required>
                                 </div>
                                 <div class="form-group col-6">
-                                    <label>Nhập lại</label>
+                                    <label>Nhập lại mật khẩu</label>
                                     <input class="form-control" name="" type="password" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>Họ tên</label>
+                                <label>Họ và tên</label>
                                 <input class="form-control" name="" type="text" required>
                             </div>
                             <div class="form-group">
@@ -124,8 +124,9 @@
                                 <div class="form-group col-6">
                                     <label>Giới tính</label> 
                                     <select class="form-control" name="sex">
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                        <option value="female">Khác</option>
                                     </select>
                                 </div>
                             </div>
@@ -134,7 +135,7 @@
                         </form>
                 </div>
                 <div class="modal-footer m-auto">
-                    <p class="">Bạn đã có tài khoản? <a href="" class="">Đăng nhập</a></p>
+                    <p class="">Bạn đã có tài khoản? <a href="" class="" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
                 </div>
             </div>
         </div>

@@ -31,21 +31,17 @@ class PlaylistDao extends DBConnection
 	// 	return $PlaylistList;
 	// }
 
-	// public function getPlaylistByTitle($title)
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post WHERE title = {$title}");
+	public function getPlaylistById($ID)
+	{
+		$result = $this->runQuery("SELECT *	FROM Playlist WHERE id = {$ID}");
 
-	// 	$row = $result->fetch_assoc();
-	// 	return new Playlist(
-	// 		$row['id'],
-	// 		$row['category_id'],
-	// 		$row['title'],
-	// 		$row['author'],
-	// 		$row['date_up'],
-	// 		$row['content'],
-	// 		$row['feature']
-	// 	);
-	// }
+		$row = $result->fetch_assoc();
+		return new Playlist(
+			$row['id'],
+			$row['name'],
+			$row['username_id']
+		);
+	}
 	
 	public function getPlaylistByUsernameId($ID)
 	{

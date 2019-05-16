@@ -9,27 +9,24 @@ class SingerDao extends DBConnection
 		parent::__construct();
 	}
 
-	// public function getAllSinger()
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post");
-	// 	$SingerList = array();
-	// 	while ($row = $result->fetch_assoc())
-	// 	{
-	// 		$Singer = new Singer(
-	// 			$row['id'],
-	// 			$row['category_id'],
-	// 			$row['title'],
-	// 			$row['author'],
-	// 			$row['date_up'],
-	// 			$row['content'],
-	// 			$row['feature']
-	// 		);
-	// 		array_push($SingerList, $Singer);
-	// 	}
-	// 	$result->free();
+	public function getAllSinger()
+	{
+		$result = $this->runQuery("SELECT *	FROM Singer");
+		$SingerList = array();
+		while ($row = $result->fetch_assoc())
+		{
+			$Singer = new Singer(
+				$row['id'],
+				$row['name'],
+				$row['image'],
+				$row['detail']
+			);
+			array_push($SingerList, $Singer);
+		}
+		$result->free();
 
-	// 	return $SingerList;
-	// }
+		return $SingerList;
+	}
 
 	// public function getSingerByTitle($title)
 	// {

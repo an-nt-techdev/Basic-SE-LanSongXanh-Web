@@ -42,7 +42,7 @@ class PlaylistDetailDao extends DBConnection
 	// 	);
 	// }
 	
-	public function getPlaylistDetailByUsernameId($ID)
+	public function getPlaylistDetailByPlaylistId($ID)
 	{
 		$result = $this->runQuery("SELECT *	FROM Playlist_Detail WHERE playlist_id = {$ID}");
 
@@ -94,14 +94,14 @@ class PlaylistDetailDao extends DBConnection
 		);
 	}
 
-	public function updatePlaylistDetail($PlaylistDetail)
-	{
-		return $this->runQuery(
-			"UPDATE PlaylistDetail
-			SET song_id = '{$PlaylistDetail->getSong_id()}'
-			WHERE playlist_id = {$PlaylistDetail->getPlaylist_id()}"
-		);
-	}
+	// public function updatePlaylistDetail($PlaylistDetail)
+	// {
+	// 	return $this->runQuery(
+	// 		"UPDATE PlaylistDetail
+	// 		SET song_id = '{$PlaylistDetail->getSong_id()}'
+	// 		WHERE playlist_id = {$PlaylistDetail->getPlaylist_id()}"
+	// 	);
+	// }
 
 	public function deletePlaylistDetail($ID)
 	{

@@ -21,6 +21,54 @@ require_once SITE_ROOT."/Entity/VoteSong.php";
             return $this->voteSongDao->getVoteSongBySongId($id);
         }
 
+        public function getVoteSongTop5($id)
+        {
+            $list = $this->voteSongDao->getAllVoteSong();
+            $n = count($list) - 1;
+            for ($i = 0; $i <= $n - 1; $i++)
+            {
+                for ($j = $i + 1; $j <= $n; $j++)
+                {
+                    if ($list[$i]->getPoint() < $list[$j]->getPoint())
+                    {
+                        $tmp = $list[$i];
+                        $list[$i] = $list[$j];
+                        $list[$j] = $tmp;
+                    }
+                }
+            }
+            $l = array();
+            for ($i = 0; $i <= 4; $i++)
+            {
+                array_push($l, $list[$i]);
+            }
+            return $l;
+        }
+
+        public function getVoteSongTop10($id)
+        {
+            $list = $this->voteSongDao->getAllVoteSong();
+            $n = count($list) - 1;
+            for ($i = 0; $i <= $n - 1; $i++)
+            {
+                for ($j = $i + 1; $j <= $n; $j++)
+                {
+                    if ($list[$i]->getPoint() < $list[$j]->getPoint())
+                    {
+                        $tmp = $list[$i];
+                        $list[$i] = $list[$j];
+                        $list[$j] = $tmp;
+                    }
+                }
+            }
+            $l = array();
+            for ($i = 0; $i <= 9; $i++)
+            {
+                array_push($l, $list[$i]);
+            }
+            return $l;
+        }
+
         public function addVoteSong($voteSong)
         {
             $this->voteSongDao->insertVoteSong($voteSong);

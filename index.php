@@ -7,7 +7,6 @@ $homeUrl = $_SERVER['REQUEST_URI'];
 // sign in
 
 
-
 // if have GET 'search'
 if (isset($_GET['search'])) {
 	require_once("Controller/searchController.php");

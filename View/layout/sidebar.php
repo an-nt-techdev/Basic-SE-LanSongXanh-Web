@@ -13,9 +13,11 @@
             <li class="nav-item py-1">
                 <a class="nav-link" href="?person=1212"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
             </li>
+<!--
             <li class="nav-item py-1">
                 <a class="nav-link" href="?page=contact"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
             </li>
+-->
             <li class="nav-item py-1">
                 <h5>Tài khoản</h5>
             </li>

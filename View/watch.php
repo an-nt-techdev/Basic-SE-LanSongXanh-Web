@@ -25,11 +25,11 @@
 							<h3 class="col-md-6 video-title">Chế linh - Nhạc lính</h3>
 							<div class="col-md-6 video-vote">
 								<h4>Bình chọn: 
-								<i class="fas fa-star star-1"></i>
-								<i class="fas fa-star star-2"></i>
-								<i class="far fa-star star-3"></i>
-								<i class="far fa-star star-4"></i>
-								<i class="far fa-star star-5"></i>
+								<i class="fas fa-star star-1"><span class="sr-only">1</span></i>
+								<i class="fas fa-star star-2"><span class="sr-only">2</span></i>
+								<i class="far fa-star star-3"><span class="sr-only">3</span></i>
+								<i class="far fa-star star-4"><span class="sr-only">4</span></i>
+								<i class="far fa-star star-5"><span class="sr-only">5</span></i>
 								</h4>
 							</div>
 						</div> 

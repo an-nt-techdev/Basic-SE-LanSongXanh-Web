@@ -1,4 +1,5 @@
 <div class="footer-top col-md-12">
+    <!--
     <div class="row text-white">
         <div class="col-md-6 p-3">
             <h3 class="mb-3 ml-2">Liên hệ</h3>
@@ -49,6 +50,7 @@
             </div>
         </div>
     </div>
+    -->
 </div>
 
 <footer class="py-3 footer col-md-12">

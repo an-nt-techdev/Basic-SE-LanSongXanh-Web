@@ -9,27 +9,23 @@ class VoteSongDao extends DBConnection
 		parent::__construct();
 	}
 
-	// public function getAllVoteSong()
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post");
-	// 	$VoteSongList = array();
-	// 	while ($row = $result->fetch_assoc())
-	// 	{
-	// 		$VoteSong = new VoteSong(
-	// 			$row['id'],
-	// 			$row['category_id'],
-	// 			$row['title'],
-	// 			$row['author'],
-	// 			$row['date_up'],
-	// 			$row['content'],
-	// 			$row['feature']
-	// 		);
-	// 		array_push($VoteSongList, $VoteSong);
-	// 	}
-	// 	$result->free();
+	public function getAllVoteSong()
+	{
+		$result = $this->runQuery("SELECT *	FROM Vote_Song");
+		$VoteSongList = array();
+		while ($row = $result->fetch_assoc())
+		{
+			$VoteSong = new VoteSong(
+				$row['song_id'],
+				$row['stars'],
+				$row['point']
+			);
+			array_push($VoteSongList, $VoteSong);
+		}
+		$result->free();
 
-	// 	return $VoteSongList;
-	// }
+		return $VoteSongList;
+	}
 
 	// public function getVoteSongByTitle($title)
 	// {

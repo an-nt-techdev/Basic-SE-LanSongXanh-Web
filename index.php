@@ -22,7 +22,7 @@ else
 			$page = $_GET['page'];
 			switch ($page) {
 				case 'ad': 
-					require_once SITE_ROOT."ad";
+					require_once SITE_ROOT."/Controller/dashboardController.php";
 					break;
 					
 				case 'infor':

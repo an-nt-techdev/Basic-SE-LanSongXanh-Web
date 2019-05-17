@@ -12,6 +12,8 @@
         $backHome = false;
         $kind = 'singer';
 
+        $data;// = $infor->getSinger($_GET['singer']); 
+        //if (is_null($data->getUserName_id())) goto backHome;
         
         require_once SITE_ROOT.'/View/infor.php';
     }
@@ -21,7 +23,9 @@
         $backHome = false;
         $kind = 'composer';
 
-        $person = $_GET['composer'];        
+        $data = $infor->getComposer($_GET['composer']); 
+        //if (is_null($data->getUserName_id())) goto backHome;
+        echo 'ok';
         require_once SITE_ROOT.'/View/infor.php';
     }
     // if user
@@ -30,9 +34,8 @@
         $back = false;
         $kind = 'user';
         
-        //$data = $infor->getAccount($_GET['user']);
-        $data = $infor->getAccountDetail($_GET['user']);
-        //if ($data->getAccountDetail() == NULL) goto backHome;
+        $data = $infor->getAccountDetail($_GET['user']);        
+        //if (is_null($data->getUserName_id())) goto backHome;
 
         require_once SITE_ROOT.'/View/infor.php';
     }

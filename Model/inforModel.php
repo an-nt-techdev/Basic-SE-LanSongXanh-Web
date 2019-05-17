@@ -23,7 +23,15 @@
             return $this->account->getAccountDetail($username);
         }
 
+        public function getComposer($nameComposer)
+        {
+            return $this->artist->getComposer($nameComposer);
+        }
 
+        public function getSinger($nameSinger)
+        {
+            return $this->artist->getSinger($nameSinger);
+        }
     }
 
 ?>

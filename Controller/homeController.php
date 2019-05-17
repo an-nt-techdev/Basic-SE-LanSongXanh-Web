@@ -1,3 +1,3 @@
 <?php 
-    require_once('View/home.php');
+    require_once SITE_ROOT.'/View/home.php';
 ?>

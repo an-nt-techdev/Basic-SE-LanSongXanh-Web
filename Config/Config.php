@@ -1,3 +1,3 @@
 <?php
-define('SITE_ROOT', __DIR__);
+define('SITE_ROOT', __DIR__."/..");
 ?>

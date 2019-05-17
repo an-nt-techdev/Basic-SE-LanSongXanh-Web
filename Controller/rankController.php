@@ -1,5 +1,5 @@
 <?php 
 
 
-    require_once('View/rank.php');
+    require_once SITE_ROOT.'/View/rank.php';
 ?>

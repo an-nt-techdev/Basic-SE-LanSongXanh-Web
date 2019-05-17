@@ -1,3 +1,3 @@
 <?php 
-    require_once('View/contact.php');
+    require_once SITE_ROOT.'/View/contact.php';
 ?>

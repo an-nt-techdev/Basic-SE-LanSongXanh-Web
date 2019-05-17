@@ -11,7 +11,7 @@
     if (1)
     {
         $backHome = false;
-        require_once('View/watch.php');
+        require_once SITE_ROOT.'/View/watch.php';
     }
     
     if ($backHome)

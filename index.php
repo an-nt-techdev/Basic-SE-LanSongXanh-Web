@@ -30,11 +30,11 @@ else
 					break;
 
 				case 'rank': 
-					require_once SITE_ROOT."Controller/rankController.php";
+					require_once SITE_ROOT."/Controller/rankController.php";
 					break;
 
 				case 'contact': 
-					require_once SITE_ROOT."Controller/contactController.php";
+					require_once SITE_ROOT."/Controller/contactController.php";
 					break;
 
 				default:
@@ -43,7 +43,7 @@ else
 		}
 		else {
 			loadHome:	
-			require_once SITE_ROOT."Controller/homeController.php";
+			require_once SITE_ROOT."/Controller/homeController.php";
 		}
 
 ?> 

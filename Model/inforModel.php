@@ -11,15 +11,17 @@
         {
             $this->account = new AccountService();
             $this->artist = new ArtistService();
-            echo 'ok';
         }
 
         public function getAccount($username)
         {
             return $this->account->getAccount($username);
-            
         }
 
+        public function getAccountDetail($username)
+        {
+            return $this->account->getAccountDetail($username);
+        }
 
 
     }

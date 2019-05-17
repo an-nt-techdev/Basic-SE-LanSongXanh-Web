@@ -6,6 +6,13 @@
 	
 	<body class="bg-light">
 		
+		<?php
+			echo var_dump($data);
+			echo var_dump($data->getUsername_id());
+			//echo var_dump($data->getUsername());
+			echo $kind;
+		?>
+
 		<div class="container-fluid">
 			<?php require_once('layout/header.php'); ?>
 			 <!-- End Header -->
@@ -23,7 +30,7 @@
 								
 								<div class="row">
 									<div class="col-md-3">
-										<img class="rounded-circle w-100" src="images/male.png">
+										<img class="rounded-circle w-100" src="View/images/male.png">
 									</div>
 									<div class="col-md-9 pl-5">
 										<div class="row">

@@ -1,8 +1,10 @@
 <?php 
     require_once SITE_ROOT."/Model/inforModel.php";
     $infor = new inforModel();
+    
     $backHome = true;
     $kind = 'user';
+    $data;
 
     // if singer
     if (isset($_GET['singer']))
@@ -27,14 +29,17 @@
     {
         $back = false;
         $kind = 'user';
-
-        $data = $infor->getAccount($_GET['user']);
         
+        //$data = $infor->getAccount($_GET['user']);
+        $data = $infor->getAccountDetail($_GET['user']);
+        //if ($data->getAccountDetail() == NULL) goto backHome;
+
         require_once SITE_ROOT.'/View/infor.php';
     }
 
     if ($backHome)
     {
+        backHome:
         header("Location: http://localhost/LanXongXanh/");
     }
             

@@ -28,7 +28,7 @@ require_once SITE_ROOT."/Dao/PlaylistDetailDao.php";
 
         public function getAccountDetail($username)
         {
-            return $this->accountDetailDao->getAccountDetailByUsername($username);
+            return $this->accountDetailDao->getAccountDetailByUsernameId($username);
         }
 
         public function addAccount($account, $accountDetail)

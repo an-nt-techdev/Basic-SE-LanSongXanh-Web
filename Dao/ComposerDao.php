@@ -28,21 +28,18 @@ class ComposerDao extends DBConnection
 		return $ComposerList;
 	}
 
-	// public function getComposerByTitle($title)
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post WHERE title = {$title}");
+	public function getComposerById($id)
+	{
+		$result = $this->runQuery("SELECT *	FROM Composer WHERE id = {$id}");
 
-	// 	$row = $result->fetch_assoc();
-	// 	return new Composer(
-	// 		$row['id'],
-	// 		$row['category_id'],
-	// 		$row['title'],
-	// 		$row['author'],
-	// 		$row['date_up'],
-	// 		$row['content'],
-	// 		$row['feature']
-	// 	);
-	// }
+		$row = $result->fetch_assoc();
+		return new Composer(
+			$row['id'],
+            $row['name'],
+            $row['image'],
+            $row['detail']
+		);
+	}
 	
 	public function getComposerByName($Name)
 	{

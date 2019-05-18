@@ -186,56 +186,26 @@
 							
 						</section>
 						<!-- End Content -->
-						
+						<?php 
+							require_once SITE_ROOT."/Model/homeModel.php";
+							$model = new homeModel();
+							$arr = $model->getTop5();
+						?>
 						<aside class="col-xl-4">
 							<div class=" my-3 border border-dark rounded bg-white">
 								<h3 class="text-center">Top tuần</h3>
 								<table class="table rank">
 									<tbody>
+									<?php for($i = 0; $i <= 4; $i++) { ?>
 										<tr>
-											<td class="align-middle" scope="row"><b>1</b></td>
+											<td class="align-middle" scope="row"><b><?php echo $arr[$i]->getTop(); ?></b></td>
 											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
+												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh"><?php echo $arr[$i]->getNameSong(); ?></a></p>
+												<p class="singer-song"><a href="infor.html?person=chelinh"><?php echo $arr[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="align-bottom count-view">36,000</td>
+											<td class="align-bottom count-view"><?php echo $arr[$i]->getPoint(); ?></td>
 										</tr>
-										
-										<tr>
-											<td class="align-middle" scope="row"><b>2</b></td>
-											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
-											</td>
-											<td class="align-bottom count-view">36,000</td>
-										</tr>
-										
-										<tr>
-											<td class="align-middle" scope="row"><b>3</b></td>
-											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
-											</td>
-											<td class="align-bottom count-view">36,000</td>
-										</tr>
-										
-										<tr>
-											<td class="align-middle" scope="row"><b>4</b></td>
-											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
-											</td>
-											<td class="align-bottom count-view">36,000</td>
-										</tr>
-										
-										<tr>
-											<td class="align-middle" scope="row"><b>5</b></td>
-											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh">Andree</a></p>
-											</td>
-											<td class="align-bottom count-view">36,000</td>
-										</tr>
+									<?php } ?>
 									</tbody>
 								</table>
 							</div>

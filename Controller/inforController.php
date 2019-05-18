@@ -18,7 +18,7 @@
         require_once SITE_ROOT.'/View/infor.php';
     }
     // if composer
-    elseif (isset($_GET['composer']))
+    else if (isset($_GET['composer']))
     {
         $backHome = false;
         $kind = 'composer';
@@ -29,7 +29,7 @@
         require_once SITE_ROOT.'/View/infor.php';
     }
     // if user
-    elseif (isset($_GET['user'])) 
+    else if (isset($_GET['user'])) 
     {
         $back = false;
         $kind = 'user';

@@ -38,7 +38,7 @@
 
 		<div class="container-fluid">
 <?php 
-    echo var_dump($data[0]);
+    //echo var_dump($data[0]);
     if ($kind == 'account') {?>
             <div class="row">
                 <div class="col-lg-12">

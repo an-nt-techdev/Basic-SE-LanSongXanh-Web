@@ -17,6 +17,11 @@ require_once SITE_ROOT."/Dao/SongDao.php";
             return $this->songDao->getAllSong();
         }
 
+        public function getSongById($id)
+        {
+            return $this->songDao->getSongById($id);
+        }
+
         public function getSongByName($nameSong)
         {
             return $this->songDao->getSongByNameSong($nameSong);

@@ -29,6 +29,20 @@ class SongDao extends DBConnection
 		return $SongList;
 	}
 
+	public function getSongById($Id)
+	{
+		$result = $this->runQuery("SELECT *	FROM Song WHERE id = {$Id}");
+
+		$row = $result->fetch_assoc();
+		return new Song(
+			$row['id'],
+			$row['namesong'],
+			$row['composer_id'],
+			$row['singer_id'],
+			$row['link']
+		);
+	}
+
 	public function getSongByNameSong($NameSong)
 	{
 		$result = $this->runQuery("SELECT *	FROM Song WHERE namesong = {$NameSong}");

@@ -20,7 +20,12 @@ require_once SITE_ROOT."/Dao/SingerDao.php";
             return $this->composerDao->getAllComposer();
         }
 
-        public function getComposer($nameComposer)
+        public function getComposerById($id)
+        {
+            return $this->composerDao->getComposerById($id);
+        }
+
+        public function getComposerByName($nameComposer)
         {
             return $this->composerDao->getComposerByName($nameComposer);
         }
@@ -40,6 +45,11 @@ require_once SITE_ROOT."/Dao/SingerDao.php";
         public function getAllSinger()
         {
             return $this->singerDao->getAllSinger();
+        }
+
+        public function getSingerById($id)
+        {
+            return $this->singerDao->getSingerById($id);
         }
 
         public function getSinger($nameSinger)

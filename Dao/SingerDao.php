@@ -28,21 +28,18 @@ class SingerDao extends DBConnection
 		return $SingerList;
 	}
 
-	// public function getSingerByTitle($title)
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post WHERE title = {$title}");
+	public function getSingerById($id)
+	{
+		$result = $this->runQuery("SELECT *	FROM singer WHERE id = {$id}");
 
-	// 	$row = $result->fetch_assoc();
-	// 	return new Singer(
-	// 		$row['id'],
-	// 		$row['category_id'],
-	// 		$row['title'],
-	// 		$row['author'],
-	// 		$row['date_up'],
-	// 		$row['content'],
-	// 		$row['feature']
-	// 	);
-	// }
+		$row = $result->fetch_assoc();
+		return new Singer(
+			$row['id'],
+            $row['name'],
+            $row['image'],
+            $row['detail']
+		);
+	}
 	
 	public function getSingerByName($Name)
 	{

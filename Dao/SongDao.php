@@ -11,7 +11,7 @@ class SongDao extends DBConnection
 
 	public function getAllSong()
 	{
-		$result = $this->runQuery("SELECT *	FROM Song");
+		$result = $this->runQuery("SELECT *	FROM song");
 		$SongList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -25,13 +25,13 @@ class SongDao extends DBConnection
 			array_push($SongList, $Song);
 		}
 		$result->free();
-
+		
 		return $SongList;
 	}
 
 	public function getSongById($Id)
 	{
-		$result = $this->runQuery("SELECT *	FROM Song WHERE id = {$Id}");
+		$result = $this->runQuery("SELECT *	FROM song WHERE id = {$Id}");
 
 		$row = $result->fetch_assoc();
 		return new Song(
@@ -45,7 +45,7 @@ class SongDao extends DBConnection
 
 	public function getSongByNameSong($NameSong)
 	{
-		$result = $this->runQuery("SELECT *	FROM Song WHERE namesong = {$NameSong}");
+		$result = $this->runQuery("SELECT *	FROM song WHERE namesong = {$NameSong}");
 
 		$row = $result->fetch_assoc();
 		return new Song(
@@ -59,7 +59,7 @@ class SongDao extends DBConnection
 	
 	public function getSongByComposerId($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM Song WHERE composer_id = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM song WHERE composer_id = {$ID}");
 
 		$SongList = array();
 		while ($row = $result->fetch_assoc())
@@ -80,7 +80,7 @@ class SongDao extends DBConnection
 
 	public function getSongBySingerId($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM Song WHERE singer_id = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM song WHERE singer_id = {$ID}");
 
 		$SongList = array();
 		while ($row = $result->fetch_assoc())

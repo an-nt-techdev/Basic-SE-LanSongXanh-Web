@@ -44,7 +44,10 @@ class DashboardModel {
     //
     // Singer
     //
-
+    public function getAllSinger()
+    {
+        return $this->artist->getAllSinger();
+    }
 
 
     //

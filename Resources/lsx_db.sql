@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2019 at 02:21 AM
+-- Generation Time: May 18, 2019 at 01:47 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -79,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `history_vote` (
   `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Song_Id` int(11) NOT NULL,
   `Stars` int(11) NOT NULL,
-  PRIMARY KEY (`Username_Id`,`Song_Id`)
+  PRIMARY KEY (`Username_Id`,`Song_Id`),
+  KEY `Song_Id` (`Song_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -93,7 +94,8 @@ CREATE TABLE IF NOT EXISTS `playlist` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Id`)
+  PRIMARY KEY (`Id`),
+  KEY `Username_Id` (`Username_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -106,7 +108,8 @@ DROP TABLE IF EXISTS `playlist_detail`;
 CREATE TABLE IF NOT EXISTS `playlist_detail` (
   `Playlist_Id` int(11) NOT NULL,
   `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Playlist_Id`,`Song_Id`)
+  PRIMARY KEY (`Playlist_Id`,`Song_Id`),
+  KEY `Song_Id` (`Song_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -137,7 +140,9 @@ CREATE TABLE IF NOT EXISTS `song` (
   `Composer_Id` int(11) NOT NULL,
   `Singer_Id` int(11) NOT NULL,
   `Link` varchar(50) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
-  PRIMARY KEY (`Id`)
+  PRIMARY KEY (`Id`),
+  KEY `Singer_Id` (`Singer_Id`),
+  KEY `Composer_Id` (`Composer_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -150,7 +155,8 @@ DROP TABLE IF EXISTS `top_month`;
 CREATE TABLE IF NOT EXISTS `top_month` (
   `Top` int(11) NOT NULL,
   `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Top`,`Song_Id`)
+  PRIMARY KEY (`Top`,`Song_Id`),
+  KEY `Song_Id` (`Song_Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -163,7 +169,8 @@ DROP TABLE IF EXISTS `top_week`;
 CREATE TABLE IF NOT EXISTS `top_week` (
   `Top` int(11) NOT NULL,
   `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Top`,`Song_Id`)
+  PRIMARY KEY (`Top`,`Song_Id`),
+  KEY `Song_Id` (`Song_Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -185,22 +192,43 @@ CREATE TABLE IF NOT EXISTS `vote_song` (
 --
 
 --
--- Constraints for table `account`
---
-ALTER TABLE `account`
-  ADD CONSTRAINT `Account_ibfk_1` FOREIGN KEY (`Username`) REFERENCES `account_detail` (`Username_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `account_detail`
 --
 ALTER TABLE `account_detail`
   ADD CONSTRAINT `Account_Detail_ibfk_1` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
 
 --
+-- Constraints for table `history_vote`
+--
+ALTER TABLE `history_vote`
+  ADD CONSTRAINT `history_vote_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`),
+  ADD CONSTRAINT `history_vote_ibfk_2` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
+
+--
+-- Constraints for table `playlist`
+--
+ALTER TABLE `playlist`
+  ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
+
+--
+-- Constraints for table `playlist_detail`
+--
+ALTER TABLE `playlist_detail`
+  ADD CONSTRAINT `playlist_detail_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`),
+  ADD CONSTRAINT `playlist_detail_ibfk_2` FOREIGN KEY (`Playlist_Id`) REFERENCES `playlist` (`Id`);
+
+--
 -- Constraints for table `song`
 --
 ALTER TABLE `song`
-  ADD CONSTRAINT `Song_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `vote_song` (`Song_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `song_ibfk_1` FOREIGN KEY (`Singer_Id`) REFERENCES `singer` (`Id`),
+  ADD CONSTRAINT `song_ibfk_2` FOREIGN KEY (`Composer_Id`) REFERENCES `composer` (`Id`);
+
+--
+-- Constraints for table `vote_song`
+--
+ALTER TABLE `vote_song`
+  ADD CONSTRAINT `vote_song_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

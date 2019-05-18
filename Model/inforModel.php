@@ -3,7 +3,7 @@
     require_once SITE_ROOT."/Services/AccountService.php";
     require_once SITE_ROOT."/Services/ArtistService.php";
 
-    class inforModel {
+    class InforModel {
         private $account;
         private $artist;
 

@@ -26,13 +26,15 @@ else
 {
     adSong:
     
+    $dashboard = new DashboardModel();
+
     // Insert song
     if (isset($_POST['name']))
     {
-        $this->song->addSong(new Song());
+        $s = new Song(1, $_POST['name'], $_POST['singer'], $_POST['composer'], $_POST['link']);
+        $dashboard->addSong($s);
     }
 
-    $dashboard = new DashboardModel();    
     $data = $dashboard->getAllSong();
 }
 

@@ -39,17 +39,17 @@ require_once SITE_ROOT."/Dao/SongDao.php";
 
         public function addSong($song)
         {
-            $this->SongDao->insertSong($song);
+            $this->songDao->insertSong($song);
         }
 
         public function editSong($song)
         {
-            $this->SongDao->updateSong($song);
+            $this->songDao->updateSong($song);
         }
 
         public function deleteSong($id)
         {
-            $this->SongDao->deleteSong($id);
+            $this->songDao->deleteSong($id);
         }
 
     }

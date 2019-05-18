@@ -27,7 +27,7 @@ class DashboardModel {
 
     public function addSong($song)
     {
-        $this->song->insertSong($song);
+        $this->song->addSong($song);
     }
 
     public function editSong($song)

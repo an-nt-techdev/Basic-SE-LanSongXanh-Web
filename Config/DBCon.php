@@ -9,7 +9,7 @@
       $host = 'localhost';
       $port = '3306';
       $username = 'root';
-      $password = '';
+      $password = '123456';
       $dbname = 'lsx_db';
 
       $this->db = new mysqli($host, $username, $password, $dbname, $port);

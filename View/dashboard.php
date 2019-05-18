@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Nhạc sĩ</label>
-                                <select class="form-control" name="compser">
+                                <select class="form-control" name="composer">
                                     <option value="1">Andree</option>
                                     <option value="1">Andree</option>
                                     <option value="1">Andree</option>

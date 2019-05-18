@@ -102,9 +102,8 @@ class SongDao extends DBConnection
 	public function insertSong($Song)
 	{
 		return $this->runQuery(
-			"INSERT INTO Song(id, namesong, composer_id, singer_id, link) 
+			"INSERT INTO Song(namesong, composer_id, singer_id, link) 
 			VALUE (
-				'{$Song->getId()}',
 				'{$Song->getNameSong()}',
 				'{$Song->getComposer_id()}',
                 '{$Song->getSinger_id()}',

@@ -25,12 +25,22 @@
 
         public function getComposer($nameComposer)
         {
-            return $this->artist->getComposer($nameComposer);
+            return $this->artist->getComposerByName($nameComposer);
+        }
+
+        public function getComposerById($id)
+        {
+            return $this->artist->getComposerById($id);
         }
 
         public function getSinger($nameSinger)
         {
             return $this->artist->getSinger($nameSinger);
+        }
+
+        public function getSingerById($id)
+        {
+            return $this->artist->getSingerById($id);
         }
     }
 

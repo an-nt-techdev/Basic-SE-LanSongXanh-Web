@@ -44,7 +44,7 @@ class PlaylistDetailDao extends DBConnection
 	
 	public function getPlaylistDetailByPlaylistId($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM Playlist_Detail WHERE playlist_id = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM playlist_detail WHERE playlist_id = {$ID}");
 
 		$PlaylistDetailList = array();
 		while ($row = $result->fetch_assoc())
@@ -86,7 +86,7 @@ class PlaylistDetailDao extends DBConnection
 	public function insertPlaylistDetail($PlaylistDetail)
 	{
 		return $this->runQuery(
-			"INSERT INTO Playlist_Detail(playlist_id, song_id) 
+			"INSERT INTO playlist_detail(playlist_id, song_id) 
 			VALUE (
 				'{$PlaylistDetail->getPlaylist_id()}',
 				'{$PlaylistDetail->getSong_id()}'
@@ -105,7 +105,7 @@ class PlaylistDetailDao extends DBConnection
 
 	public function deletePlaylistDetail($ID)
 	{
-		$this->runQuery("DELETE FROM PlaylistDetail WHERE playlist_id = {$ID}");
+		$this->runQuery("DELETE FROM playlist_detail WHERE playlist_id = {$ID}");
 	}
 }
 

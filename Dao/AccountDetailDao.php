@@ -49,7 +49,7 @@ class AccountDetailDao extends DBConnection
 	
 	public function getAccountDetailByUsernameId($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM Account_Detail WHERE username_id = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM account_detail WHERE username_id = {$ID}");
 
 		$row = $result->fetch_assoc();
 		return new AccountDetail(
@@ -87,7 +87,7 @@ class AccountDetailDao extends DBConnection
 	public function insertAccountDetail($AccountDetail)
 	{
 		return $this->runQuery(
-			"INSERT INTO AccountDetail(username_id, name, birthday, sex, email) 
+			"INSERT INTO account_detail(username_id, name, birthday, sex, email) 
 			VALUE (
 				'{$AccountDetail->getUsername_id()}',
 				'{$AccountDetail->getName()}',
@@ -101,7 +101,7 @@ class AccountDetailDao extends DBConnection
 	public function updateAccountDetail($AccountDetail)
 	{
 		return $this->runQuery(
-			"UPDATE AccountDetail
+			"UPDATE account_detail
 			SET name = '{$AccountDetail->getName()}',
 				birthday = '{$AccountDetail->getBirthday()}',
 				sex = '{$AccountDetail->getSex()}',

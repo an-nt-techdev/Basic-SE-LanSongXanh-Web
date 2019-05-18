@@ -28,7 +28,7 @@
 								
 								<div class="row">
 									<div class="col-md-3">
-										<img class="rounded-circle w-100" src="View/images/male.png">
+										<img class="rounded-circle w-100" src="<?php if ($kind != 'user') echo SITE_ROOT.$data->getImage(); else echo 'View/images/male.png'; ?>">
 									</div>
 									<div class="col-md-9 pl-5">
 <?php if ($kind == 'user') {?>
@@ -57,11 +57,11 @@
 else {?>
 										<div class="row">
 											<h5 class="col-3">Họ tên</h5>
-											<p class="col-9">: <?php echo ''; ?></p>
+											<p class="col-9">: <?php echo $data->getName(); ?></p>
 										</div>
 										<div class="row">
 											<h5 class="col-3">Thông tin</h5>
-											<p class="col-9">: <?php echo ''; ?></p>
+											<p class="col-9">: <?php echo $data->getDetail(); ?></p>
 										</div>
 <?php } ?>
 									</div>

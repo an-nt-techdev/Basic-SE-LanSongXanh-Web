@@ -200,8 +200,8 @@
 										<tr>
 											<td class="align-middle" scope="row"><b><?php echo $arr[$i]->getTop(); ?></b></td>
 											<td>
-												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh"><?php echo $arr[$i]->getNameSong(); ?></a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh"><?php echo $arr[$i]->getSinger(); ?></a></p>
+												<p class="name-song"><a href="watch.php?v="><?php echo $arr[$i]->getNameSong(); ?></a></p>
+												<p class="singer-song"><a href="?page=infor&singer=<?php echo $arr[$i]->getSinger_id(); ?>"><?php echo $arr[$i]->getSinger(); ?></a></p>
 											</td>
 											<td class="align-bottom count-view"><?php echo $arr[$i]->getPoint(); ?></td>
 										</tr>
@@ -219,7 +219,7 @@
 											<td class="align-middle" scope="row"><b><?php echo $arr[$i]->getTop(); ?></b></td>
 											<td>
 												<p class="name-song"><a href="watch.html?v=chelinh-nhaclinh"><?php echo $arr[$i]->getNameSong(); ?></a></p>
-												<p class="singer-song"><a href="infor.html?person=chelinh"><?php echo $arr[$i]->getSinger(); ?></a></p>
+												<p class="singer-song"><a href="?page=infor&singer=<?php echo $arr[$i]->getSinger_id(); ?>"><?php echo $arr[$i]->getSinger(); ?></a></p>
 											</td>
 											<td class="align-bottom count-view"><?php echo $arr[$i]->getPoint(); ?></td>
 										</tr>

@@ -11,7 +11,7 @@ class ComposerDao extends DBConnection
 
 	public function getAllComposer()
 	{
-		$result = $this->runQuery("SELECT *	FROM Composer");
+		$result = $this->runQuery("SELECT *	FROM composer");
 		$ComposerList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -30,7 +30,7 @@ class ComposerDao extends DBConnection
 
 	public function getComposerById($id)
 	{
-		$result = $this->runQuery("SELECT *	FROM Composer WHERE id = {$id}");
+		$result = $this->runQuery("SELECT *	FROM composer WHERE id = {$id}");
 
 		$row = $result->fetch_assoc();
 		return new Composer(
@@ -43,7 +43,7 @@ class ComposerDao extends DBConnection
 	
 	public function getComposerByName($Name)
 	{
-		$result = $this->runQuery("SELECT *	FROM Composer WHERE name = {$Name}");
+		$result = $this->runQuery("SELECT *	FROM composer WHERE name = {$Name}");
 
 		$row = $result->fetch_assoc();
 		return new Composer(
@@ -80,7 +80,7 @@ class ComposerDao extends DBConnection
 	public function insertComposer($Composer)
 	{
 		return $this->runQuery(
-			"INSERT INTO Composer(id, name, image, detail) 
+			"INSERT INTO composer(id, name, image, detail) 
 			VALUE (
 				'{$Composer->getId()}',
 				'{$Composer->getName()}',
@@ -93,7 +93,7 @@ class ComposerDao extends DBConnection
 	public function updateComposer($Composer)
 	{
 		return $this->runQuery(
-			"UPDATE Composer
+			"UPDATE composer
 			SET name = '{$Composer->getName()}',
                 image = '{$Composer->getImage()}',
                 detail = '{$Composer->getDetail()}'

@@ -99,7 +99,7 @@ class TopWeekDao extends DBConnection
 
 	public function deleteTopWeek($Top)
 	{
-		$this->runQuery("DELETE FROM TopWeek WHERE top = {$Top}");
+		$this->runQuery("DELETE FROM top_week WHERE top = {$Top}");
 	}
 }
 

@@ -11,7 +11,7 @@ class TopMonthDao extends DBConnection
 
 	public function getAllTopMonth()
 	{
-		$result = $this->runQuery("SELECT *	FROM top_week");
+		$result = $this->runQuery("SELECT *	FROM top_month");
 		$TopMonthList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -80,7 +80,7 @@ class TopMonthDao extends DBConnection
 	public function insertTopMonth($TopMonth)
 	{
 		return $this->runQuery(
-			"INSERT INTO TopMonth(top, song_id) 
+			"INSERT INTO top_month(top, song_id) 
 			VALUE (
 				'{$TopMonth->getTop()}',
 				'{$TopMonth->getSong_id()}'
@@ -91,7 +91,7 @@ class TopMonthDao extends DBConnection
 	public function updateTopMonth($TopMonth)
 	{
 		return $this->runQuery(
-			"UPDATE TopMonth
+			"UPDATE top_month
 			SET song_id = '{$TopMonth->getSong_id()}'
 			WHERE top = {$TopMonth->getTop()}"
 		);
@@ -99,7 +99,7 @@ class TopMonthDao extends DBConnection
 
 	public function deleteTopMonth($Top)
 	{
-		$this->runQuery("DELETE FROM TopMonth WHERE top = {$Top}");
+		$this->runQuery("DELETE FROM top_month WHERE top = {$Top}");
 	}
 }
 

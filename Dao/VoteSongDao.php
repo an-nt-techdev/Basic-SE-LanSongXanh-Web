@@ -11,7 +11,7 @@ class VoteSongDao extends DBConnection
 
 	public function getAllVoteSong()
 	{
-		$result = $this->runQuery("SELECT *	FROM Vote_Song");
+		$result = $this->runQuery("SELECT *	FROM vote_song");
 		$VoteSongList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -45,7 +45,7 @@ class VoteSongDao extends DBConnection
 	
 	public function getVoteSongBySongId($Song_id)
 	{
-        $result = $this->runQuery("SELECT *	FROM Vote_Song WHERE song_id = {$Song_id}");
+        $result = $this->runQuery("SELECT *	FROM vote_song WHERE song_id = {$Song_id}");
 
 		$row = $result->fetch_assoc();
 		return new VoteSong(
@@ -81,7 +81,7 @@ class VoteSongDao extends DBConnection
 	public function insertVoteSong($VoteSong)
 	{
 		return $this->runQuery(
-			"INSERT INTO Vote_Song(song_id, stars, point) 
+			"INSERT INTO vote_song(song_id, stars, point) 
 			VALUE (
 				'{$VoteSong->getSong_id()}',
 				'{$VoteSong->getStars()}',
@@ -93,7 +93,7 @@ class VoteSongDao extends DBConnection
 	public function updateVoteSong($VoteSong)
 	{
 		return $this->runQuery(
-			"UPDATE Vote_Song
+			"UPDATE vote_song
 			SET stars = '{$VoteSong->getStars()}',
                 point = '{$VoteSong->getPoint()}'
 			WHERE song_id = {$VoteSong->getSong_id()}"

@@ -102,7 +102,7 @@ class SongDao extends DBConnection
 	public function insertSong($Song)
 	{
 		return $this->runQuery(
-			"INSERT INTO Song(namesong, composer_id, singer_id, link) 
+			"INSERT INTO song(namesong, composer_id, singer_id, link) 
 			VALUE (
 				'{$Song->getNameSong()}',
 				'{$Song->getComposer_id()}',
@@ -115,7 +115,7 @@ class SongDao extends DBConnection
 	public function updateSong($Song)
 	{
 		return $this->runQuery(
-			"UPDATE Song
+			"UPDATE song
 			SET namesong = '{$Song->getNameSong()}',
                 composer_id = '{$Song->getComposer_id()}',
                 singer_id = '{$Song->getSinger_id()}',
@@ -126,10 +126,10 @@ class SongDao extends DBConnection
 
 	public function deleteSong($ID)
 	{
-        $this->runQuery("DELETE FROM Playlist_Detail WHERE song_id = {$ID}");
-        $this->runQuery("DELETE FROM History_Vote WHERE song_id = {$ID}");
-        $this->runQuery("DELETE FROM Vote_Song WHERE song_id = {$ID}");
-		$this->runQuery("DELETE FROM Song WHERE id = {$ID}");
+        $this->runQuery("DELETE FROM playlist_detail WHERE song_id = {$ID}");
+        $this->runQuery("DELETE FROM history_vote WHERE song_id = {$ID}");
+        $this->runQuery("DELETE FROM vote_song WHERE song_id = {$ID}");
+		$this->runQuery("DELETE FROM song WHERE id = {$ID}");
 	}
 }
 

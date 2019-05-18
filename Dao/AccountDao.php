@@ -49,7 +49,7 @@ class AccountDao extends DBConnection
 	
 	public function getAccountByUsername($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM Account WHERE username = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM account WHERE username = {$ID}");
 
 		$row = $result->fetch_assoc();
 		return new Account(
@@ -85,7 +85,7 @@ class AccountDao extends DBConnection
 	public function insertAccount($Account)
 	{
 		return $this->runQuery(
-			"INSERT INTO Account(username, password, ranking) 
+			"INSERT INTO account(username, password, ranking) 
 			VALUE (
 				'{$Account->getUsername()}',
 				'{$Account->getPassword()}',
@@ -97,7 +97,7 @@ class AccountDao extends DBConnection
 	public function updateAccount($Account)
 	{
 		return $this->runQuery(
-			"UPDATE Account
+			"UPDATE account
 			SET password = '{$Account->getPassword()}',
 				ranking = '{$Account->getRanking()}'
 			WHERE username = {$Account->getUsername()}"

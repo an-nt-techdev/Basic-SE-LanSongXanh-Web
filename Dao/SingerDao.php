@@ -11,7 +11,7 @@ class SingerDao extends DBConnection
 
 	public function getAllSinger()
 	{
-		$result = $this->runQuery("SELECT *	FROM Singer");
+		$result = $this->runQuery("SELECT *	FROM singer");
 		$SingerList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -43,7 +43,7 @@ class SingerDao extends DBConnection
 	
 	public function getSingerByName($Name)
 	{
-		$result = $this->runQuery("SELECT *	FROM Singer WHERE name = {$Name}");
+		$result = $this->runQuery("SELECT *	FROM singer WHERE name = {$Name}");
 
 		$row = $result->fetch_assoc();
 		return new Singer(
@@ -80,7 +80,7 @@ class SingerDao extends DBConnection
 	public function insertSinger($Singer)
 	{
 		return $this->runQuery(
-			"INSERT INTO Singer(id, name, image, detail) 
+			"INSERT INTO singer(id, name, image, detail) 
 			VALUE (
 				'{$Singer->getId()}',
 				'{$Singer->getName()}',
@@ -93,7 +93,7 @@ class SingerDao extends DBConnection
 	public function updateSinger($Singer)
 	{
 		return $this->runQuery(
-			"UPDATE Singer
+			"UPDATE singer
 			SET name = '{$Singer->getName()}',
                 image = '{$Singer->getImage()}',
                 detail = '{$Singer->getDetail()}'

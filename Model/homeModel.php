@@ -28,7 +28,7 @@
                 $s = $this->songService->getSongById($listTop5[$i]->getSong_id());
                 $singer = $this->artistService->getSingerById($s->getSinger_id());
 
-                $rm = new RankingModel($listTop5[$i]->getTop(), $s->getNameSong(), $singer->getName(), $vs->getPoint());
+                $rm = new RankingModel($listTop5[$i]->getTop(), $s->getId(), $s->getNameSong(), $singer->getId(), $singer->getName(), $vs->getPoint());
                 array_push($result, $rm);
             }
 

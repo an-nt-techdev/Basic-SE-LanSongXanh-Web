@@ -12,7 +12,7 @@
         $backHome = false;
         $kind = 'singer';
 
-        $data;// = $infor->getSinger($_GET['singer']); 
+        $data = $infor->getSingerById($_GET['singer']); 
         //if (is_null($data->getUserName_id())) goto backHome;
         
         require_once SITE_ROOT.'/View/infor.php';
@@ -23,7 +23,7 @@
         $backHome = false;
         $kind = 'composer';
 
-        $data = $infor->getComposer($_GET['composer']); 
+        $data = $infor->getComposerById($_GET['composer']); 
         //if (is_null($data->getUserName_id())) goto backHome;
         echo 'ok';
         require_once SITE_ROOT.'/View/infor.php';

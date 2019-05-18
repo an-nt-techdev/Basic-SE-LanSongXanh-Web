@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2019 at 03:53 PM
+-- Generation Time: May 18, 2019 at 04:05 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -30,17 +30,17 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `account`;
 CREATE TABLE IF NOT EXISTS `account` (
-  `Username` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Password` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Ranking` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Username`)
+  `username` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `ranking` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`Username`, `Password`, `Ranking`) VALUES
+INSERT INTO `account` (`username`, `password`, `ranking`) VALUES
 ('admin', 'admin', 'ADMIN'),
 ('dvip1999', 'thienan99', 'Diamond');
 
@@ -52,20 +52,20 @@ INSERT INTO `account` (`Username`, `Password`, `Ranking`) VALUES
 
 DROP TABLE IF EXISTS `account_detail`;
 CREATE TABLE IF NOT EXISTS `account_detail` (
-  `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Birthday` date NOT NULL,
-  `Sex` tinyint(1) NOT NULL,
-  `Email` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Username_Id`),
-  UNIQUE KEY `Email` (`Email`)
+  `username_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `birthday` date NOT NULL,
+  `sex` tinyint(1) NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`username_id`),
+  UNIQUE KEY `Email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `account_detail`
 --
 
-INSERT INTO `account_detail` (`Username_Id`, `Name`, `Birthday`, `Sex`, `Email`) VALUES
+INSERT INTO `account_detail` (`username_id`, `name`, `birthday`, `sex`, `email`) VALUES
 ('admin', 'Quản trị viên', '2019-05-15', 0, 'adminLSX@gmail.com'),
 ('dvip1999', 'Nguyễn Thiên Ân', '1999-05-01', 0, 'ndsg1964@gmail.com');
 
@@ -77,18 +77,18 @@ INSERT INTO `account_detail` (`Username_Id`, `Name`, `Birthday`, `Sex`, `Email`)
 
 DROP TABLE IF EXISTS `composer`;
 CREATE TABLE IF NOT EXISTS `composer` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Detail` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `detail` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `composer`
 --
 
-INSERT INTO `composer` (`Id`, `Name`, `Image`, `Detail`) VALUES
+INSERT INTO `composer` (`id`, `name`, `image`, `detail`) VALUES
 (1, 'Bảo Chấn', '/View/images/Composer/BaoChan.jpg', 'Một trong số những nhạc sĩ nổi tiếng nhất thời kì hoàng kim của Làn Sóng Xanh'),
 (2, 'Bảo Phúc', '/View/images/Composer/BaoPhuc.jpg', 'Anh em cũng cha khác ông nội của nhạc sĩ Bảo Chấn'),
 (3, 'Đức Trí', '/View/images/Composer/DucTri.jpg', 'Nhạc sĩ, nhà sản xuất nhạc tài năng của Việt Nam, hiện nay vẫn đang giảng dạy tại Nhạc Viện TPHCM'),
@@ -109,18 +109,18 @@ INSERT INTO `composer` (`Id`, `Name`, `Image`, `Detail`) VALUES
 
 DROP TABLE IF EXISTS `history_vote`;
 CREATE TABLE IF NOT EXISTS `history_vote` (
-  `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Song_Id` int(11) NOT NULL,
-  `Stars` int(11) NOT NULL,
-  PRIMARY KEY (`Username_Id`,`Song_Id`),
-  KEY `Song_Id` (`Song_Id`)
+  `username_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `song_id` int(11) NOT NULL,
+  `stars` int(11) NOT NULL,
+  PRIMARY KEY (`username_id`,`song_id`),
+  KEY `Song_Id` (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `history_vote`
 --
 
-INSERT INTO `history_vote` (`Username_Id`, `Song_Id`, `Stars`) VALUES
+INSERT INTO `history_vote` (`username_id`, `song_id`, `stars`) VALUES
 ('dvip1999', 6, 5),
 ('dvip1999', 20, 5);
 
@@ -132,11 +132,11 @@ INSERT INTO `history_vote` (`Username_Id`, `Song_Id`, `Stars`) VALUES
 
 DROP TABLE IF EXISTS `playlist`;
 CREATE TABLE IF NOT EXISTS `playlist` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Username_Id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Id`),
-  KEY `Username_Id` (`Username_Id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `username_id` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `Username_Id` (`username_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -147,10 +147,10 @@ CREATE TABLE IF NOT EXISTS `playlist` (
 
 DROP TABLE IF EXISTS `playlist_detail`;
 CREATE TABLE IF NOT EXISTS `playlist_detail` (
-  `Playlist_Id` int(11) NOT NULL,
-  `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Playlist_Id`,`Song_Id`),
-  KEY `Song_Id` (`Song_Id`)
+  `playlist_id` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL,
+  PRIMARY KEY (`playlist_id`,`song_id`),
+  KEY `Song_Id` (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
@@ -161,18 +161,18 @@ CREATE TABLE IF NOT EXISTS `playlist_detail` (
 
 DROP TABLE IF EXISTS `singer`;
 CREATE TABLE IF NOT EXISTS `singer` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Detail` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  PRIMARY KEY (`Id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `detail` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `singer`
 --
 
-INSERT INTO `singer` (`Id`, `Name`, `Image`, `Detail`) VALUES
+INSERT INTO `singer` (`id`, `name`, `image`, `detail`) VALUES
 (1, 'Đan Trường', '/View/images/Singer/DanTruong.jpg', 'Thần tượng lớn nhất của tao đấy !!'),
 (2, 'Lam Trường', '/View/images/Singer/LamTruong.jpg', 'Một trong số những nam ca sĩ nổi nhất thời kì đầu của Làn Sóng Xanh'),
 (3, 'Cẩm Ly', '/View/images/Singer/CamLy.jpg', 'Nữ ca sĩ song ca hay nhất với Đan Trường'),
@@ -190,21 +190,21 @@ INSERT INTO `singer` (`Id`, `Name`, `Image`, `Detail`) VALUES
 
 DROP TABLE IF EXISTS `song`;
 CREATE TABLE IF NOT EXISTS `song` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `NameSong` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Composer_Id` int(11) NOT NULL,
-  `Singer_Id` int(11) NOT NULL,
-  `Link` varchar(50) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
-  PRIMARY KEY (`Id`),
-  KEY `Singer_Id` (`Singer_Id`),
-  KEY `Composer_Id` (`Composer_Id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `namesong` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `composer_id` int(11) NOT NULL,
+  `singer_id` int(11) NOT NULL,
+  `link` varchar(50) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `Singer_Id` (`singer_id`),
+  KEY `Composer_Id` (`composer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `song`
 --
 
-INSERT INTO `song` (`Id`, `NameSong`, `Composer_Id`, `Singer_Id`, `Link`) VALUES
+INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
 (3, 'Cho tình mãi xa', 10, 1, '2Ii_NpKal8U'),
 (4, 'Bóng dáng thiên thần', 6, 1, 'UhG6aIo-QgM'),
 (5, 'Bóng Biển', 8, 1, '-B1pQT9upic'),
@@ -233,17 +233,17 @@ INSERT INTO `song` (`Id`, `NameSong`, `Composer_Id`, `Singer_Id`, `Link`) VALUES
 
 DROP TABLE IF EXISTS `top_month`;
 CREATE TABLE IF NOT EXISTS `top_month` (
-  `Top` int(11) NOT NULL,
-  `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Top`,`Song_Id`),
-  KEY `Song_Id` (`Song_Id`)
+  `top` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL,
+  PRIMARY KEY (`top`,`song_id`),
+  KEY `Song_Id` (`song_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `top_month`
 --
 
-INSERT INTO `top_month` (`Top`, `Song_Id`) VALUES
+INSERT INTO `top_month` (`top`, `song_id`) VALUES
 (1, 11),
 (2, 12),
 (3, 3),
@@ -263,17 +263,17 @@ INSERT INTO `top_month` (`Top`, `Song_Id`) VALUES
 
 DROP TABLE IF EXISTS `top_week`;
 CREATE TABLE IF NOT EXISTS `top_week` (
-  `Top` int(11) NOT NULL,
-  `Song_Id` int(11) NOT NULL,
-  PRIMARY KEY (`Top`,`Song_Id`),
-  KEY `Song_Id` (`Song_Id`)
+  `top` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL,
+  PRIMARY KEY (`top`,`song_id`),
+  KEY `Song_Id` (`song_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `top_week`
 --
 
-INSERT INTO `top_week` (`Top`, `Song_Id`) VALUES
+INSERT INTO `top_week` (`top`, `song_id`) VALUES
 (1, 11),
 (2, 12),
 (3, 3),
@@ -293,17 +293,17 @@ INSERT INTO `top_week` (`Top`, `Song_Id`) VALUES
 
 DROP TABLE IF EXISTS `vote_song`;
 CREATE TABLE IF NOT EXISTS `vote_song` (
-  `Song_Id` int(11) NOT NULL,
-  `Stars` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL,
+  `stars` int(11) NOT NULL,
   `point` float NOT NULL,
-  PRIMARY KEY (`Song_Id`)
+  PRIMARY KEY (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `vote_song`
 --
 
-INSERT INTO `vote_song` (`Song_Id`, `Stars`, `point`) VALUES
+INSERT INTO `vote_song` (`song_id`, `stars`, `point`) VALUES
 (3, 5, 5),
 (4, 5, 5),
 (5, 4, 4.5),
@@ -323,40 +323,40 @@ INSERT INTO `vote_song` (`Song_Id`, `Stars`, `point`) VALUES
 -- Constraints for table `account_detail`
 --
 ALTER TABLE `account_detail`
-  ADD CONSTRAINT `Account_Detail_ibfk_1` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
+  ADD CONSTRAINT `Account_Detail_ibfk_1` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
 -- Constraints for table `history_vote`
 --
 ALTER TABLE `history_vote`
-  ADD CONSTRAINT `history_vote_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`),
-  ADD CONSTRAINT `history_vote_ibfk_2` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
+  ADD CONSTRAINT `history_vote_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`),
+  ADD CONSTRAINT `history_vote_ibfk_2` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
 -- Constraints for table `playlist`
 --
 ALTER TABLE `playlist`
-  ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`Username_Id`) REFERENCES `account` (`Username`);
+  ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
 -- Constraints for table `playlist_detail`
 --
 ALTER TABLE `playlist_detail`
-  ADD CONSTRAINT `playlist_detail_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`),
-  ADD CONSTRAINT `playlist_detail_ibfk_2` FOREIGN KEY (`Playlist_Id`) REFERENCES `playlist` (`Id`);
+  ADD CONSTRAINT `playlist_detail_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`),
+  ADD CONSTRAINT `playlist_detail_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`id`);
 
 --
 -- Constraints for table `song`
 --
 ALTER TABLE `song`
-  ADD CONSTRAINT `song_ibfk_1` FOREIGN KEY (`Singer_Id`) REFERENCES `singer` (`Id`),
-  ADD CONSTRAINT `song_ibfk_2` FOREIGN KEY (`Composer_Id`) REFERENCES `composer` (`Id`);
+  ADD CONSTRAINT `song_ibfk_1` FOREIGN KEY (`singer_id`) REFERENCES `singer` (`id`),
+  ADD CONSTRAINT `song_ibfk_2` FOREIGN KEY (`composer_id`) REFERENCES `composer` (`id`);
 
 --
 -- Constraints for table `vote_song`
 --
 ALTER TABLE `vote_song`
-  ADD CONSTRAINT `vote_song_ibfk_1` FOREIGN KEY (`Song_Id`) REFERENCES `song` (`Id`);
+  ADD CONSTRAINT `vote_song_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

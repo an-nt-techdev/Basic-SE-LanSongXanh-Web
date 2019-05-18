@@ -91,7 +91,7 @@ class TopWeekDao extends DBConnection
 	public function updateTopWeek($TopWeek)
 	{
 		return $this->runQuery(
-			"UPDATE TopWeek
+			"UPDATE top_week
 			SET song_id = '{$TopWeek->getSong_id()}'
 			WHERE top = {$TopWeek->getTop()}"
 		);

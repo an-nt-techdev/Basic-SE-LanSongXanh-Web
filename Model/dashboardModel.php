@@ -48,10 +48,12 @@ class DashboardModel {
     {
         return $this->artist->getAllSinger();
     }
+    
     public function getSingerById($id)
     {
         return $this->artist->getSingerById($id);
     }
+    
     public function addSinger($singer)
     {
         $this->artist->addSinger($singer);
@@ -64,10 +66,22 @@ class DashboardModel {
     {
         return $this->artist->getAllComposer();
     }
+    
     public function getComposerById($id)
     {
         return $this->artist->getComposerById($id);
     }
+    
+    public function addComposer($composer)
+    {
+        $this->artist->addComposer($composer);
+    }
+
+    //
+    // Account
+    //
+
+
 }
 
 ?>

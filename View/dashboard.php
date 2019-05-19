@@ -37,8 +37,7 @@
         </div>
 
 		<div class="container-fluid">
-<?php 
-    if ($kind == 'account') {?>
+<?php /* Account */ if ($kind == 'account') {?>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="bg-white border rounded p-3 m-3">
@@ -56,28 +55,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+    <?php foreach ($listAccount as $account) { ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Andree</td>
-                                    <td>Andree right hand</td>
-                                    <td>xx/yy/zzzz</td>
-                                    <td>Male</td>
-                                    <td>Andree@gmail.com</td>
+                                    <th scope="row"><?php echo $account; ?></th>
+                                    <td><?php echo $account; ?></td>
+                                    <td><?php echo $account; ?></td>
+                                    <td><?php echo $account; ?></td>
+                                    <td><?php echo $account; ?></td>
+                                    <td><?php echo $account; ?></td>
                                     <td>
                                         <button class="btn btn-warning">Chỉnh sửa</button>
                                         <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
+    <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <!-- User -->
-<?php 
-}   // User
-elseif ($kind == 'singer') {
-?>
+            <!-- Account -->
+<?php } /* Singer */ elseif ($kind == 'singer') { ?>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="bg-white border rounded p-3 mt-3">
@@ -130,27 +128,24 @@ elseif ($kind == 'singer') {
                 </div>
             </div>
             <!-- Singer -->
-<?php 
-}   // Singer
-elseif ($kind == 'composer') {
-?>
+<?php } /* Composer */ elseif ($kind == 'composer') { ?>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="bg-white border rounded p-3 mt-3">
-                        <h3></h3>
+                        <h3>Thêm nhạc sĩ</h3>
                         <hr>
-                        <form>
+                        <form action="?page=ad&k=singer" method="post">
                             <div class="form-group">
                                 <label>Tên nhạc sĩ</label>
-                                <input class="form-control" type="" name="" >
+                                <input class="form-control" type="text" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label>Ảnh</label>
-                                <input class="form-control" type="" name="" >
+                                <input class="form-control" type="text" name="linkImage">
                             </div>
                             <div class="form-group">
-                                <label>Thông tin</label>
-                                <input class="form-control" type="" name="" >
+                                <label>Thông tin:</label>
+                                <textarea class="form-control" name="detail"></textarea>
                             </div>
                             <button class="btn btn-primary" type="submit">Thêm</button>
                         </form>
@@ -170,26 +165,24 @@ elseif ($kind == 'composer') {
                                 </tr>
                             </thead>
                             <tbody>
+    <?php foreach ($listComposer as $composer) { ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Andree</td>
-                                    <td>abcxiz.jpg</td>
+                                    <th scope="row"><?php echo $composer->getId(); ?></th>
+                                    <td><?php echo $composer->getName(); ?></td>
+                                    <td><?php echo $composer->getImage(); ?></td>
                                     <td>
-                                        <button class="btn btn-success">Chi tiết</button>
                                         <button class="btn btn-warning">Chỉnh sửa</button>
                                         <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
+    <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
             <!-- Composer -->
-<?php 
-}   // Composer
-else {
-?>
+<?php } /* Song */ else { ?>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="bg-white border rounded p-3 mt-3">
@@ -264,7 +257,7 @@ else {
                 </div>
             </div>
             <!-- Song -->
-<?php } // Song ?>
+<?php } ?>
 		</div>
 
         <div class="container-fluid mt-3">

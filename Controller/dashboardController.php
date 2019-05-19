@@ -16,7 +16,7 @@ if (isset($_GET['k'])) {
 
         if (isset($_POST['name']))
         {
-            echo var_dump(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            //echo var_dump(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
             $dashboard->addSinger(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
         elseif (1)
@@ -30,7 +30,15 @@ if (isset($_GET['k'])) {
     //
     elseif ($kind == 'composer') {
 
+        if (isset($_POST['name'])) {
+            //echo var_dump(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->addComposer(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+        }
+        elseif (1) {
+
+        }   
     }
+
     //
     // Dashboard Account
     //
@@ -43,8 +51,7 @@ if (isset($_GET['k'])) {
 //
 // Dashboard Song
 //
-else
-{
+else {
     adSong:
     $kind = 'song';
 
@@ -60,10 +67,13 @@ else
     }
 }
 
-// Data
+//
+// Get All Data
+//
 $listSong = $dashboard->getAllSong();
 $listSinger = $dashboard->getAllSinger();
 $listComposer = $dashboard->getAllComposer();
+$listAccount;
 
 //$tmp = (int)($listSong[0]->getSinger_id());
 //echo $dashboard->getSingerById($tmp);

@@ -17,102 +17,32 @@
 				<div class="col-xl-10 col-lg-9">
 					<div class="row">
 						<section class="col-xl-9 py-3">					
-							<p class="search-title">Từ khóa: ...</p>
+							<p class="search-title">Từ khóa: <?php echo $search; ?></p>
 							<article class="bg-white border rounded p-3 result-search">
-									<p class="result-search-status">Có .. kết quả.</p>
+									<p class="result-search-status">Có <?php echo count($rs); ?> kết quả.</p>
 									<hr>
 									<ul class="result-search-list">
+									<?php for($i = 0; $i < count($rs); $i++) { ?>
 										<li class="result-search-item row">
-											<a class="col-sm-3" href="watch.html?v=chelinh-nhaclinh"><img src="images/10namtinhcu-chelinh.jpg" class="result-search-image"></a>
+											<a class="col-sm-3" href="?v=<?php echo $rs[$i]->getId(); ?>"><img src="<?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getImage(); ?>" class="result-search-image"></a>
 											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="watch.html?v=chelinh-nhaclinh">
-													<p class="text-ellipsis">Chế Linh - Nhạc Lính</p>
+												<a class="result-search-link" href="?v=<?php echo $rs[$i]->getId(); ?>">
+													<p class="text-ellipsis"><?php echo $rs[$i]->getNameSong(); ?> - <?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
 													<p class="mb-0">
-														3.7 <i class="fas fa-star"></i>
+														<?php $tmp=$searchService->getVoteSongById($rs[$i]->getId()); echo $tmp->getPoint(); ?> <i class="fas fa-star"></i>
 													</p>
 													<p class="mb-0 text-ellipsis">
-														Chế Linh: ...
+														<?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getDetail(); ?>
 													</p>
-													<p class="composer text-ellipsis">
-														Chế Linh: ...
-													</p>
-												</div>
-											</div>
-										</li>
-										
-										<li class="result-search-item row">
-											<a class="col-sm-3" href="watch.html?v=chelinh-nhaclinh"><img src="images/10namtinhcu-chelinh.jpg" class="result-search-image"></a>
-											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="watch.html?v=chelinh-nhaclinh">Chế Linh - Nhạc Lính</a>
-												<div class="result-search-intro">
-													<p class="mb-0">
-														3.7 <i class="fas fa-star"></i>
-													</p>
-													<p class="mb-0">
-														Chế Linh: ...
-													</p>
-													<p class="composer">
+													<p class="composer text-ellipsis" style="display:none;">
 														Chế Linh: ...
 													</p>
 												</div>
 											</div>
 										</li>
-										
-										<li class="result-search-item row">
-											<a class="col-sm-3" href="watch.html?v=chelinh-nhaclinh"><img src="images/10namtinhcu-chelinh.jpg" class="result-search-image"></a>
-											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="watch.html?v=chelinh-nhaclinh">Chế Linh - Nhạc Lính</a>
-												<div class="result-search-intro">
-													<p class="mb-0">
-														3.7 <i class="fas fa-star"></i>
-													</p>
-													<p class="mb-0">
-														Chế Linh: ...
-													</p>
-													<p class="composer">
-														Chế Linh: ...
-													</p>
-												</div>
-											</div>
-										</li>
-										
-										<li class="result-search-item row">
-											<a class="col-sm-3" href="watch.html?v=chelinh-nhaclinh"><img src="images/10namtinhcu-chelinh.jpg" class="result-search-image"></a>
-											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="watch.html?v=chelinh-nhaclinh">Chế Linh - Nhạc Lính</a>
-												<div class="result-search-intro">
-													<p class="mb-0">
-														3.7 <i class="fas fa-star"></i>
-													</p>
-													<p class="mb-0">
-														Chế Linh: ...
-													</p>
-													<p class="composer">
-														Chế Linh: ...
-													</p>
-												</div>
-											</div>
-										</li>
-										
-										<li class="result-search-item row">
-											<a class="col-sm-3" href="watch.html?v=chelinh-nhaclinh"><img src="images/10namtinhcu-chelinh.jpg" class="result-search-image"></a>
-											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="watch.html?v=chelinh-nhaclinh">Chế Linh - Nhạc Lính</a>
-												<div class="result-search-intro">
-													<p class="mb-0">
-														3.7 <i class="fas fa-star"></i>
-													</p>
-													<p class="mb-0">
-														Chế Linh: ...
-													</p>
-													<p class="composer">
-														Chế Linh: ...
-													</p>
-												</div>
-											</div>
-										</li>
+									<?php } ?>
 									</ul>
 							</article>
 							

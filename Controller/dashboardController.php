@@ -16,8 +16,13 @@ if (isset($_GET['k'])) {
 
         if (isset($_POST['name']))
         {
+<<<<<<< Updated upstream
             //echo var_dump(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
             $dashboard->addSinger(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+=======
+            echo var_dump(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->addSinger(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
+>>>>>>> Stashed changes
         }
         elseif (1)
         {
@@ -28,7 +33,7 @@ if (isset($_GET['k'])) {
     //
     // Dashboard Composer
     //
-    elseif ($kind == 'composer') {
+    else if ($kind == 'composer') {
 
         if (isset($_POST['name'])) {
             //echo var_dump(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));

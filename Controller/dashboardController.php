@@ -55,7 +55,7 @@ else
         $dashboard->addSong(new Song(1, $_POST['name'], $_POST['singer'], $_POST['composer'], $_POST['link']));
     }
 }
-echo $dashboard->getSingerById($listSong[0]->getSinger_id());
+echo $dashboard->getSingerById($listSong[0]->getId());
 //getComposer_id()
 require_once SITE_ROOT.'/View/dashboard.php';
 ?>

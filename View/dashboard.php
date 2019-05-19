@@ -17,16 +17,16 @@
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item <?php if ($kind == 'song') echo 'active';?>">
-                                    <a class="nav-link" href="?page=ad"><h5 class="m-0">Song</h5></a>
+                                    <a class="nav-link" href="?page=ad"><h5 class="m-0">Bài hát</h5></a>
                                 </li>
                                 <li class="nav-item <?php if ($kind == 'singer') echo 'active';?>">
-                                    <a class="nav-link" href="?page=ad&k=singer"><h5 class="m-0">Singer</h5></a>
+                                    <a class="nav-link" href="?page=ad&k=singer"><h5 class="m-0">Ca sĩ</h5></a>
                                 </li>
                                 <li class="nav-item <?php if ($kind == 'composer') echo 'active';?>">
-                                    <a class="nav-link" href="?page=ad&k=composer"><h5 class="m-0">Composer</h5></a>
+                                    <a class="nav-link" href="?page=ad&k=composer"><h5 class="m-0">Nhạc sĩ</h5></a>
                                 </li>
                                 <li class="nav-item <?php if ($kind == 'account') echo 'active';?>">
-                                    <a class="nav-link" href="?page=ad&k=account"><h5 class="m-0">Account</h5></a>
+                                    <a class="nav-link" href="?page=ad&k=account"><h5 class="m-0">Tài khoản</h5></a>
                                 </li>
                             </ul>
                         </div>
@@ -229,19 +229,23 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Tên</th>
+                                    <th scope="col">Tên bài hát</th>
                                     <th scope="col">Ca sĩ</th>
                                     <th scope="col">Nhạc sĩ</th>
                                     <th scope="col">Chỉnh sửa</th>
                                 </tr>
                             </thead>
                             <tbody>
-    <?php foreach ($listSong as $song) { ?>
+    <?php 
+        require_once SITE_ROOT."/Services/ArtistService.php";
+        $ser = new ArtistService();
+        foreach ($listSong as $song) { 
+    ?>
                                 <tr>
-                                    <th scope="row"><?php echo $song->getId(); ?></th>
+                                    <th><?php echo $song->getId(); ?></th>
                                     <td><?php echo $song->getNameSong(); ?></td>
-                                    <td><?php echo $song->getSinger_id(); ?></td>
-                                    <td><?php echo $song->getComposer_id(); ?></td>
+                                    <td><?php $tmp = $ser->getSingerById($song->getSinger_id()); echo $tmp->getName(); ?></td>
+                                    <td><?php $tmp = $ser->getComposerById($song->getComposer_id()); echo $tmp->getName(); ?></td>
                                     <td>
                                         <!--<button class="btn btn-warning">Chỉnh sửa</button>-->
                                         <a class="btn btn-danger" 

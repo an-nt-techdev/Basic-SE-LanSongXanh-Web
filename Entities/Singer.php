@@ -6,9 +6,9 @@
         private $image;
         private $detail;
 
-		public function __construct($Name, $Image, $Detail)
+		public function __construct($Id, $Name, $Image, $Detail)
 		{
-			//$this->id = $Id;
+			$this->id = $Id;
 			$this->name = $Name;
             $this->image = $Image;
             $this->detail = $Detail;

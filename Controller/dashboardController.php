@@ -16,13 +16,8 @@ if (isset($_GET['k'])) {
 
         if (isset($_POST['name']))
         {
-<<<<<<< Updated upstream
-            //echo var_dump(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
-            $dashboard->addSinger(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
-=======
-            echo var_dump(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
-            $dashboard->addSinger(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
->>>>>>> Stashed changes
+            //echo var_dump(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->addSinger(new Singer(0, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
         elseif (1)
         {
@@ -37,7 +32,7 @@ if (isset($_GET['k'])) {
 
         if (isset($_POST['name'])) {
             //echo var_dump(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
-            $dashboard->addComposer(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->addComposer(new Composer(0, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
         elseif (1) {
 
@@ -63,7 +58,7 @@ else {
     // Insert song
     if (isset($_POST['name']))
     {
-        $dashboard->addSong(new Song(1, $_POST['name'], $_POST['singer'], $_POST['composer'], $_POST['link']));
+        $dashboard->addSong(new Song(0, $_POST['name'], $_POST['composer'], $_POST['singer'], $_POST['link']));
     }
     // Remove song
     elseif (isset($_GET['removeId']))

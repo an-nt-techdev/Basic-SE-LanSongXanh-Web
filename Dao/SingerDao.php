@@ -80,9 +80,9 @@ class SingerDao extends DBConnection
 	public function insertSinger($Singer)
 	{
 		return $this->runQuery(
-			"INSERT INTO singer(name, image, detail) 
+			"INSERT INTO singer(id, name, image, detail) 
 			VALUE (
-				-- '{$Singer->getId()}',
+				'{$Singer->getId()}',
 				'{$Singer->getName()}',
 				'{$Singer->getImage()}',
                 '{$Singer->getDetail()}'

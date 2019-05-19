@@ -8,7 +8,7 @@
 		
 		<?php
 			//echo var_dump($data->getUserName_id());
-			echo $kind;
+			//echo $kind;
 		?>
 
 		<div class="container-fluid">
@@ -69,15 +69,75 @@ else {?>
 							</article>
 							<!-- Show Information -->
 
-<?php if ($kind != 'user') {?>
+<?php if ($kind != 'user' && $kind == 'singer') {?>
 							<article class="bg-white border rounded p-3 mt-3">
-								<h3>Bài hát</h3>
-								<hr>
-								
+								<h3>Những bài hát của <?php echo $data->getName(); ?>:</h3>
+								<section class="col-xl-13 py-3">
+									<article class="bg-white border rounded p-3">
+										<!-- <h3 class="text-center">Top trong tuần</h3> -->
+										
+										<table class="table table-hover table-striped rank">
+											<thead>
+												<th scope="col"><h3>Tên bài hát</h3></th>
+												<th scope="col"><h3>Điểm</h3></th>
+											</thead>
+											<tbody>
+											<?php 
+												require_once SITE_ROOT.'/Model/WatchModel.php';
+												require_once SITE_ROOT.'/Services/SongService.php';
+												$ser = new SongService();
+												$model = new WatchModel();
+												$l = $ser->getSongBySingerId($data->getId());
+												foreach ($l as $s) {
+													$song = $model->getSongDetail($s->getId());
+												?>
+												<tr>
+													<th><p class="name-song"><a href="?v=<?php echo $song->getSong_id(); ?>"><?php echo $song->getNameSong(); ?></a></p></th>
+													<td class="score"><?php echo number_format($song->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+												</tr>
+												<?php } ?>
+											</tbody>
+										</table>
+									</article>
+								</section>
+							</article>
+							<!-- End Introduction music -->
+<?php } 
+	else if ($kind == 'composer') {
+?>
+							<article class="bg-white border rounded p-3 mt-3">
+								<h3>Những bài hát của <?php echo $data->getName(); ?>:</h3>
+								<section class="col-xl-13 py-3">
+									<article class="bg-white border rounded p-3">
+										<!-- <h3 class="text-center">Top trong tuần</h3> -->
+										
+										<table class="table table-hover table-striped rank">
+											<thead>
+												<th scope="col"><h3>Tên bài hát</h3></th>
+												<th scope="col"><h3>Điểm</h3></th>
+											</thead>
+											<tbody>
+											<?php 
+												require_once SITE_ROOT.'/Model/WatchModel.php';
+												require_once SITE_ROOT.'/Services/SongService.php';
+												$ser = new SongService();
+												$model = new WatchModel();
+												$l = $ser->getSongByComposerId($data->getId());
+												foreach ($l as $s) {
+													$song = $model->getSongDetail1($s->getId());
+												?>
+												<tr>
+													<th><p class="name-song"><a href="?v=<?php echo $song->getSong_id(); ?>"><?php echo $song->getNameSong(); ?></a></p></th>
+													<td class="score"><?php echo number_format($song->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+												</tr>
+												<?php } ?>
+											</tbody>
+										</table>
+									</article>
+								</section>
 							</article>
 							<!-- End Introduction music -->
 <?php } ?>
-
 <?php if ($kind == 'user') {?>
 							<article class="bg-white border rounded p-3 mt-3">
 								<h3>Cập nhật thông tin</h3>

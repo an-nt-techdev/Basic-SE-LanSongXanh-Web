@@ -25,7 +25,7 @@
 
         $data = $infor->getComposerById($_GET['composer']); 
         //if (is_null($data->getUserName_id())) goto backHome;
-        echo 'ok';
+        //echo 'ok';
         require_once SITE_ROOT.'/View/infor.php';
     }
     // if user
@@ -43,7 +43,7 @@
     if ($backHome)
     {
         backHome:
-        header("Location: http://localhost/LanXongXanh/");
+        //header("Location: http://localhost/LanXongXanh/");
     }
             
 ?>

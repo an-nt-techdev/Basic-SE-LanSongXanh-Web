@@ -28,6 +28,16 @@
             return $sdm;
         }
 
+        public function getSongDetail1($id)
+        {
+            $s = $this->songService->getSongById($id);
+            $composer = $this->artistService->getComposerById($s->getComposer_id());
+            $vs = $this->voteService->getVoteSongById($id);
+            $sdm = new SongDetailModel($s->getId(), $s->getNameSong(), $s->getLink(), $composer->getId(), $composer->getName(), $composer->getDetail(), $composer->getImage(), $vs->getPoint());
+
+            return $sdm;
+        }
+
         public function getSong()
         {
             $result = array();

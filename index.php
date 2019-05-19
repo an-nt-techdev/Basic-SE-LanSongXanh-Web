@@ -37,6 +37,14 @@ else
 					require_once SITE_ROOT."/Controller/contactController.php";
 					break;
 
+				case 'singer': 
+					require_once SITE_ROOT."/Controller/artistController.php";
+					break;
+
+				case 'composer': 
+					require_once SITE_ROOT."/Controller/artistController.php";
+					break;
+
 				default:
 					goto loadHome;
 			}

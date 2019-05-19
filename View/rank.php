@@ -62,7 +62,7 @@
 										require_once SITE_ROOT.'/Model/homeModel.php'; 
 										$model = new homeModel();
 										$l = $model->getTop10();
-										for ($i = 0; $i <= 9; $i++) {
+										for ($i = 10; $i <= 19; $i++) {
 										?>
 										<tr>
 											<th scope="row"><?php echo $l[$i]->getTop(); ?></th>

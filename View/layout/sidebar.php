@@ -8,10 +8,10 @@
                 <a class="nav-link" href="?page=rank"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?person=1212"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
+                <a class="nav-link" href="?page=singer"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?person=1212"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
+                <a class="nav-link" href="?page=composer"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
             </li>
 <!--
             <li class="nav-item py-1">

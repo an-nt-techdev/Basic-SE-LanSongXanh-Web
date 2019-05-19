@@ -48,13 +48,22 @@ class DashboardModel {
     {
         return $this->artist->getAllSinger();
     }
-
+    public function getSingerById($id)
+    {
+        return $this->artist->getSingerById($id);
+    }
 
     //
     // Composer
     //
-
-
+    public function getAllComposer()
+    {
+        return $this->artist->getAllComposer();
+    }
+    public function getComposerById($id)
+    {
+        return $this->artist->getComposerById($id);
+    }
 }
 
 ?>

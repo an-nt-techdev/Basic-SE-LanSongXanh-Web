@@ -4,7 +4,11 @@ require_once SITE_ROOT."/Model/dashboardModel.php";
 
 $dashboard = new DashboardModel();
 $kind;
-$data;
+
+// Data
+$listSong = $dashboard->getAllSong();
+$listSinger = $dashboard->getAllSinger();
+$listComposer = $dashboard->getAllComposer();
 
 if (isset($_GET['k'])) {
 
@@ -43,16 +47,15 @@ if (isset($_GET['k'])) {
 else
 {
     adSong:
-    
     $kind = 'song';
+
     // Insert song
     if (isset($_POST['name']))
     {
         $dashboard->addSong(new Song(1, $_POST['name'], $_POST['singer'], $_POST['composer'], $_POST['link']));
     }
-
-    $data = $dashboard->getAllSong();
 }
-
+echo $dashboard->getSingerById($listSong[0]->getSinger_id());
+//getComposer_id()
 require_once SITE_ROOT.'/View/dashboard.php';
 ?>

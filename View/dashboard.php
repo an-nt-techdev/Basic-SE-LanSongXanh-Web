@@ -38,7 +38,6 @@
 
 		<div class="container-fluid">
 <?php 
-    //echo var_dump($data[0]);
     if ($kind == 'account') {?>
             <div class="row">
                 <div class="col-lg-12">
@@ -204,13 +203,21 @@ else {
                             <div class="form-group" >
                                 <label>Ca sĩ</label>
                                 <select class="form-control" name="singer">
-                                    <option value="1">Andree</option>
+    <?php foreach ($listSinger as $singer) { ?>
+                                    <option value="<?php echo $singer->getId()?>">
+                                        <?php echo $singer->getName();?>
+                                    </option>
+    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Nhạc sĩ</label>
                                 <select class="form-control" name="composer">
-                                    <option value="1">Andree</option>
+    <?php foreach ($listComposer as $composer) { ?>
+                                    <option value="<?php echo $composer->getId()?>">
+                                        <?php echo $composer->getName();?>
+                                    </option>
+    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -236,17 +243,22 @@ else {
                                 </tr>
                             </thead>
                             <tbody>
+    <?php foreach ($listSong as $song) { ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Cho anh fuck em lần cuối</td>
-                                    <td>Andree</td>
-                                    <td>Andree</td>
+                                    <th scope="row"><?php echo $song->getId(); ?></th>
+                                    <td><?php echo $song->getNameSong(); ?></td>
+                                    <td><?php echo $song->getSinger_id(); ?></td>
+                                    <td><?php echo $song->getComposer_id(); ?></td>
                                     <td>
                                         <button class="btn btn-success">Chi tiết</button>
                                         <button class="btn btn-warning">Chỉnh sửa</button>
-                                        <button class="btn btn-danger">Xóa</button>   
+                                        <a class="btn btn-danger" 
+                                            href="?page=ad&removeId=<?php echo $song->getId(); ?>">
+                                            Xóa
+                                        </a>
                                     </td>
                                 </tr>
+    <?php } ?>
                             </tbody>
                         </table>
                     </div>

@@ -75,7 +75,7 @@
             </div>
             <!-- User -->
 <?php 
-} 
+}   // User
 elseif ($kind == 'singer') {
 ?>
             <div class="row">
@@ -94,7 +94,7 @@ elseif ($kind == 'singer') {
                             </div>
                             <div class="form-group">
                                 <label>Thông tin:</label>
-                                <textarea class="form-control" name=""></textarea>
+                                <textarea class="form-control" name="detail"></textarea>
                             </div>
                             <button class="btn btn-primary" type="submit">Thêm</button>
                         </form>
@@ -114,16 +114,16 @@ elseif ($kind == 'singer') {
                                 </tr>
                             </thead>
                             <tbody>
+    <?php foreach ($listSinger as $singer) { ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Andree</td>
-                                    <td>abcxyz.jpg</td>
+                                    <th scope="row"><?php echo $singer->getId(); ?></th>
+                                    <td><?php echo $singer->getName(); ?></td>
+                                    <td><?php echo $singer->getImage(); ?></td>
                                     <td>
-                                        <button class="btn btn-success">Chi tiết</button>
                                         <button class="btn btn-warning">Chỉnh sửa</button>
-                                        <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
+    <?php } ?>
                             </tbody>
                         </table>
                     </div>
@@ -131,7 +131,7 @@ elseif ($kind == 'singer') {
             </div>
             <!-- Singer -->
 <?php 
-}
+}   // Singer
 elseif ($kind == 'composer') {
 ?>
             <div class="row">
@@ -187,7 +187,7 @@ elseif ($kind == 'composer') {
             </div>
             <!-- Composer -->
 <?php 
-}
+}   // Composer
 else {
 ?>
             <div class="row">
@@ -250,8 +250,7 @@ else {
                                     <td><?php echo $song->getSinger_id(); ?></td>
                                     <td><?php echo $song->getComposer_id(); ?></td>
                                     <td>
-                                        <button class="btn btn-success">Chi tiết</button>
-                                        <button class="btn btn-warning">Chỉnh sửa</button>
+                                        <!--<button class="btn btn-warning">Chỉnh sửa</button>-->
                                         <a class="btn btn-danger" 
                                             href="?page=ad&removeId=<?php echo $song->getId(); ?>">
                                             Xóa
@@ -265,7 +264,7 @@ else {
                 </div>
             </div>
             <!-- Song -->
-<?php } ?>
+<?php } // Song ?>
 		</div>
 
         <div class="container-fluid mt-3">

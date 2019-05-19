@@ -52,7 +52,7 @@ require_once SITE_ROOT."/Dao/SingerDao.php";
             return $this->singerDao->getSingerById($id);
         }
 
-        public function getSingerByName($nameSinger)
+        public function getSinger($nameSinger)
         {
             return $this->singerDao->getSingerByName($nameSinger);
         }

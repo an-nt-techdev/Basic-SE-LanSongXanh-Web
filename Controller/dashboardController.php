@@ -5,11 +5,6 @@ require_once SITE_ROOT."/Model/dashboardModel.php";
 $dashboard = new DashboardModel();
 $kind;
 
-// Data
-$listSong = $dashboard->getAllSong();
-$listSinger = $dashboard->getAllSinger();
-$listComposer = $dashboard->getAllComposer();
-
 if (isset($_GET['k'])) {
 
     $kind = $_GET['k'];
@@ -21,11 +16,15 @@ if (isset($_GET['k'])) {
 
         if (isset($_POST['name']))
         {
-            
+            echo var_dump(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->addSinger(new Singer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
+        elseif (1)
+        {
 
-        //$data = $dashboard->getAllSinger();
+        }        
     }
+
     //
     // Dashboard Composer
     //
@@ -54,8 +53,21 @@ else
     {
         $dashboard->addSong(new Song(1, $_POST['name'], $_POST['singer'], $_POST['composer'], $_POST['link']));
     }
+    // Remove song
+    elseif (isset($_GET['removeId']))
+    {
+        $dashboard->deleteSong($_GET['removeId']);
+    }
 }
-echo $dashboard->getSingerById($listSong[0]->getSinger_id());
+
+// Data
+$listSong = $dashboard->getAllSong();
+$listSinger = $dashboard->getAllSinger();
+$listComposer = $dashboard->getAllComposer();
+
+//$tmp = (int)($listSong[0]->getSinger_id());
+//echo $dashboard->getSingerById($tmp);
 //getComposer_id()
+
 require_once SITE_ROOT.'/View/dashboard.php';
 ?>

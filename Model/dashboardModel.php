@@ -52,6 +52,10 @@ class DashboardModel {
     {
         return $this->artist->getSingerById($id);
     }
+    public function addSinger($singer)
+    {
+        $this->artist->addSinger($singer);
+    }
 
     //
     // Composer

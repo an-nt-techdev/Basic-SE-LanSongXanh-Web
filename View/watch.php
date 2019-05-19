@@ -6,6 +6,11 @@
 	
 	<body class="bg-light">
 		
+	<?php
+		require_once SITE_ROOT."/Model/WatchModel.php";
+		$model = new WatchModel();
+	?>
+
 		<div class="container-fluid">
 			<?php require_once('layout/header.php'); ?>
 			<!-- End Header -->
@@ -14,16 +19,21 @@
 				<?php require_once('layout/sidebar.php'); ?>
 				<!-- End Siderbar -->
 				
+				<?php 
+					$s = $model->getSongDetail($idSong);
+				?> 
+
 				<div class="col-xl-10 col-lg-9 pt-3">
 					<div class="video-media w-75 m-auto">
-						<iframe class="w-100 h-100"src="https://www.youtube.com/embed/4wEZMFEy3iE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe class="w-100 h-100"src="https://www.youtube.com/embed/<?php echo $s->getLink(); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 					
 					<div class="video-infor mt-4 p-3 border rounded bg-white">
 					
 						<div class="video-header row">
-							<h3 class="col-md-6 video-title">Chế linh - Nhạc lính</h3>
+							<h3 class="col-md-6 video-title"><?php echo $s->getNameSong(); ?> - <?php echo $s->getSinger(); ?></h3>
 							<div class="col-md-6 video-vote">
+								<h4 style="padding-right:60px;">Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
 								<h4>Bình chọn: 
 								<i class="fas fa-star star-1"><span class="sr-only">1</span></i>
 								<i class="fas fa-star star-2"><span class="sr-only">2</span></i>
@@ -37,11 +47,7 @@
 						<hr style="margin-top: 1em;">
 						
 						<p class="video-intro">
-							Chế linh: người nhận được giải ca sĩ xuất sắc với nhiều bản hít đứng trong top 10 thế giới của năm 2017. Đặt biệt
-							bài hát Thành phố buồn được tính là bài hát hay nhất mọi thời đại, bài hát bán chạy nhất năm,. . .<br>
-							Là người đi đầu trong chiến dịch chống phân biệt chủng tộc, chống bạo hành gia đình, kêu gọi quyên góp giúp trẻ em châu phi
-							lớp học từ thiện, hỗ trợ người khuyết tật, người tiên phong chiến dịch giờ trái đất,. . .<br>
-							
+							<?php echo $s->getSingerDetail(); ?><br>
 						</p>
 					</div>					
 					<!-- End Media -->
@@ -51,87 +57,20 @@
 							<h3>Có thể bạn muốn nghe</h3>
 							<hr>
 						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
-						<div class=" col-xl-3 col-lg-4 col-md-6">
-							<a class="card m-2" href="">
-							  <img src="images/TaylorSwift-Red.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-								<h5 class="card-title">Red - Taylor Swift</h5>
-								<p class="card-text">Taylor Swift</p>
-							  </div>
-							</a>
-						</div>
-						
+						<?php 
+							$l = $model->getSong();
+							for ($i = 0; $i <= 7; $i++) {
+						?>
+							<div class=" col-xl-3 col-lg-4 col-md-6">
+								<a class="card m-2" href="?v=<?php echo $l[$i]->getSong_id(); ?>">
+									<img src="<?php echo $l[$i]->getImageSinger(); ?>" class="card-img-top" alt="...">
+									<div class="card-body">
+									<h5 class="card-title"><?php echo $l[$i]->getNameSong(); ?></h5>
+									<p class="card-text"><?php echo $l[$i]->getSinger(); ?></p>
+									</div>
+								</a>
+							</div>
+							<?php } ?>
 					</div>
 					<!-- Next video -->
 					

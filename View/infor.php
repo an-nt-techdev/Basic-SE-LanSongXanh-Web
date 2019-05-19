@@ -28,7 +28,7 @@
 								
 								<div class="row">
 									<div class="col-md-3">
-										<img class="rounded-circle w-100" src="<?php if ($kind != 'user') echo SITE_ROOT.$data->getImage(); else echo 'View/images/male.png'; ?>">
+										<img class="rounded-circle w-100" src="<?php if ($kind != 'user') echo $data->getImage(); else echo 'View/images/male.png'; ?>">
 									</div>
 									<div class="col-md-9 pl-5">
 <?php if ($kind == 'user') {?>

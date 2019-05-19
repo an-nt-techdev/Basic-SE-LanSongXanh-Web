@@ -9,7 +9,7 @@ $homeUrl = $_SERVER['REQUEST_URI'];
 
 // if have GET 'search'
 if (isset($_GET['search'])) {
-	require_once SITE_ROOT."Controller/searchController.php";
+	require_once SITE_ROOT."/Controller/searchController.php";
 }
 else
 	// if have GET 'v'(video)

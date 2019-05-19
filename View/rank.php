@@ -27,86 +27,21 @@
 										<th scope="col">Điểm</th>
 									</thead>
 									<tbody>
+									<?php 
+										require_once SITE_ROOT.'/Model/homeModel.php'; 
+										$model = new homeModel();
+										$l = $model->getTop10();
+										for ($i = 0; $i <= 9; $i++) {
+										?>
 										<tr>
-											<th scope="row">#1</th>
+											<th scope="row"><?php echo $l[$i]->getTop(); ?></th>
 											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
+												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
+												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
+											<td class="score"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
 										</tr>
-										<tr>
-											<th scope="row">#2</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#3</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#4</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#5</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#6</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#7</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#8</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#9</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#10</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
+										<?php } ?>
 									</tbody>
 								</table>
 							</article>
@@ -123,86 +58,21 @@
 										<th scope="col">Điểm</th>
 									</thead>
 									<tbody>
+									<?php 
+										require_once SITE_ROOT.'/Model/homeModel.php'; 
+										$model = new homeModel();
+										$l = $model->getTop10();
+										for ($i = 0; $i <= 9; $i++) {
+										?>
 										<tr>
-											<th scope="row">#1</th>
-											<td class="rank-top-1">
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#2</th>
+											<th scope="row"><?php echo $l[$i]->getTop(); ?></th>
 											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
+												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
+												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
+											<td class="score"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
 										</tr>
-										<tr>
-											<th scope="row">#3</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#4</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#5</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#6</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#7</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#8</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#9</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
-										<tr>
-											<th scope="row">#10</th>
-											<td>
-												<p class="name-song"><a href="watch.html?v=1212">Cho anh fuck em lần cuối</a></p>
-												<p class="singer-song"><a href="infor.html?v=1212">Andree</a></p>
-											</td>
-											<td class="score">5.0 <i class="fas fa-star"></i></td>
-										</tr>
+										<?php } ?>
 									</tbody>
 								</table>
 							</article>

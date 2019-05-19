@@ -2,13 +2,11 @@
 
     $backHome = true;
 
-    $id = $_GET['v'];
+    $idSong = $_GET['v'];
     // find video have id
     
-        
-    
     // if have result
-    if (1)
+    if ($idSong != 0)
     {
         $backHome = false;
         require_once SITE_ROOT.'/View/watch.php';

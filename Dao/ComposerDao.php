@@ -80,7 +80,7 @@ class ComposerDao extends DBConnection
 	public function insertComposer($Composer)
 	{
 		return $this->runQuery(
-			"INSERT INTO composer(name, image, detail) 
+			"INSERT INTO composer(id, name, image, detail) 
 			VALUE (
 				'{$Composer->getId()}',
 				'{$Composer->getName()}',

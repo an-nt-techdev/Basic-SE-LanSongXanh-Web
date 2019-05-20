@@ -118,7 +118,75 @@
                                     <td><?php echo $singer->getName(); ?></td>
                                     <td><?php echo $singer->getImage(); ?></td>
                                     <td>
-                                        <button class="btn btn-warning">Chỉnh sửa</button>
+                                        <button class="btn btn-success" type="button" data-toggle="modal" data-target="#ModalSinger<?php echo $singer->getId(); ?>">Chi tiết</button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalSinger<?php echo $singer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="ModalLabelSinger<?php echo $singer->getId(); ?>" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="ModalLabelSinger<?php echo $singer->getId(); ?>">Thông tin ca sĩ</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row justify-content-center">
+                                                            <img class="col-6" alt="<?php echo $singer->getName(); ?>" 
+                                                                src="<?php echo str_replace('/View', 'View', $singer->getImage()); ?>">
+                                                        </div>
+                                                        <div class="row m-3">
+                                                            <h5 class="col-3">Tên</h5>
+                                                            <p class="col-9"><?php echo $singer->getName(); ?></p>
+                                                        </div>
+                                                        <div class="row m-3">
+                                                            <h5 class="col-3">Thông tin</h5>
+                                                            <p class="col-9"><?php echo $singer->getDetail(); ?></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#EditSinger<?php echo $singer->getId(); ?>">Chỉnh sửa</button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="EditSinger<?php echo $singer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="EditLabelSinger<?php echo $singer->getId(); ?>" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <form action="" method="post">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="EditLabelSinger<?php echo $singer->getId(); ?>">Cập nhật ca sĩ</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group form-row m-3">
+                                                                <label class="col-3">Tên</label>
+                                                                <input class="col-9 form-control" name="name" value="<?php echo $singer->getName(); ?>">
+                                                            </div>
+                                                            <div class="form-group form-row m-3">
+                                                                <label class="col-3">Link Ảnh</label>
+                                                                <input class="col-9 form-control" name="linkImage" value="<?php echo $singer->getImage(); ?>">
+                                                            </div>
+                                                            <div class="form-group form-row m-3">
+                                                                <label class="col-3">Thông tin</label>
+                                                                <textarea class="col-9 form-control" name="detail"><?php echo $singer->getDetail(); ?></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-danger">Cập nhật</button>
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                     </td>
                                 </tr>
     <?php } ?>
@@ -171,7 +239,75 @@
                                     <td><?php echo $composer->getName(); ?></td>
                                     <td><?php echo $composer->getImage(); ?></td>
                                     <td>
-                                        <button class="btn btn-warning">Chỉnh sửa</button>
+                                        <button class="btn btn-success" type="button" data-toggle="modal" data-target="#ModalComposer<?php echo $composer->getId(); ?>">Chi tiết</button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalComposer<?php echo $composer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="ModalLabelComposer<?php echo $composer->getId(); ?>" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="ModalLabelComposer<?php echo $composer->getId(); ?>">Thông tin nhạc sĩ</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row justify-content-center">
+                                                            <img class="col-7" alt="<?php echo $composer->getName(); ?>" 
+                                                                src="<?php echo str_replace('/View', 'View', $composer->getImage()); ?>">
+                                                        </div>
+                                                        <div class="row m-3">
+                                                            <h5 class="col-3">Tên</h5>
+                                                            <p class="col-9"><?php echo $composer->getName(); ?></p>
+                                                        </div>
+                                                        <div class="row m-3">
+                                                            <h5 class="col-3">Thông tin</h5>
+                                                            <p class="col-9"><?php echo $composer->getDetail(); ?></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#EditComposer<?php echo $composer->getId(); ?>">Chỉnh sửa</button>
+
+                                        <!-- Modal Edit -->
+                                        <div class="modal fade" id="EditComposer<?php echo $composer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="EditLabelComposer<?php echo $composer->getId(); ?>" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <form action="" method="post">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="EditLabelComposer<?php echo $composer->getId(); ?>">Thông tin nhạc sĩ</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-gorup form-row m-3">
+                                                                <label class="col-3">Tên</label>
+                                                                <input class="col-9 form-control" name="name" value="<?php echo $composer->getName(); ?>">
+                                                            </div>
+                                                            <div class="form-gorup form-row m-3">
+                                                                <label class="col-3">Link Image</label>
+                                                                <input class="col-9 form-control" name="linkImage" value="<?php echo $composer->getImage(); ?>">
+                                                            </div>
+                                                            <div class="form-gorup form-row m-3">
+                                                                <label class="col-3">Thông tin</label>
+                                                                <textarea type="text" class="col-9 form-control" name="detail"><?php echo $composer->getDetail(); ?></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-danger">Cập nhật</button>
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
@@ -270,8 +406,6 @@
             </footer>
         </div>
         <!-- End Footer -->
-
-
 
 		<?php require_once('layout/loadScript.php'); ?>
 		

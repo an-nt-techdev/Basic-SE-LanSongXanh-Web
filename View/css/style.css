@@ -143,3 +143,10 @@ body {
 .footer-top .name-contact {
 	font-size: 20px;
 }
+
+.overflow {
+	
+	height: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

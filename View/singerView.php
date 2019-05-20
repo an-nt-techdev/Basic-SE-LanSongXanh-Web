@@ -30,7 +30,7 @@
 													<p class="text-ellipsis"><?php echo $s->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0 overflow-hidden">
+													<p class="mb-0 overflow">
                                                         <?php echo $s->getDetail(); ?>
 													</p>
 												</div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2019 at 04:05 PM
+-- Generation Time: May 20, 2019 at 01:35 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -89,17 +89,17 @@ CREATE TABLE IF NOT EXISTS `composer` (
 --
 
 INSERT INTO `composer` (`id`, `name`, `image`, `detail`) VALUES
-(1, 'Bảo Chấn', '/View/images/Composer/BaoChan.jpg', 'Một trong số những nhạc sĩ nổi tiếng nhất thời kì hoàng kim của Làn Sóng Xanh'),
-(2, 'Bảo Phúc', '/View/images/Composer/BaoPhuc.jpg', 'Anh em cũng cha khác ông nội của nhạc sĩ Bảo Chấn'),
-(3, 'Đức Trí', '/View/images/Composer/DucTri.jpg', 'Nhạc sĩ, nhà sản xuất nhạc tài năng của Việt Nam, hiện nay vẫn đang giảng dạy tại Nhạc Viện TPHCM'),
-(4, 'Hoài An', '/View/images/Composer/HoaiAn.jpg', 'Một trong số những nhạc sĩ có khí chất khá lãng tử'),
-(5, 'Ngô Thụy Miên', '/View/images/Composer/NgoThuyMien.jpg', 'Một trong số những nhạc sĩ tuyệt vời với dòng nhạc tình bất hủ, nhạc sang của Việt Nam'),
-(6, 'Nguyễn Ngọc Thiện', '/View/images/Composer/NguyenNgocThien.jpg', 'Bác này tao không rõ nữa :v'),
-(7, 'Nguyễn Nhất Huy', '/View/images/Composer/NguyenNhatHuy.jpg', 'Nhìn ngầu ngầu vậy thôi chứ đạo nhạc khỏe vl ra :v'),
-(8, 'Quốc Dũng', '/View/images/Composer/QuocDung.jpg', 'Mức độ nổi tiếng và ảnh hưởng đến nền âm nhạc Việt Nam cũng ngang Bảo Chấn'),
-(9, 'Vũ Thành An', '/View/images/Composer/VuThanhAn.jpg', 'Một nhạc sĩ Công Giáo với những tác phẩm không tên du dương và tuyệt vời !!'),
-(10, 'Minh Khang', '/View/images/Singer/MinhKhang.jpg', 'Giỏi'),
-(11, 'Trường Huy', '/View/images/Composer/TruongHuy.jpg', 'Không rõ bác này luôn');
+(1, 'Bảo Chấn', 'View/images/Composer/BaoChan.jpg', 'Một trong số những nhạc sĩ nổi tiếng nhất thời kì hoàng kim của Làn Sóng Xanh'),
+(2, 'Bảo Phúc', 'View/images/Composer/BaoPhuc.jpg', 'Anh em cũng cha khác ông nội của nhạc sĩ Bảo Chấn'),
+(3, 'Đức Trí', 'View/images/Composer/DucTri.jpg', 'Nhạc sĩ, nhà sản xuất nhạc tài năng của Việt Nam, hiện nay vẫn đang giảng dạy tại Nhạc Viện TPHCM'),
+(4, 'Hoài An', 'View/images/Composer/HoaiAn.jpg', 'Một trong số những nhạc sĩ có khí chất khá lãng tử'),
+(5, 'Ngô Thụy Miên', 'View/images/Composer/NgoThuyMien.jpg', 'Một trong số những nhạc sĩ tuyệt vời với dòng nhạc tình bất hủ, nhạc sang của Việt Nam'),
+(6, 'Nguyễn Ngọc Thiện', 'View/images/Composer/NguyenNgocThien.jpg', 'Bác này tao không rõ nữa :v'),
+(7, 'Nguyễn Nhất Huy', 'View/images/Composer/NguyenNhatHuy.jpg', 'Nhìn ngầu ngầu vậy thôi chứ đạo nhạc khỏe vl ra :v'),
+(8, 'Quốc Dũng', 'View/images/Composer/QuocDung.jpg', 'Mức độ nổi tiếng và ảnh hưởng đến nền âm nhạc Việt Nam cũng ngang Bảo Chấn'),
+(9, 'Vũ Thành An', 'View/images/Composer/VuThanhAn.jpg', 'Một nhạc sĩ Công Giáo với những tác phẩm không tên du dương và tuyệt vời !!'),
+(10, 'Minh Khang', 'View/images/Composer/MinhKhang.jpg', 'Giỏi'),
+(11, 'Trường Huy', 'View/images/Composer/TruongHuy.jpg', 'Không rõ bác này luôn');
 
 -- --------------------------------------------------------
 
@@ -166,21 +166,23 @@ CREATE TABLE IF NOT EXISTS `singer` (
   `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `detail` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `singer`
 --
 
 INSERT INTO `singer` (`id`, `name`, `image`, `detail`) VALUES
-(1, 'Đan Trường', '/View/images/Singer/DanTruong.jpg', 'Thần tượng lớn nhất của tao đấy !!'),
-(2, 'Lam Trường', '/View/images/Singer/LamTruong.jpg', 'Một trong số những nam ca sĩ nổi nhất thời kì đầu của Làn Sóng Xanh'),
-(3, 'Cẩm Ly', '/View/images/Singer/CamLy.jpg', 'Nữ ca sĩ song ca hay nhất với Đan Trường'),
-(4, 'Bằng Kiều', '/View/images/Singer/BangKieu.jpg', 'Giọng cao vl'),
-(5, 'Minh Thuận', '/View/images/Singer/MinhThuan.jpg', 'Nam ca sĩ tài năng nhưng yểu mệnh'),
-(6, 'Mỹ Tâm', '/View/images/Singer/MyTam.JPG', 'Người đâu trẻ đẹp mãi vậy !!'),
-(7, 'Phương Thanh', '/View/images/Singer/PhuongThanh.jpg', 'Giọng hơi khàn nhưng nội lực vl'),
-(8, 'Thanh Thảo', '/View/images/Singer/ThanhThao.jpg', 'Bánh bèo của nhạc sĩ Đức Trí');
+(1, 'Đan Trường', 'View/images/Singer/DanTruong.jpg', 'Thần tượng lớn nhất của tao đấy !!'),
+(2, 'Lam Trường', 'View/images/Singer/LamTruong.jpg', 'Một trong số những nam ca sĩ nổi nhất thời kì đầu của Làn Sóng Xanh'),
+(3, 'Cẩm Ly', 'View/images/Singer/CamLy.jpg', 'Nữ ca sĩ song ca hay nhất với Đan Trường'),
+(4, 'Bằng Kiều', 'View/images/Singer/BangKieu.jpg', 'Giọng cao vl'),
+(5, 'Minh Thuận', 'View/images/Singer/MinhThuan.jpg', 'Nam ca sĩ tài năng nhưng yểu mệnh'),
+(6, 'Mỹ Tâm', 'View/images/Singer/MyTam.JPG', 'Người đâu trẻ đẹp mãi vậy !!'),
+(7, 'Phương Thanh', 'View/images/Singer/PhuongThanh.jpg', 'Giọng hơi khàn nhưng nội lực vl'),
+(8, 'Thanh Thảo', 'View/images/Singer/ThanhThao.jpg', 'Bánh bèo của nhạc sĩ Đức Trí'),
+(10, 'Tô Chấn Phong', 'View/images/Singer/ToChanPhong.jpg', 'hello'),
+(11, 'Trịnh Nam Sơn', 'View/images/Singer/TrinhNamSon.jpg', 'nullss');
 
 -- --------------------------------------------------------
 
@@ -198,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `song` (
   PRIMARY KEY (`id`),
   KEY `Singer_Id` (`singer_id`),
   KEY `Composer_Id` (`composer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `song`
@@ -207,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `song` (
 INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
 (3, 'Cho tình mãi xa', 10, 1, '2Ii_NpKal8U'),
 (4, 'Bóng dáng thiên thần', 6, 1, 'UhG6aIo-QgM'),
-(5, 'Bóng Biển', 8, 1, '-B1pQT9upic'),
+(5, 'Bóng biển', 8, 1, '-B1pQT9upic'),
 (6, 'Còn lại một mình', 6, 1, 'hLl8OfV2z0k'),
 (7, 'Kiếp ve sầu', 1, 1, 'ccCig7MGs_g'),
 (8, 'Mãi là niềm đau', 7, 1, 'yiuDUHSEoXY'),
@@ -223,7 +225,8 @@ INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
 (18, 'Ta chẳng còn ai', 3, 7, '6NDR_F5HZIw'),
 (19, 'Ta chẳng còn ai', 3, 8, 'v5H8FZ18cIA'),
 (20, 'Có quên được đâu', 3, 8, 'Jk_GQfl9NbI'),
-(21, 'Khi giấc mơ về', 3, 7, 'Tgj5jL6CC9o');
+(21, 'Khi giấc mơ về', 3, 7, 'Tgj5jL6CC9o'),
+(23, 'Bản tình ca cho em', 5, 4, '8Jhrgr4DeSU');
 
 -- --------------------------------------------------------
 

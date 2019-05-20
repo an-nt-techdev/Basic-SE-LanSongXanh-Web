@@ -30,12 +30,8 @@
 													<p class="text-ellipsis"><?php echo $c->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0" style="text-align: justify;">
+													<p class="mb-0 overflow">
                                                         <?php echo $c->getDetail(); ?>
-													</p>
-													<p class="mb-0 text-ellipsis" style="display:none;"></p>
-													<p class="composer text-ellipsis" style="display:none;">
-														Chế Linh: ...
 													</p>
 												</div>
 											</div>

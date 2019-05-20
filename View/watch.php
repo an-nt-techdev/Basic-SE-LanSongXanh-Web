@@ -30,17 +30,19 @@
 					
 					<div class="video-infor mt-4 p-3 border rounded bg-white">
 					
-						<div class="video-header row">
+						<div class="video-header row justify-content-between">
 							<h3 class="col-md-6 video-title"><?php echo $s->getNameSong(); ?> - <?php echo $s->getSinger(); ?></h3>
-							<div class="col-md-6 video-vote">
-								<h4 style="padding-right:60px;">Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
-								<h4>Bình chọn: 
-								<i class="fas fa-star star-1"><span class="sr-only">1</span></i>
-								<i class="fas fa-star star-2"><span class="sr-only">2</span></i>
-								<i class="far fa-star star-3"><span class="sr-only">3</span></i>
-								<i class="far fa-star star-4"><span class="sr-only">4</span></i>
-								<i class="far fa-star star-5"><span class="sr-only">5</span></i>
-								</h4>
+							<div class="col-md-4 video-vote">
+								<div class="">
+									<h4>Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
+									<h4 class="vote">Bình chọn: 
+										<i class="fas fa-star star-1"><span class="sr-only">1</span></i>
+										<i class="fas fa-star star-2"><span class="sr-only">2</span></i>
+										<i class="far fa-star star-3"><span class="sr-only">3</span></i>
+										<i class="far fa-star star-4"><span class="sr-only">4</span></i>
+										<i class="far fa-star star-5"><span class="sr-only">5</span></i>
+									</h4>
+								</div>
 							</div>
 						</div> 
 						

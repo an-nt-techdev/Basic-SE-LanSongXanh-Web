@@ -137,7 +137,7 @@
                         </form>
                 </div>
                 <div class="modal-footer m-auto">
-                    <p class="">Bạn đã có tài khoản? <a href="" id="idtest" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
+                    <p class="">Bạn đã có tài khoản? <a href="" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
                 </div>
             </div>
         </div>

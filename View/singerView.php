@@ -22,7 +22,7 @@
 									<h2 class="">Danh sách ca sĩ: </h2>
 									<hr>
 									<ul class="result-search-list">
-									<?php foreach($singer as $s) { ?>
+	<?php foreach($singer as $s) { ?>
 										<li class="result-search-item row">
 											<a class="col-sm-3" href="?page=infor&singer=<?php echo $s->getId(); ?>"><img src="<?php echo $s->getImage(); ?>" class="result-search-image"></a>
 											<div class="result-search-infor col-sm-9">
@@ -30,18 +30,14 @@
 													<p class="text-ellipsis"><?php echo $s->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0" style="text-align: justify;">
+													<p class="mb-0 overflow">
                                                         <?php echo $s->getDetail(); ?>
-													</p>
-													<p class="mb-0 text-ellipsis" style="display:none;"></p>
-													<p class="composer text-ellipsis" style="display:none;">
-														Chế Linh: ...
 													</p>
 												</div>
 											</div>
 										</li>
                                         <hr>
-									<?php } ?>
+	<?php } ?>
 									</ul>
 							</article>
 							

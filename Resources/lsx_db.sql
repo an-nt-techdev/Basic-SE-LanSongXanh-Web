@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 20, 2019 at 03:45 PM
--- Server version: 5.7.24
--- PHP Version: 7.2.14
+-- Máy chủ: 127.0.0.1:3306
+-- Thời gian đã tạo: Th5 20, 2019 lúc 05:27 PM
+-- Phiên bản máy phục vụ: 5.7.24
+-- Phiên bản PHP: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lsx_db`
+-- Cơ sở dữ liệu: `lsx_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `account`
+-- Cấu trúc bảng cho bảng `account`
 --
 
 DROP TABLE IF EXISTS `account`;
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `account`
+-- Đang đổ dữ liệu cho bảng `account`
 --
 
 INSERT INTO `account` (`username`, `password`, `ranking`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `account` (`username`, `password`, `ranking`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `account_detail`
+-- Cấu trúc bảng cho bảng `account_detail`
 --
 
 DROP TABLE IF EXISTS `account_detail`;
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `account_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `account_detail`
+-- Đang đổ dữ liệu cho bảng `account_detail`
 --
 
 INSERT INTO `account_detail` (`username_id`, `name`, `birthday`, `sex`, `email`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `account_detail` (`username_id`, `name`, `birthday`, `sex`, `email`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `composer`
+-- Cấu trúc bảng cho bảng `composer`
 --
 
 DROP TABLE IF EXISTS `composer`;
@@ -82,10 +82,10 @@ CREATE TABLE IF NOT EXISTS `composer` (
   `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `detail` longtext COLLATE utf8mb4_vietnamese_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `composer`
+-- Đang đổ dữ liệu cho bảng `composer`
 --
 
 INSERT INTO `composer` (`id`, `name`, `image`, `detail`) VALUES
@@ -99,12 +99,13 @@ INSERT INTO `composer` (`id`, `name`, `image`, `detail`) VALUES
 (8, 'Quốc Dũng', 'View/images/Composer/QuocDung.jpg', 'Ông tên thật là Nguyễn Quốc Dũng, sinh năm 1951 tại Thái Lan. Năm 1954, khi Quốc Dũng 3 tuổi, gia đình ông hồi hương trở về Việt Nam. Năm 10 tuổi, Quốc Dũng vào học tại trường Quốc gia Âm nhạc ở Sài Gòn và năm 16 tuổi ông tốt nghiệp thủ khoa môn nhạc pháp Tây phương. Sau khi đỗ Tú tài 2, Quốc Dũng vào học tại Viện Đại học Vạn Hạnh.\r\n\r\nĐam mê âm nhạc từ nhỏ, 15 tuổi Quốc Dũng đã trình diễn mandolin trên truyền hình trong dàn nhạc đại hòa tấu. Bản nhạc đầu tiên của Quốc Dũng được ông viết khi mới 11 tuổi. Nhưng đó chỉ là một nhạc phẩm không lời. Phải đến năm 17 tuổi ông mới hoàn chỉnh bản nhạc đó thành ca khúc đầu tay Em đã thấy mùa xuân chưa. Sau đó ông viết nhiều ca khúc nổi tiếng khác như Mai, Đường xưa, Cơn gió thoảng, Chuyện ba người, Còn mãi nơi đây, Điệp khúc mùa xuân, Thoát ly, Hoang vắng...\r\n\r\nVào những năm đầu thập niên 1970, khi phong trào nhạc trẻ phổ biến ở miền Nam Việt Nam, Quốc Dũng cùng Nguyễn Trung Cang và Lê Hựu Hà là những nhạc sĩ đầu tiên Việt hóa nhạc trẻ, bắt đầu soạn các ca khúc nhạc trẻ bằng tiếng Việt. Khi đó ông cùng với Thanh Mai tạo thành một đôi song ca nổi tiếng. Với khả năng sáng tác, biểu diễn và sử dụng mandolin, guitar, piano, trống, bass, keyboard, organ, Quốc Dũng là một trong những gương mặt tiêu biểu của nhạc trẻ thời đó.\r\n\r\nSau 1975, Quốc Dũng chọn ở lại Việt Nam và kết hôn lần thứ hai với ca sĩ Bảo Yến khi ông làm biên tập, hòa âm phối khí cho Đài truyền hình Thành phố Hồ Chí Minh[1].\r\n\r\nNăm 2005, Trung tâm Thúy Nga thực hiện DVD Paris By Night 78: Đường xưa, giới thiệu dòng nhạc của ba nhạc sĩ Quốc Dũng, Châu Kỳ và Tùng Giang.\r\n\r\nNgoài vai trò nhạc sĩ, Quốc Dũng còn là diễn viên, từng đóng vai nam chính trong bộ phim Trường tôi của đạo diễn Lê Dân.'),
 (9, 'Vũ Thành An', 'View/images/Composer/VuThanhAn.jpg', 'Vũ Thành An (1943–) là một trong những nhạc sĩ nổi bật của miền Nam Việt Nam thời kỳ 1954 - 1975. Các \"Bài không tên\" là những tác phẩm nổi tiếng của ông. Hiện nay, ông là một phó tế của Giáo hội Công giáo Rôma, đã ngừng sáng tác nhạc tình ca mà chỉ sáng tác thánh ca.\r\n\r\nVũ Thành An sinh tại huyện Hải Hậu thuộc tỉnh Nam Định (về sau đổi thành quận Hải Hậu thuộc tỉnh Bùi Chu). Năm 1954 ông theo gia đình di cư vào miền Nam. Năm 1960, ông vào học trường trung học Nguyễn Trãi, có theo học nhạc sĩ Chung Quân cùng Ngô Thụy Miên, Đức Huy. Năm 1961 ông thi hỏng Tú tài và về trường Hưng Đạo học tiếp Đệ nhị. Năm 1963, Vũ Thành An thi đậu Tú tài toàn phần.\r\n\r\nSau đó ông được linh mục Trần Đức Huynh, giám đốc trường Hưng Đạo cho dạy lớp Đệ thất để có tiền học Đại học. Cuối năm 1963, Vũ Thành An vào làm phóng viên ở Đài phát thanh Sài Gòn, ở đó ông gặp nhà thơ Nguyễn Đình Toàn. Năm 1965, ông viết Tình khúc thứ nhất, thơ Nguyễn Đình Toàn và nổi tiếng ngay từ ca khúc đầu tay đó. Những năm tiếp theo, ông viết nhiều Bài không tên khác. Năm 1967, Vũ Thành An nhập ngũ khóa 25 Sĩ quan dự bị Thủ Đức và 1969 ông lập gia đình.\r\n\r\nNăm 1969, ông phát hành tập nhạc Những bài không tên. Các tác phẩm của Vũ Thành An được yêu thích ở khắp miền Nam khi đó. Người ta có thể nghe tại gần như hầu hết các quán cà phê nhạc của Sài Gòn và những thành phố lớn khác, tại các quân trường và trên các làn sóng phát thanh. Tên tuổi của Vũ Thành An cùng với Tình khúc thứ nhất, Em đến thăm anh đêm ba mươi và các Bài không tên gắn liền với giới trẻ thời bấy giờ. Vũ Thành An cùng với Trịnh Công Sơn, Ngô Thụy Miên, Từ Công Phụng, Lê Uyên Phương tạo thành một lớp nhạc sĩ mới đầy tài năng.\r\n\r\nNăm 1971, Vũ Thành An tốt nghiệp đại học Luật khoa Sài Gòn. Ông tiếp tục làm việc tại đài phát thanh Sài Gòn với cấp bậc sĩ quan, và trải qua nhiều chức vụ: Trưởng cơ sở dân vận Gia Định 1973, Trưởng phân khối văn hóa, Phụ tá trưởng khối chương trình, Trưởng khối chương trình và Trưởng phân khối kế hoạch hệ thống truyền thanh 1974.\r\n\r\nNgày 30 tháng 4 năm 1975, Vũ Thành An là người cuối cùng rời Đài phát thanh Sài Gòn, lúc 10 giờ 30 giờ sáng. Sau đó ông phải học tập cải tạo suốt mười năm dài từ 1975 đến 1985 tại miền Bắc. Theo lời Vũ Thành An, ông bắt đầu sáng tác Thánh ca, Những Bài Nhân Bản trong thời gian cải tạo từ năm 1981.\r\n\r\nNăm 1991, Vũ Thành An rời Việt Nam và định cư tại Hoa Kỳ. Năm 1996, ông ghi danh học chương trình Cao học Thần học của Tổng giáo phận Portland, Oregon. Năm 2000, Vũ Thành An được đào tạo làm chức Phó Tế và phụ trách Đài phát thanh Việt Nam Hải Ngoại ở Portland, Oregon. Vũ Thành An ngừng sáng tác tình khúc và chỉ tiếp tục soạn các bản thánh ca, và tham gia các công việc từ thiện.\r\n\r\nNăm 2002, trung tâm Thúy Nga thực hiện Paris By Night 64: Đêm văn nghệ thính phòng vinh danh ông cùng nhạc sĩ Tuấn Khanh và Từ Công Phụng'),
 (10, 'Minh Khang', 'View/images/Composer/MinhKhang.jpg', 'Nhạc sĩ Minh Khang sinh ngày 27 tháng 8 năm 1978 ở tại thành phố Hồ Chí Minh. Nhạc sĩ xếp hạng thứ 1576 trên thế giới và ở trong top 11 các nhạc sĩ nổi tiếng trong nước. Cuộc đời anh có khá nhiều đau khổ khi còn nhỏ.\r\n\r\nNhạc sĩ đã được khán giả biết đến qua rất nhiều sáng tác nổi tiếng như: cầu vồng khuyết, giọt nước mắt chảy ngược, bạc trắng tình đời, mưa sao băng, … Và là nhạc sĩ hòa âm phối khí cực đắt show tại thành phố Hồ Chí Minh.\r\n\r\nNhững sáng tác của anh theo xu hướng âm nhạc cho giới trẻ. Anh xem công việc sáng tác nhạc là niềm đam mê ăn vào máu thịt của bản thân mình.\r\n\r\nNhạc sĩ còn tâm đắc với các thể loại như Blues Jazz. Có những sáng tác đậm chất trữ tình như: cứ ngỡ đê mê, dòng sông không trôi, khói lam chiều đã được đông đảo khán giả đón nhận.\r\n\r\nVào năm 2005, nhạc sĩ đã thực hiện dự án âm nhạc xã hội, nó khá mất nhiều tiền bạc công sức và thời gian. Ca khúc “Đứa bé” với sự tham gia của nhiều nghệ sĩ nổi tiếng trong nước và ngoài nước đồng thời có sự tham gia của hơn 200 ca sĩ.\r\n\r\nDự án này nhằm gây quỹ từ thiện và được đông đảo khán giả đón nhận và gây được tiếng vang lớn. Quỹ từ thiện Đứa bé  được Thúy Hạnh quyên tặng 100 triệu đồng cho những hoàn cảnh khó khăn.\r\n\r\nSự nghiệp của anh một phần cũng gắn liền với ca khúc nổi tiếng Đứa bé, đã gây tiếng vang lớn trong lòng người nghe và cũng là gây quỹ từ thiện cho những đứa bé có hoàn cảnh khó khăn.\r\n\r\nCùng với đó Đối thoại Ký ức là dịp tổng kết chặng đường 20 năm trong nghề. Cùng với đó là 2 ca khúc Áo trắng ngời sáng tương lai, Mồ côi và Màu trắng, màu đen.'),
-(11, 'Trường Huy', 'View/images/Composer/TruongHuy.jpg', 'Tôi sinh ra trong một gia đình nghèo, có tuổi thơ vất vả, ngoài việc đi học còn phải đi làm thuê để phụ giúp gia đình. Vốn đam mê âm nhạc, tôi đã dành dụm được một số tiền để mua cây guitar và tự mày mò học. Những đêm trăng sáng, tôi ôm đàn ngồi trước hiên nhà, hát say sưa bên tiếng muỗi vo ve.\r\nTôi viết ca khúc đầu tay khi đang học lớp 10 có tựa đề Thiên thần nhỏ, phỏng theo truyện của Nguyễn Nhật Ánh. Bài hát tiếp theo Ngôi trường của tôi đã làm bạn bè cười phá lên vì có đoạn tả về hai hàng cây xanh tươi mà trường tôi thì chẳng có bóng dáng một cây nào. Khi sắp rời cấp III, tôi lại sáng tác Nhớ trường xưa với những cảm xúc hồn nhiên nhất.\r\nVới mơ ước được học và hiểu biết hơn về nhạc lý, sau một thời gian làm thêm, tôi quyết định đầu tư 2 chỉ vàng vào việc học. Thế nhưng khi mang tiền đến thì bị thày từ chối. Cũng may là tôi được thọ giáo nhạc sĩ Trường Sa. Đó là người thày đầu tiên đã dạy không công, giúp tôi tự tin trên con đường sáng tác. Tôi đã lấy tên đệm của thày và của mình thành Trường Huy để đề tựa dưới mỗi bài hát.\r\nNăm 1995, khi còn là sinh viên năm thứ hai Đại học Sư phạm TP HCM, trong một chuyến picnic, tôi xung phong hát 2 sáng tác mới Mắt buồn và Tình xa khuất. Không ngờ, trong số bạn bè hôm ấy, có người bạn là con của chủ hãng băng đĩa Kim Lợi. Anh đề nghị tôi đưa hai ca khúc về cho mẹ nghe thử và sau đó hãng này đã tung ra ca khúc Mắt buồn do Minh Tuyết trình bày. Tôi bắt đầu được giới âm nhạc chú ý. Năm 1997, tôi đoạt 2 giải B và C cuộc thi sáng tác ca khúc sinh viên do Hội Âm nhạc TP HCM tổ chức.\r\nNăm 1998, Phương Thanh hát Một thời đã xa đoạt Giọng hát vàng ASEAN và giúp nâng tầm các ca khúc của tôi. Sau đó, Cô bé mắt nai, Tình em mùa xuân, Cho em lời cuối... liên tục lọt vào Top Làn Sóng Xanh.\r\nNhiều khán giả hỏi rằng vì sao ca khúc của Huy thường đề cập đến chuyện thất tình, bị phụ tình... Thật ra, đây chỉ là sự tình cờ. Tôi thường dựa vào cảm xúc thật và sự đồng cảm với những người xung quanh để viết nhạc. Tuy nhiên, các bài hát buồn lại được khán giả biết đến nhiều hơn.\r\nGần 10 năm sáng tác, tôi không nghĩ viết nhạc để kiếm danh tiếng, với tôi, âm nhạc là hơi thở không thể thiếu trong cuộc đời. ');
+(11, 'Trường Huy', 'View/images/Composer/TruongHuy.jpg', 'Tôi sinh ra trong một gia đình nghèo, có tuổi thơ vất vả, ngoài việc đi học còn phải đi làm thuê để phụ giúp gia đình. Vốn đam mê âm nhạc, tôi đã dành dụm được một số tiền để mua cây guitar và tự mày mò học. Những đêm trăng sáng, tôi ôm đàn ngồi trước hiên nhà, hát say sưa bên tiếng muỗi vo ve.\r\nTôi viết ca khúc đầu tay khi đang học lớp 10 có tựa đề Thiên thần nhỏ, phỏng theo truyện của Nguyễn Nhật Ánh. Bài hát tiếp theo Ngôi trường của tôi đã làm bạn bè cười phá lên vì có đoạn tả về hai hàng cây xanh tươi mà trường tôi thì chẳng có bóng dáng một cây nào. Khi sắp rời cấp III, tôi lại sáng tác Nhớ trường xưa với những cảm xúc hồn nhiên nhất.\r\nVới mơ ước được học và hiểu biết hơn về nhạc lý, sau một thời gian làm thêm, tôi quyết định đầu tư 2 chỉ vàng vào việc học. Thế nhưng khi mang tiền đến thì bị thày từ chối. Cũng may là tôi được thọ giáo nhạc sĩ Trường Sa. Đó là người thày đầu tiên đã dạy không công, giúp tôi tự tin trên con đường sáng tác. Tôi đã lấy tên đệm của thày và của mình thành Trường Huy để đề tựa dưới mỗi bài hát.\r\nNăm 1995, khi còn là sinh viên năm thứ hai Đại học Sư phạm TP HCM, trong một chuyến picnic, tôi xung phong hát 2 sáng tác mới Mắt buồn và Tình xa khuất. Không ngờ, trong số bạn bè hôm ấy, có người bạn là con của chủ hãng băng đĩa Kim Lợi. Anh đề nghị tôi đưa hai ca khúc về cho mẹ nghe thử và sau đó hãng này đã tung ra ca khúc Mắt buồn do Minh Tuyết trình bày. Tôi bắt đầu được giới âm nhạc chú ý. Năm 1997, tôi đoạt 2 giải B và C cuộc thi sáng tác ca khúc sinh viên do Hội Âm nhạc TP HCM tổ chức.\r\nNăm 1998, Phương Thanh hát Một thời đã xa đoạt Giọng hát vàng ASEAN và giúp nâng tầm các ca khúc của tôi. Sau đó, Cô bé mắt nai, Tình em mùa xuân, Cho em lời cuối... liên tục lọt vào Top Làn Sóng Xanh.\r\nNhiều khán giả hỏi rằng vì sao ca khúc của Huy thường đề cập đến chuyện thất tình, bị phụ tình... Thật ra, đây chỉ là sự tình cờ. Tôi thường dựa vào cảm xúc thật và sự đồng cảm với những người xung quanh để viết nhạc. Tuy nhiên, các bài hát buồn lại được khán giả biết đến nhiều hơn.\r\nGần 10 năm sáng tác, tôi không nghĩ viết nhạc để kiếm danh tiếng, với tôi, âm nhạc là hơi thở không thể thiếu trong cuộc đời. '),
+(12, 'Trịnh Nam Sơn', 'View/images/Singer/TrinhNamSon.jpg', 'Nhạc sĩ Trịnh Nam Sơn học sáng tác và hòa nhạc tại Dick Grove School Of Music và tốt nghiệp hạng danh dự vào năm 1986. Nhanh chóng được bạn trẻ trong và ngoài nước yêu thích với giọng hát thật ấm và truyền cảm, Anh đã từng lưu diễn khắp nơi trên đất Mỹ, Đông - Tây Âu, Canada, và đã từng gặp gỡ khán giả Việt Nam trong 2 chương trình Duyên dáng Việt Nam 12 & 13 do Báo Thanh Niên tổ chức.\r\n\r\nThuở nhỏ, Trịnh Nam Sơn hay theo cha đi câu cá chép ở hồ Xuân Hương rồi đem về thả trong chiếc hồ nhỏ trước sân nhà. Gia đình anh nghèo, nhưng anh biết ơn tuổi thơ cơ cực và đẹp đẽ với những buổi sáng thức dậy tràn ngập ánh mặt trời, ngắm những bông hoa păng-xê nở giữa các luống ngô khoai, những cơn mưa bong bóng phập phồng của Đà Lạt... Bởi các ca khúc Tình yêu cho Đà Lạt, Bong bóng mưa đã được chào đời từ chính nỗi hoài niệm về những ký ức đó.\r\n\r\nChặng đường âm nhạc của Trịnh Nam Sơn là một chuỗi dài nghiệt ngã. Ngày đầu đặt chân lên đất Mỹ, vốn liếng âm nhạc của anh chỉ vừa bằng một tay chơi guitar nghiệp dư, thậm chí anh còn phải đánh vần từng giai điệu. Thế rồi anh quyết tâm phải học đến nơi đến chốn về guitar. Anh đăng ký theo học sáng tác tại trường nhạc khí nổi tiếng Dick Grove, Mỹ.\r\n\r\nTừng tham gia các đại hòa tấu ở Mỹ, Trịnh Nam Sơn hy vọng sẽ có mặt trong những chương trình hòa tấu ở VN. Anh nói: \"Tôi rất mong được làm những đêm nhạc hòa tấu kết hợp nửa cổ điển, nửa hiện đại tại VN. Bước đầu có thể hơi gian nan nhưng nó sẽ mang lại màu sắc mới phong phú cho âm nhạc.\r\n\r\nHiện anh là người chuyên viết nhạc nền cho phim quảng cáo, phim truyện, sáng tác nhạc không lời và có thêm nghề phụ là lập trình tin học. Con gái 21 tuổi của anh đang theo học ngành báo chí.\r\n\r\nNgoài ca nhạc, Trịnh Nam Sơn hiện là lập trình viên cho một số hãng phim và thỉnh thoảng viết nhạc cho một số phim tài liệu cùng một số nhạc nền cho phim.\r\n\r\nDĩ vãng là tác phẩm đầu tay của Trịnh Nam Sơn. Ban đầu đây là tác phẩm nhạc khí anh viết khi đang theo học về khí nhạc và chỉ huy dàn nhạc tại trường Dick Grove School of Music ở Hollywood. Tính đến nay, anh đã viết mấy chục bản khí nhạc và hai bản nhạc phim tài liệu.\r\n\r\nSau này, khi muốn phổ biến Dĩ vãng, Trịnh Nam Sơn đã nhờ mấy người bạn là nhà thơ viết giúp cho phần lời, nhưng họ nói không có thời gian. Anh đành tự viết lời Việt. Sau đó, anh nhờ đạo diễn Lưu Huỳnh, lúc đó cũng học cùng trường với Trịnh Nam Sơn, nhưng học về đạo diễn làm giúp một video ca nhạc.\r\n\r\nLúc gửi gắm tác phẩm của mình cho Lưu Huỳnh, anh cũng chưa nghĩ là mình sẽ hát, mà định mời ca sỹ. Khổ nỗi, lúc đó, người ta chưa biết đến Trịnh Nam Sơn là ai, nên anh mời hết người nọ, đến người kia đều bị từ chối. Thế là, anh quyết định tự hát.\r\n\r\nKhông những thế, anh còn tự đánh ghi ta, đệm đàn piano và thổi kèn saxophone cho bài hát của mình. Với sự nhiệt tình giúp đỡ của Lưu Huỳnh, album đã được quay khá công phu. Dĩ vãng được thu vào băng nhựa VHS là công nghệ mới nhất thời đó.\r\n\r\nKhi quay xong, Trịnh Nam Sơn cũng chưa nghĩ đến chuyện lỗ lãi. Chỉ đơn giản nghĩ rằng, làm thế nào để giới thiệu album này tới nhiều người. Hồi đó, chưa có nhiều phương tiện quảng bá như bây giờ.\r\n\r\nTrịnh Nam Sơn đã đi gõ cửa hết trung tâm sản xuất băng đĩa này, đến trung tâm sản xuất băng đĩa kia của cộng đồng người Việt tại Hải ngoại, nhưng đều nhận được những cái lắc đầu. Không nản chí, anh quyết định tự đi phát hành. Anh thiết kế poster đĩa nhạc của mình rồi đi dán khắp nơi.\r\n\r\nRồi Dĩ vãng cũng được ra mắt, tại một quán café. Đến giờ, Trịnh Nam Sơn vẫn còn nhớ mãi ngày đó. Anh thuê một quán café nhỏ, thuê dàn âm thanh xịn và đến đó trình diễn. Anh kể, khán giả có mặt ở đây rất ấn tượng, nhưng rồi, cái tên Trịnh Nam Sơn và Dĩ vãng vẫn nhạt nhòa với số đông.\r\n\r\nThời đó, quảng cáo hữu hiệu nhất là tới tiệm bán máy video, cho họ mượn băng để thử máy. Những người đi mua đầu video thấy lạ với một clip ca nhạc có hình ảnh chất lượng cao hơn rất nhiều so với băng video thông thường.\r\n\r\nVà mọi người bắt đầu để ý tới nhạc của Trịnh Nam Sơn. Cuối cùng, trời không phụ lòng người, hãng thu thanh Khánh Hà đã mua bản quyền và sản xuất đĩa nhạc, nhờ đó mà Dĩ vãng được đưa đến công chúng.\r\n\r\nSau này, Trịnh Nam Sơn và Khánh Hà thường xuyên hợp tác với nhau. Khánh Hà cũng thường xuyên hát bài của Trịnh Nam Sơn trong nhiều năm ở hải ngoại. Năm 91, Trịnh Nam Sơn tiếp tục ra đĩa nhạc Về đây em rất được yêu chuộng tại hải ngoại và tới cuối năm 91 là Con đường màu xanh.\r\n\r\nKhoảng 94, khi nhạc Việt Nam bắt đầu bị cạnh tranh bởi nhạc Hoa lời Việt, nhạc Âu Mỹ lời dịch, Trịnh Nam Sơn chuyển sang làm tư vấn bất động sản và chỉ còn “dạo chơi trong vườn hoa âm nhạc”.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history_vote`
+-- Cấu trúc bảng cho bảng `history_vote`
 --
 
 DROP TABLE IF EXISTS `history_vote`;
@@ -117,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `history_vote` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `history_vote`
+-- Đang đổ dữ liệu cho bảng `history_vote`
 --
 
 INSERT INTO `history_vote` (`username_id`, `song_id`, `stars`) VALUES
@@ -127,7 +128,7 @@ INSERT INTO `history_vote` (`username_id`, `song_id`, `stars`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `playlist`
+-- Cấu trúc bảng cho bảng `playlist`
 --
 
 DROP TABLE IF EXISTS `playlist`;
@@ -142,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `playlist` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `playlist_detail`
+-- Cấu trúc bảng cho bảng `playlist_detail`
 --
 
 DROP TABLE IF EXISTS `playlist_detail`;
@@ -156,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `playlist_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `singer`
+-- Cấu trúc bảng cho bảng `singer`
 --
 
 DROP TABLE IF EXISTS `singer`;
@@ -166,10 +167,10 @@ CREATE TABLE IF NOT EXISTS `singer` (
   `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `detail` longtext COLLATE utf8mb4_vietnamese_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `singer`
+-- Đang đổ dữ liệu cho bảng `singer`
 --
 
 INSERT INTO `singer` (`id`, `name`, `image`, `detail`) VALUES
@@ -188,7 +189,7 @@ INSERT INTO `singer` (`id`, `name`, `image`, `detail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `song`
+-- Cấu trúc bảng cho bảng `song`
 --
 
 DROP TABLE IF EXISTS `song`;
@@ -201,10 +202,10 @@ CREATE TABLE IF NOT EXISTS `song` (
   PRIMARY KEY (`id`),
   KEY `Singer_Id` (`singer_id`),
   KEY `Composer_Id` (`composer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `song`
+-- Đang đổ dữ liệu cho bảng `song`
 --
 
 INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
@@ -237,7 +238,7 @@ INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `top_month`
+-- Cấu trúc bảng cho bảng `top_month`
 --
 
 DROP TABLE IF EXISTS `top_month`;
@@ -249,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `top_month` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `top_month`
+-- Đang đổ dữ liệu cho bảng `top_month`
 --
 
 INSERT INTO `top_month` (`top`, `song_id`) VALUES
@@ -267,7 +268,7 @@ INSERT INTO `top_month` (`top`, `song_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `top_week`
+-- Cấu trúc bảng cho bảng `top_week`
 --
 
 DROP TABLE IF EXISTS `top_week`;
@@ -279,7 +280,7 @@ CREATE TABLE IF NOT EXISTS `top_week` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `top_week`
+-- Đang đổ dữ liệu cho bảng `top_week`
 --
 
 INSERT INTO `top_week` (`top`, `song_id`) VALUES
@@ -297,7 +298,7 @@ INSERT INTO `top_week` (`top`, `song_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vote_song`
+-- Cấu trúc bảng cho bảng `vote_song`
 --
 
 DROP TABLE IF EXISTS `vote_song`;
@@ -309,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `vote_song` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Dumping data for table `vote_song`
+-- Đang đổ dữ liệu cho bảng `vote_song`
 --
 
 INSERT INTO `vote_song` (`song_id`, `stars`, `point`) VALUES
@@ -325,44 +326,44 @@ INSERT INTO `vote_song` (`song_id`, `stars`, `point`) VALUES
 (12, 5, 5);
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `account_detail`
+-- Các ràng buộc cho bảng `account_detail`
 --
 ALTER TABLE `account_detail`
   ADD CONSTRAINT `Account_Detail_ibfk_1` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
--- Constraints for table `history_vote`
+-- Các ràng buộc cho bảng `history_vote`
 --
 ALTER TABLE `history_vote`
   ADD CONSTRAINT `history_vote_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`),
   ADD CONSTRAINT `history_vote_ibfk_2` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
--- Constraints for table `playlist`
+-- Các ràng buộc cho bảng `playlist`
 --
 ALTER TABLE `playlist`
   ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`username_id`) REFERENCES `account` (`username`);
 
 --
--- Constraints for table `playlist_detail`
+-- Các ràng buộc cho bảng `playlist_detail`
 --
 ALTER TABLE `playlist_detail`
   ADD CONSTRAINT `playlist_detail_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`),
   ADD CONSTRAINT `playlist_detail_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`id`);
 
 --
--- Constraints for table `song`
+-- Các ràng buộc cho bảng `song`
 --
 ALTER TABLE `song`
   ADD CONSTRAINT `song_ibfk_1` FOREIGN KEY (`singer_id`) REFERENCES `singer` (`id`),
   ADD CONSTRAINT `song_ibfk_2` FOREIGN KEY (`composer_id`) REFERENCES `composer` (`id`);
 
 --
--- Constraints for table `vote_song`
+-- Các ràng buộc cho bảng `vote_song`
 --
 ALTER TABLE `vote_song`
   ADD CONSTRAINT `vote_song_ibfk_1` FOREIGN KEY (`song_id`) REFERENCES `song` (`id`);

@@ -30,7 +30,7 @@
                                 </li>
                             </ul>
 
-                            <form class="form-inline my-2 my-lg-0" action=>
+                            <form class="form-inline my-2 my-lg-0" action="" method="get">
                                 <button class="btn btn-danger my-2 my-0" type="submit">Monthly</button>
                                 <button class="btn btn-danger my-2 my-0 mx-1" type="submit">Weekly</button>
                             </form>
@@ -86,7 +86,7 @@
                     <div class="bg-white border rounded p-3 mt-3">
                         <h3>Thêm ca sĩ</h3>
                         <hr>
-                        <form action="?page=ad&k=singer" method="post">
+                        <form action="?page=ad&k=singer&a=true" method="post">
                             <div class="form-group">
                                 <label>Tên ca sĩ</label>
                                 <input class="form-control" type="text" name="name" required>
@@ -158,13 +158,14 @@
                                     
                                         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#EditSinger<?php echo $singer->getId(); ?>">Chỉnh sửa</button>
 
-                                        <!-- Modal -->
+                                        <!-- Modal edit -->
                                         <div class="modal fade" id="EditSinger<?php echo $singer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="EditLabelSinger<?php echo $singer->getId(); ?>" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                    <form action="" method="post">
+                                                    <form action="?page=ad&k=singer&u=true" method="post">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="EditLabelSinger<?php echo $singer->getId(); ?>">Cập nhật ca sĩ</h5>
+                                                            <h5 class="modal-title" name="" value="<?php echo $singer->getId(); ?>">Cập nhật ca sĩ</h5>
+                                                            <input type="hidden" name="id" value="<?php echo $singer->getId(); ?>">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
@@ -191,7 +192,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="btn btn-danger">Xóa</button>
+                                       
                                     </td>
                                 </tr>
     <?php } ?>
@@ -201,13 +202,13 @@
                 </div>
             </div>
             <!-- Singer -->
-<?php } /* Composer */ elseif ($kind == 'composer') { ?>
+<?php } /* Composer */ else if ($kind == 'composer') { ?>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="bg-white border rounded p-3 mt-3">
                         <h3>Thêm nhạc sĩ</h3>
                         <hr>
-                        <form action="?page=ad&k=singer" method="post">
+                        <form action="?page=ad&k=composer&a=true" method="post">
                             <div class="form-group">
                                 <label>Tên nhạc sĩ</label>
                                 <input class="form-control" type="text" name="name" required>
@@ -283,9 +284,10 @@
                                         <div class="modal fade" id="EditComposer<?php echo $composer->getId(); ?>" tabindex="-1" role="dialog" aria-labelledby="EditLabelComposer<?php echo $composer->getId(); ?>" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                    <form action="" method="post">
+                                                    <form action="?page=ad&k=composer&u=true" method="post">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="EditLabelComposer<?php echo $composer->getId(); ?>">Thông tin nhạc sĩ</h5>
+                                                            <h5 class="modal-title" name="" value="<?php echo $composer->getId(); ?>">Cập nhật nhạc sĩ</h5>
+                                                            <input type="hidden" name="id" value="<?php echo $composer->getId(); ?>">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
@@ -313,7 +315,6 @@
                                             </div>
                                         </div>
 
-                                        <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
     <?php } ?>

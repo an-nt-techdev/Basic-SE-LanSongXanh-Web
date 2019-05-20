@@ -59,6 +59,12 @@ class DashboardModel {
         $this->artist->addSinger($singer);
     }
 
+    public function editSinger($singer)
+    {
+        $this->artist->editSinger($singer);
+    }
+
+
     //
     // Composer
     //
@@ -76,6 +82,12 @@ class DashboardModel {
     {
         $this->artist->addComposer($composer);
     }
+
+    public function editComposer($composer)
+    {
+        $this->artist->editComposer($composer);
+    }
+
 
     //
     // Account

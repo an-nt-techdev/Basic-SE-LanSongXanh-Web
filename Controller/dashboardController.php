@@ -13,15 +13,21 @@ if (isset($_GET['k'])) {
     // Dashboard Singer
     //
     if ($kind == 'singer') {
-
-        if (isset($_POST['name']))
+        
+        // update Singer
+        if (isset($_GET['u']))
         {
-            //echo var_dump(new Singer($_POST['name'], $_POST['linkImage'], $_POST['detail']));
+            $dashboard->editSinger(new Singer($_POST['id'], $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+        }
+        // insert Singer
+        else if (isset($_GET['a']))
+        {
             $dashboard->addSinger(new Singer(0, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
-        elseif (1)
+        // delete Singer
+        else if (isset($_GET['delSinger']))
         {
-
+            $dashboard->deleteSinger($_GET['delSinger']);
         }        
     }
 
@@ -30,21 +36,27 @@ if (isset($_GET['k'])) {
     //
     else if ($kind == 'composer') {
 
-        if (isset($_POST['name'])) {
-            //echo var_dump(new Composer(1, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+        // update Composer
+        if (isset($_GET['u']))
+        {
+            $dashboard->editComposer(new Composer($_POST['id'], $_POST['name'], $_POST['linkImage'], $_POST['detail']));
+        }
+        // insert Composer
+        else if (isset($_GET['a']))
+        {
             $dashboard->addComposer(new Composer(0, $_POST['name'], $_POST['linkImage'], $_POST['detail']));
         }
-        elseif (1) {
-
-        }   
+        // delete Composer
+        else if (isset($_GET['delComposer']))
+        {
+            $dashboard->deleteComposer($_GET['delComposer']);
+        }  
     }
 
     //
     // Dashboard Account
     //
-    elseif ($kind == 'account') {
-
-    }
+    else if ($kind == 'account') {}
     else { goto adSong; }
 }
 
@@ -61,7 +73,7 @@ else {
         $dashboard->addSong(new Song(0, $_POST['name'], $_POST['composer'], $_POST['singer'], $_POST['link']));
     }
     // Remove song
-    elseif (isset($_GET['removeId']))
+    else if (isset($_GET['removeId']))
     {
         $dashboard->deleteSong($_GET['removeId']);
     }

@@ -6,15 +6,14 @@
     // find video have id
     
     // if have result
-    if ($idSong != 0)
+    if ($idSong != null)
     {
         $backHome = false;
         require_once SITE_ROOT.'/View/watch.php';
     }
-    
-    if ($backHome)
+    else if ($backHome)
     {
-        header("Location: http://localhost/LanXongXanh/");
+        require_once SITE_ROOT."/Controller/homeController.php";
     }
 
         

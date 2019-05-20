@@ -37,3 +37,7 @@ $('.far').hover(function(){
 		}
 	}
 });
+
+$('#idtest').on(function(){
+	alert( "Handler for .click() called." );
+});

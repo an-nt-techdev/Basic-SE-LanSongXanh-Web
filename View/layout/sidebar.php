@@ -85,7 +85,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title m-auto" id="newAccountModalLabel">Đăng ký</h3>
+                    <h3 class="modal-title" id="newAccountModalLabel">Đăng ký</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -137,7 +137,7 @@
                         </form>
                 </div>
                 <div class="modal-footer m-auto">
-                    <p class="">Bạn đã có tài khoản? <a href="" class="" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
+                    <p class="">Bạn đã có tài khoản? <a href="" id="idtest" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@
                                 </li>
                             </ul>
 
-                            <form class="form-inline my-2 my-lg-0" action=>
+                            <form class="form-inline my-2 my-lg-0" action="" method="">
                                 <button class="btn btn-danger my-2 my-0" type="submit">Monthly</button>
                                 <button class="btn btn-danger my-2 my-0 mx-1" type="submit">Weekly</button>
                             </form>
@@ -184,7 +184,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="submit" class="btn btn-danger">Cập nhật</button>
+                                                            <button type="submit" class="btn btn-danger" name="id" value="<?php echo $singer->getId(); ?>">Cập nhật</button>
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                                                         </div>
                                                     </form>
@@ -305,7 +305,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="submit" class="btn btn-danger">Cập nhật</button>
+                                                            <button type="submit" class="btn btn-danger" name="id" value="<?php echo $composer->getId();?>">Cập nhật</button>
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                                                         </div>
                                                     </form>

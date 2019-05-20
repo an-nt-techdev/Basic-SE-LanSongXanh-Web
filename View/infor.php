@@ -56,11 +56,11 @@
 }
 else {?>
 										<div class="row">
-											<h5 class="col-3">Họ tên:</h5>
+											<h5 class="col-3"><b>Họ tên:</b></h5>
 											<p class="col-12"><?php echo $data->getName(); ?></p>
 										</div>
 										<div class="row">
-											<h5 class="col-3">Thông tin:</h5> 
+											<h5 class="col-3"><b>Thông tin:</b></h5> 
 											<p class="col-12" style="text-align: justify;"> <?php echo $data->getDetail(); ?></p>
 										</div>
 <?php } ?>

@@ -30,8 +30,9 @@
 													<p class="text-ellipsis"><?php echo $s->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0 overflow">
-                                                        <?php echo $s->getDetail(); ?>
+													<p class="mb-0 overflow" style="text-align: justify;">
+														<?php echo $s->getDetail(); ?>
+														<a class="" href="?page=infor&singer=<?php echo $s->getId(); ?>"><p>đọc tiếp . . .</p></a>
 													</p>
 												</div>
 											</div>

@@ -1,36 +1,44 @@
 
+//
 // Event vote song
-var star = $('.fa-star');
-var vote = $('.fas.fa-star').length;
+//
+
+var star = $('.vote .fa-star');
+var vote = $('.vote .fas.fa-star').length;
 var n;
 
-$('.far').hover(function(){
+$('.vote .fa-star').hover(function(){
 
-	n = parseInt($(this)[0].children[0].innerHTML)
-
-	for (var i=1; i<=5; i++)
+	n = parseInt($(this)[0].children[0].innerHTML);
+	
+	if (vote < n)
 	{
-		if (i <= n)
+		for (var i=vote+1; i<=n; i++)
 		{
 			$('.star-'+i).removeClass('far');
 			$('.star-'+i).addClass('fas');
 		}
-		else 
+	}
+	else
+	{
+		for (var i=n+1; i<=vote; i++)
 		{
 			$('.star-'+i).removeClass('fas');
 			$('.star-'+i).addClass('far');
 		}
 	}
 }, function(){
-
-	for (var i=vote+1; i<=n; i++)
+	if (vote < n)
 	{
-		if (i <= n)
+		for (var i=vote+1; i<=n; i++)
 		{
 			$('.star-'+i).removeClass('fas');
 			$('.star-'+i).addClass('far');
 		}
-		else 
+	}
+	else
+	{
+		for (var i=n+1; i<=vote; i++)
 		{
 			$('.star-'+i).removeClass('far');
 			$('.star-'+i).addClass('fas');
@@ -38,6 +46,18 @@ $('.far').hover(function(){
 	}
 });
 
-$('#idtest').on(function(){
-	alert( "Handler for .click() called." );
+
+$('.vote .fa-star').click(function(){
+
+	vote = parseInt($(this)[0].children[0].innerHTML);
+
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			alert(this.responseText);
+		}
+	};
+	xhttp.open("GET", "getVote.php?point="+ $(this)[0].children[0].innerHTML, true);
+	xhttp.send();
 });

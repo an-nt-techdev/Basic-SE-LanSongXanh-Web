@@ -29,6 +29,11 @@
                                     <a class="nav-link" href="?page=ad&k=account"><h5 class="m-0">Tài khoản</h5></a>
                                 </li>
                             </ul>
+
+                            <form class="form-inline my-2 my-lg-0" action=>
+                                <button class="btn btn-danger my-2 my-0" type="submit">Monthly</button>
+                                <button class="btn btn-danger my-2 my-0 mx-1" type="submit">Weekly</button>
+                            </form>
                         </div>
                     </nav>
                 </div>
@@ -186,7 +191,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+                                        <button class="btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
     <?php } ?>

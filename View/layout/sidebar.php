@@ -11,7 +11,7 @@
                 <a class="nav-link" href="?page=singer"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=composer"><i class="fas fa-users mr-3"></i>Nhac sĩ</a>
+                <a class="nav-link" href="?page=composer"><i class="fas fa-users mr-3"></i>Nhạc sĩ</a>
             </li>
 <!--
             <li class="nav-item py-1">
@@ -24,9 +24,9 @@
             <li class="nav-item py-1">
                 <a class="nav-link" href="?page=infor&user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
             </li>
-            <li class="nav-item py-1">
+            <!-- <li class="nav-item py-1">
                 <a class="nav-link" href=""><i class="fas fa-music mr-3"></i>Playlist</a>
-            </li>
+            </li> -->
             <li class="nav-item py-1">
                 <a class="nav-link" href="?logout=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
             </li>

@@ -16,7 +16,7 @@
 				
 				<div class="col-xl-10 col-lg-9">
 					<div class="row">
-						<section class="col-xl-9 py-3">					
+						<section class="col-xl-12 py-3">					
 							<p class="search-title" style="display:none;"></p>
 							<article class="bg-white border rounded p-3 result-search">
 									<h2 class="">Danh sách ca sĩ: </h2>
@@ -30,7 +30,7 @@
 													<p class="text-ellipsis"><?php echo $s->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0">
+													<p class="mb-0" style="text-align: justify;">
                                                         <?php echo $s->getDetail(); ?>
 													</p>
 													<p class="mb-0 text-ellipsis" style="display:none;"></p>

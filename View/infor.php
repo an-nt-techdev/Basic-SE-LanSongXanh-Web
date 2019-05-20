@@ -21,7 +21,7 @@
 				
 				<div class="col-xl-10 col-lg-9">
 					<div class="row">
-						<section class="col-xl-9">
+						<section class="col-xl-12">
 							<article class="bg-white border rounded p-3 mt-3">
 								<h3 class="text-center mb-3">Thông tin</h3>
 								<hr>
@@ -56,12 +56,12 @@
 }
 else {?>
 										<div class="row">
-											<h5 class="col-3">Họ tên</h5>
-											<p class="col-9">: <?php echo $data->getName(); ?></p>
+											<h5 class="col-3">Họ tên:</h5>
+											<p class="col-12"><?php echo $data->getName(); ?></p>
 										</div>
 										<div class="row">
-											<h5 class="col-3">Thông tin</h5>
-											<p class="col-9">: <?php echo $data->getDetail(); ?></p>
+											<h5 class="col-3">Thông tin:</h5> 
+											<p class="col-12" style="text-align: justify;"> <?php echo $data->getDetail(); ?></p>
 										</div>
 <?php } ?>
 									</div>

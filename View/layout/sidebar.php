@@ -70,14 +70,14 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="<?php echo $homeUrl;?>" method="POST" id="login-form">
+                        <form action="?signin=1" method="POST" >
                             <div class="form-group">
                                 <label for="">Tên đăng nhập</label>
-                                <input class="form-control" type="text" name="user">
+                                <input class="form-control" type="text" name="user" required>
                             </div>
                             <div class="form-group">
                                 <label class="">Mật khẩu</label>
-                                <input class="form-control" type="password" name="password">
+                                <input class="form-control" type="password" name="pass" required>
                             </div>
                             <p id="resLogin"></p>
                             <input class="btn btn-primary" type="submit" id="btn-signIn" value="Đăng nhập">
@@ -106,41 +106,40 @@
                     <form action="<?php echo $homeUrl;?>" method="POST">
                         <div class="form-group">
                             <label>Tên đăng nhập</label>
-                            <input class="form-control" name="" type="text" required>
+                            <input class="form-control" name="username" type="text" required>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-6">
                                 <label>Mật khẩu</label>
-                                <input class="form-control" name="" type="password" required>
+                                <input class="form-control" name="password" type="password" required>
                             </div>
                             <div class="form-group col-6">
                                 <label>Nhập lại mật khẩu</label>
-                                <input class="form-control" name="" type="password" required>
+                                <input class="form-control" name="againPassword" type="password" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label>Họ và tên</label>
-                            <input class="form-control" name="" type="text" required>
+                            <input class="form-control" name="name" type="text" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="form-control" name="" type="email" required>
+                            <input class="form-control" name="email" type="email" required>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-6">
                                 <label>Ngày sinh</label>
-                                <input class="form-control" name="" type="date" required>
+                                <input class="form-control" name="birthday" type="date" required>
                             </div>
 
                             <div class="form-group col-6">
                                 <label>Giới tính</label> 
                                 <select class="form-control" name="sex">
-                                    <option value="male">Nam</option>
-                                    <option value="female">Nữ</option>
-                                    <option value="female">Khác</option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
                                 </select>
                             </div>
                         </div>

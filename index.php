@@ -8,32 +8,89 @@ session_start();
 
 $checkAccount = false;
 
+// Sign up
+if (isset($_POST['username']))
+{
+	require_once SITE_ROOT."/Services/AccountService.php";
+	$acc = new AccountService();
+	$list = $acc->getAllAccount();
+	$kt = true;
+	foreach ($list as $l) 
+	{
+		if ($_POST['username'] == $l->getUsername()) 
+		{
+			$kt = false;
+			break;
+		}
+	}
+	if ($kt)
+	{
+		if ($_POST['password'] != $_POST['againPassword'])
+		{
+			$message = "Mật khẩu không khớp nhau!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+		else
+		{
+			$acc->addAccount(new Account($_POST['username'], $_POST['password'], "Member"), 
+				new AccountDetail($_POST['username'], $_POST['name'], $_POST['birthday'], $_POST['sex'], $_POST['email']));
+			$message = "Bạn tạo tài khoản thành công!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			header("Location: /LanSongXanh");
+		}
+	}
+	else
+	{
+		$message = "Tên đăng nhập đã có người sử dụng!";
+		echo "<script type='text/javascript'>alert('$message');</script>";
+	}
+}
 // Sign in
-if (isset($_POST['user']))
+else if (isset($_GET['signin']))
 {
 	$user = $_POST['user'];
 	$pass = $_POST['pass'];
 	
 	require_once SITE_ROOT."/Services/AccountService.php";
 	$acc = new AccountService();
-	$res = $acc->getAccount($user);
-	
+	$list = $acc->getAllAccount();
+	$kt = false;
+	foreach ($list as $l) 
+	{
+		if ($user == $l->getUsername()) 
+		{
+			$kt = true;
+			break;
+		}
+	}
+
 	// Not found
-	if (!$res) echo 0;
+	if ($kt == false)
+	{
+		$message = "Tên đăng nhập bị sai!";
+		echo "<script type='text/javascript'>alert('$message');</script>";
+	}
 	// Wrong Password
-	elseif ($pass != $res->getPassword()) echo 0;
-	// Correct
 	else 
 	{
-		$_SESSION['user'] = $user;
-		goto loadHome;
+		$res = $acc->getAccount($user);
+		if ($pass != $res->getPassword())
+		{
+			$message = "Mật khẩu bị sai!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+		// Correct
+		else 
+		{
+			$_SESSION['user'] = $user;
+			header("Location: /LanSongXanh");
+		}
 	}
 }
 // Sign out
-elseif (isset($_GET['signOut'])) {
+else if (isset($_GET['signOut'])) {
 	session_destroy();
 	header("Location: /LanSongXanh");
-	//goto loadHome;
 }
 else
 	// if have GET 'search'

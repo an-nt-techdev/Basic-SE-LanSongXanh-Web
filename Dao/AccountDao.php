@@ -9,27 +9,23 @@ class AccountDao extends DBConnection
 		parent::__construct();
 	}
 
-	// public function getAllAccount()
-	// {
-	// 	$result = $this->runQuery("SELECT *	FROM post");
-	// 	$AccountList = array();
-	// 	while ($row = $result->fetch_assoc())
-	// 	{
-	// 		$Account = new Account(
-	// 			$row['id'],
-	// 			$row['category_id'],
-	// 			$row['title'],
-	// 			$row['author'],
-	// 			$row['date_up'],
-	// 			$row['content'],
-	// 			$row['feature']
-	// 		);
-	// 		array_push($AccountList, $Account);
-	// 	}
-	// 	$result->free();
+	public function getAllAccount()
+	{
+		$result = $this->runQuery("SELECT *	FROM account");
+		$AccountList = array();
+		while ($row = $result->fetch_assoc())
+		{
+			$Account = new Account(
+				$row['username'],
+				$row['password'],
+				$row['ranking']
+			);
+			array_push($AccountList, $Account);
+		}
+		$result->free();
 
-	// 	return $AccountList;
-	// }
+		return $AccountList;
+	}
 
 	// public function getAccountByTitle($title)
 	// {
@@ -50,11 +46,14 @@ class AccountDao extends DBConnection
 	public function getAccountByUsername($ID)
 	{
 		$result = $this->runQuery("SELECT *	FROM account WHERE username = '{$ID}'");
-		
-		if (!$result) return $result;
+
+		if (!$result) 
+		{
+			//$result = "f";
+			return $result;
+		}
 
 		$row = $result->fetch_assoc();
-		
 		return new Account(
 			$row['username'],
 			$row['password'],

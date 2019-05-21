@@ -145,8 +145,14 @@ body {
 }
 
 .overflow {
-	
 	height: 100px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.fade-link {
+	color: blue;
+}
+.fade-link:hover {
+	cursor: pointer;
 }

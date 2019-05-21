@@ -18,17 +18,24 @@
                 <a class="nav-link" href="?page=contact"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
             </li>
 -->
+<?php if (isset($_SESSION['user'])) { ?>
             <li class="nav-item py-1">
-                <h5>Tài khoản</h5>
+                <h5 class="text-primary">Tài khoản: <?php echo $_SESSION['user']; ?></h5>
             </li>
             <li class="nav-item py-1">
                 <a class="nav-link" href="?page=infor&user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
             </li>
+            <!--
             <li class="nav-item py-1">
                 <a class="nav-link" href=""><i class="fas fa-music mr-3"></i>Playlist</a>
             </li>
+            -->
             <li class="nav-item py-1">
-                <a class="nav-link" href="?logout=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
+                <a class="nav-link" href="?signOut=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
+            </li>
+    <?php } else { ?>
+            <li class="nav-item py-1">
+                <h5 class="text-primary">Bạn chưa đăng nhập</h5>
             </li>
             <li class="nav-item py-1">
                 <!-- Button trigger modal Sign In -->
@@ -40,8 +47,9 @@
                 <!-- Button trigger modal Create New Account -->
                 <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#newAccountModal">
                         Đăng ký
-                    </button>
+                </button>
             </li>
+    <?php } ?>
         </ul>
     </div>
 
@@ -59,21 +67,22 @@
                     </div>
 
                     <div class="modal-body">
-                        <form class="" action="" method="POST">
+                        <form action="<?php echo $homeUrl;?>" method="POST" id="login-form">
                             <div class="form-group">
                                 <label for="">Tên đăng nhập</label>
-                                <input class="form-control" type="text" id="nameUser-SignIn">
+                                <input class="form-control" type="text" name="user">
                             </div>
                             <div class="form-group">
                                 <label class="">Mật khẩu</label>
-                                <input class="form-control" type="password" id="nameUser-SignIn">
+                                <input class="form-control" type="password" name="password">
                             </div>
-                            <button class="btn btn-primary" type="submit">Đăng nhập</button>
+                            <p id="resLogin"></p>
+                            <input class="btn btn-primary" type="submit" id="btn-signIn" value="Đăng nhập">
                         </form>
                     </div>
 
                     <div class="modal-footer">
-                        <p class="m-auto">Bạn chưa có tài khoản? <a href="" class="" data-toggle="modal" data-target="#newAccountModal">Đăng ký</a></p>
+                        <p class="m-auto">Bạn chưa có tài khoản? <span id="changeFormSignUp" class="fade-link">Đăng ký</span></p>
                     </div>
                 
             </div>
@@ -91,53 +100,53 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="" action="" method="POST">
-                            <div class="form-group">
-                                <label>Tên đăng nhập</label>
-                                <input class="form-control" name="" type="text" required>
+                    <form action="<?php echo $homeUrl;?>" method="POST">
+                        <div class="form-group">
+                            <label>Tên đăng nhập</label>
+                            <input class="form-control" name="" type="text" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label>Mật khẩu</label>
+                                <input class="form-control" name="" type="password" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Nhập lại mật khẩu</label>
+                                <input class="form-control" name="" type="password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Họ và tên</label>
+                            <input class="form-control" name="" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input class="form-control" name="" type="email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label>Ngày sinh</label>
+                                <input class="form-control" name="" type="date" required>
                             </div>
 
-                            <div class="form-row">
-                                <div class="form-group col-6">
-                                    <label>Mật khẩu</label>
-                                    <input class="form-control" name="" type="password" required>
-                                </div>
-                                <div class="form-group col-6">
-                                    <label>Nhập lại mật khẩu</label>
-                                    <input class="form-control" name="" type="password" required>
-                                </div>
+                            <div class="form-group col-6">
+                                <label>Giới tính</label> 
+                                <select class="form-control" name="sex">
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="female">Khác</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label>Họ và tên</label>
-                                <input class="form-control" name="" type="text" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input class="form-control" name="" type="email" required>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-6">
-                                    <label>Ngày sinh</label>
-                                    <input class="form-control" name="" type="date" required>
-                                </div>
-
-                                <div class="form-group col-6">
-                                    <label>Giới tính</label> 
-                                    <select class="form-control" name="sex">
-                                        <option value="male">Nam</option>
-                                        <option value="female">Nữ</option>
-                                        <option value="female">Khác</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <button class="btn btn-primary" type="submit">Đăng ký</button>
-                        </form>
+                        <button class="btn btn-primary" type="submit">Đăng ký</button>
+                    </form>
                 </div>
                 <div class="modal-footer m-auto">
-                    <p class="">Bạn đã có tài khoản? <a href="" data-toggle="modal" data-target="#signInModal">Đăng nhập</a></p>
+                    <p class="">Bạn đã có tài khoản? <span id="changeFormSignIn" class="fade-link">Đăng nhập</span></p>
                 </div>
             </div>
         </div>

@@ -49,9 +49,12 @@ class AccountDao extends DBConnection
 	
 	public function getAccountByUsername($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM account WHERE username = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM account WHERE username = '{$ID}'");
+		
+		if (!$result) return $result;
 
 		$row = $result->fetch_assoc();
+		
 		return new Account(
 			$row['username'],
 			$row['password'],

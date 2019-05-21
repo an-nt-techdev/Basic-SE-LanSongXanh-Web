@@ -16,29 +16,32 @@
 				
 				<div class="col-xl-10 col-lg-9">
 					<div class="row">
-						<section class="col-xl-12 py-3">					
-							<p class="search-title" style="display:none;"></p>
+						<section class="col-xl-9 py-3">					
 							<article class="bg-white border rounded p-3 result-search">
-									<h2 class="">Danh sách ca sĩ: </h2>
+									<h3 class="result-search-status">Danh sách Playlist của bạn:</h3>
 									<hr>
 									<ul class="result-search-list">
-	<?php foreach($singer as $s) { ?>
+									<?php for($i = 0; $i < count($rs); $i++) { ?>
 										<li class="result-search-item row">
-											<a class="col-sm-3" href="?page=infor&singer=<?php echo $s->getId(); ?>"><img src="<?php echo $s->getImage(); ?>" class="result-search-image"></a>
+											<a class="col-sm-3" href="?v=<?php echo $rs[$i]->getId(); ?>"><img src="<?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getImage(); ?>" class="result-search-image"></a>
 											<div class="result-search-infor col-sm-9">
-												<a class="result-search-link" href="?page=infor&singer=<?php echo $s->getId(); ?>">
-													<p class="text-ellipsis"><?php echo $s->getName(); ?></p>
+												<a class="result-search-link" href="?v=<?php echo $rs[$i]->getId(); ?>">
+													<p class="text-ellipsis"><?php echo $rs[$i]->getNameSong(); ?> - <?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getName(); ?></p>
 												</a>
 												<div class="result-search-intro">
-													<p class="mb-0 overflow" style="text-align: justify;">
-														<?php echo $s->getDetail(); ?>
-														<a class="" href="?page=infor&singer=<?php echo $s->getId(); ?>"><p>đọc tiếp . . .</p></a>
+													<p class="mb-0">
+														<?php $tmp=$searchService->getVoteSongById($rs[$i]->getId()); echo $tmp->getPoint(); ?> <i class="fas fa-star"></i>
+													</p>
+													<p class="mb-0 text-ellipsis">
+														<?php $tmp=$searchService->getSingerById($rs[$i]->getSinger_id()); echo $tmp->getDetail(); ?>
+													</p>
+													<p class="composer text-ellipsis" style="display:none;">
+														Chế Linh: ...
 													</p>
 												</div>
 											</div>
 										</li>
-                                        <hr>
-	<?php } ?>
+									<?php } ?>
 									</ul>
 							</article>
 							

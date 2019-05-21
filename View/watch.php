@@ -31,7 +31,7 @@
 					<div class="video-infor mt-4 p-3 border rounded bg-white">
 					
 						<div class="video-header row justify-content-between">
-							<h3 class="col-md-6 video-title"><?php echo $s->getNameSong(); ?> - <?php echo $s->getSinger(); ?></h3>
+							<h3 class="col-md-6 video-title"><?php echo $s->getNameSong(); ?> - <a class="result-search-link" href="?page=infor&singer=<?php echo $s->getSinger_id(); ?>"><?php echo $s->getSinger(); ?></a></h3>
 							<div class="col-md-4 video-vote">
 								<div class="">
 									<h4>Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
@@ -48,8 +48,9 @@
 						
 						<hr style="margin-top: 1em;">
 						
-						<p class="video-intro">
-							<?php echo $s->getSingerDetail(); ?><br>
+						<p class="video-intro overflow" style="text-align: justify;">
+							<?php echo $s->getSingerDetail(); ?>
+							<a class="result-search-link" href="?page=infor&singer=<?php echo $s->getSinger_id(); ?>"><p>đọc tiếp . . .</p></a>
 						</p>
 					</div>					
 					<!-- End Media -->

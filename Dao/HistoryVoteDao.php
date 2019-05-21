@@ -11,7 +11,7 @@ class HistoryVoteDao extends DBConnection
 
 	public function getHistoryVoteBySongId($id)
 	{
-		$result = $this->runQuery("SELECT *	FROM History_Vote WHERE song_id = {$id}");
+		$result = $this->runQuery("SELECT *	FROM history_vote WHERE song_id = {$id}");
 		$HistoryVoteList = array();
 		while ($row = $result->fetch_assoc())
 		{
@@ -45,7 +45,7 @@ class HistoryVoteDao extends DBConnection
 	
 	public function getHistoryVoteByUsernameIdAndSongId($Username_id, $Song_id)
 	{
-        $result = $this->runQuery("SELECT *	FROM History_Vote WHERE username_id = {$Username_id} AND song_id = {$Song_id}");
+        $result = $this->runQuery("SELECT *	FROM history_vote WHERE username_id = {$Username_id} AND song_id = {$Song_id}");
 
 		$row = $result->fetch_assoc();
 		return new HistoryVote(
@@ -101,7 +101,7 @@ class HistoryVoteDao extends DBConnection
 
 	public function deleteHistoryVote($ID)
 	{
-		$this->runQuery("DELETE FROM History_Vote WHERE song_id = {$ID}");
+		$this->runQuery("DELETE FROM history_vote WHERE song_id = {$ID}");
 	}
 }
 

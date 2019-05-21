@@ -9,7 +9,7 @@ session_start();
 $checkAccount = false;
 
 // Sign up
-if (isset($_POST['username']))
+if (isset($_GET['signup']))
 {
 	require_once SITE_ROOT."/Services/AccountService.php";
 	$acc = new AccountService();
@@ -32,8 +32,10 @@ if (isset($_POST['username']))
 		}
 		else
 		{
-			$acc->addAccount(new Account($_POST['username'], $_POST['password'], "Member"), 
-				new AccountDetail($_POST['username'], $_POST['name'], $_POST['birthday'], $_POST['sex'], $_POST['email']));
+			require_once SITE_ROOT."/Entities/Account.php";
+			require_once SITE_ROOT."/Entities/AccountDetail.php";
+			$acc->addAccount(new Account($_POST['username'], $_POST['password'], "Member"));
+			$acc->addAccountDetail(new AccountDetail($_POST['username'], $_POST['name'], $_POST['birthday'], $_POST['sex'], $_POST['email']));
 			$message = "Bạn tạo tài khoản thành công!";
 			echo "<script type='text/javascript'>alert('$message');</script>";
 			header("Location: /LanSongXanh");

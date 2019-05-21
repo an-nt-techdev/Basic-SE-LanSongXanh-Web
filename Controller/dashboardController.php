@@ -59,7 +59,22 @@ if (isset($_GET['k'])) {
     else if ($kind == 'account') {}
     else { goto adSong; }
 }
-
+//
+//  Thống kê Tuần - Tháng
+//
+else if (isset($_GET['statistic']))
+{
+    require_once SITE_ROOT."/Services/VoteService.php";
+    $ser = new VoteService();
+    if ($_GET['statistic'] == "week")
+    {    
+        $ser->saveTopWeek();
+    }
+    else if ($_GET['statistic'] == "month")
+    {
+        $ser->saveTopMonth();
+    }
+}
 //
 // Dashboard Song
 //

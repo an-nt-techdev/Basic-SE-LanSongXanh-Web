@@ -103,7 +103,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo $homeUrl;?>" method="POST">
+                    <form action="?signup=1" method="POST">
                         <div class="form-group">
                             <label>Tên đăng nhập</label>
                             <input class="form-control" name="username" type="text" required>

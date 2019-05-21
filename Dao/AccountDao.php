@@ -103,7 +103,7 @@ class AccountDao extends DBConnection
 			"UPDATE account
 			SET password = '{$Account->getPassword()}',
 				ranking = '{$Account->getRanking()}'
-			WHERE username = {$Account->getUsername()}"
+			WHERE username = '{$Account->getUsername()}'"
 		);
 	}
 

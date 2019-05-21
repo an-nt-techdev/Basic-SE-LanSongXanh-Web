@@ -19,11 +19,12 @@
             </li>
 -->
 <?php if (isset($_SESSION['user'])) { ?>
+
             <li class="nav-item py-1">
                 <h5 class="text-primary">Tài khoản: <?php echo $_SESSION['user']; ?></h5>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=infor&user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
+                <a class="nav-link" href="?page=infor&user=<?php echo $_SESSION['user']; ?>"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
             </li>
             <!--
             <li class="nav-item py-1">
@@ -33,7 +34,9 @@
             <li class="nav-item py-1">
                 <a class="nav-link" href="?signOut=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
             </li>
-    <?php } else { ?>
+
+<?php } else { ?>
+
             <li class="nav-item py-1">
                 <h5 class="text-primary">Bạn chưa đăng nhập</h5>
             </li>

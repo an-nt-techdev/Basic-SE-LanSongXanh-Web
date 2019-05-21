@@ -45,7 +45,7 @@ class SongDao extends DBConnection
 
 	public function getSongByNameSong($NameSong)
 	{
-		$result = $this->runQuery("SELECT *	FROM song WHERE namesong = {$NameSong}");
+		$result = $this->runQuery("SELECT *	FROM song WHERE namesong = '{$NameSong}'");
 
 		$row = $result->fetch_assoc();
 		return new Song(

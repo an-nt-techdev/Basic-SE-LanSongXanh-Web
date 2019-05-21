@@ -18,9 +18,19 @@
             return $this->account->getAccount($username);
         }
 
+        public function editAccount($username)
+        {
+            return $this->account->editAccount($username);
+        }
+
         public function getAccountDetail($username)
         {
             return $this->account->getAccountDetail($username);
+        }
+
+        public function editAccountDetail($username)
+        {
+            return $this->account->editAccountDetail($username);
         }
 
         public function getComposer($nameComposer)

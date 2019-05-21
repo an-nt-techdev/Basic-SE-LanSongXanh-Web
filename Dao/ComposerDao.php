@@ -43,7 +43,7 @@ class ComposerDao extends DBConnection
 	
 	public function getComposerByName($Name)
 	{
-		$result = $this->runQuery("SELECT *	FROM composer WHERE name = {$Name}");
+		$result = $this->runQuery("SELECT *	FROM composer WHERE name = '{$Name}'");
 
 		$row = $result->fetch_assoc();
 		return new Composer(

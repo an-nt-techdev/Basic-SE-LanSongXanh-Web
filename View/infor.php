@@ -50,7 +50,7 @@
 										</div>
 										<div class="row">
 											<h5 class="col-3">Giới tính</h5>
-											<p class="col-9">: <?php echo $data->getSex(); ?></p>
+											<p class="col-9">: <?php if ($data->getSex() == 0) echo "Nam"; else echo "Nữ"; ?></p>
 										</div>
 <?php 
 }
@@ -142,16 +142,18 @@ else {?>
 							<article class="bg-white border rounded p-3 mt-3">
 								<h3>Cập nhật thông tin</h3>
 								<hr>
-								<form class="" method="post">
+								
+								<form action="?page=infor&user=<?php echo $data->getUsername_id(); ?>&u=true" method="post">
 									<div class="form-group form-row">
 										<label class="col-md-3">Họ Tên:</label>
 										<input class="col-md-4 form-control" type="text" name="name" 
-											value="<?php echo $data->getUsername_id();?>">
+											value="<?php echo $data->getName();?>">
 									</div>
 									
 									<div class="form-group form-row">
 										<label class="col-md-3">Ngày sinh:</label>
-										<input class="col-md-4 form-control" type="date" name="birthday">
+										<input class="col-md-4 form-control" type="date" name="birthday"
+											value="<?php echo $data->getBirthday();?>">
 									</div>
 									
 									<div class="form-group form-row">
@@ -163,17 +165,8 @@ else {?>
 									<div class="form-group form-row">
 										<label class="col-md-3">Giới tính:</label>
 										<select class="col-md-4 form-control" name="sex">
-											<option value="male" 
-												<?php 
-													if (!$data->getSex()) {
-														echo "selected";
-													} else {
-												?>
-											>Male</option>
-											
-											<option value="female" 
-												<?php echo "selected";}?>
-											>Female</option>
+											<option value="0" <?php if ($data->getSex() == 0) echo "selected"; ?> >Nam</option>
+											<option value="1" <?php if ($data->getSex() == 1) echo "selected"; ?> >Nữ</option>
 										</select>
 									</div>
 									<input class="btn btn-primary" type="submit" value="Cập nhật">
@@ -184,7 +177,7 @@ else {?>
 							<article class="bg-white border rounded p-3 mt-3">
 								<h3>Đổi mật khẩu</h3>
 								<hr>
-								<form class="" method="post">
+								<form action="?page=infor&user=<?php echo $data->getUsername_id(); ?>&pass=true" method="post">
 									<div class="form-group form-row">
 										<label class="col-md-3">Mật khẩu:</label>
 										<input class="col-md-4 form-control" type="password" name="password" placeholder="Mật khẩu..." required>

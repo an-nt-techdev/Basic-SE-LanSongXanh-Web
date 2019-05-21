@@ -1,5 +1,7 @@
 <?php 
     require_once SITE_ROOT."/Model/inforModel.php";
+    require_once SITE_ROOT."/Entities/Account.php";
+    require_once SITE_ROOT."/Entities/AccountDetail.php";
     $infor = new inforModel();
     
     $backHome = true;
@@ -33,9 +35,27 @@
     {
         $back = false;
         $kind = 'user';
-        
-        $data = $infor->getAccountDetail($_GET['user']);        
-        //if (is_null($data->getUserName_id())) goto backHome;
+        if (isset($_GET['u'])) 
+        {
+            $infor->editAccountDetail(new AccountDetail($_GET['user'], $_POST['name'], $_POST['birthday'], $_POST['sex'], $_POST['email']));
+            $data = $infor->getAccountDetail((string)$_GET['user']);
+        }
+        else if (isset($_GET['pass']))
+        {
+            $acc = $infor->getAccount($_GET['user']);
+            if ($acc->getPassword() == $_POST['password'])
+            {
+                if ($_POST['newPassword'] == ($_POST['againPassword'])) 
+                {
+                    $infor->editAccount(new Account($_GET['user'], $_POST['newPassword'], "member"));
+                    $data = $infor->getAccountDetail((string)$_GET['user']);
+                }   
+            }
+        }
+        else 
+        {
+            $data = $infor->getAccountDetail((string)$_GET['user']);
+        }
 
         require_once SITE_ROOT.'/View/infor.php';
     }

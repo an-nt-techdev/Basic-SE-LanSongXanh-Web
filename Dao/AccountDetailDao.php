@@ -49,7 +49,13 @@ class AccountDetailDao extends DBConnection
 	
 	public function getAccountDetailByUsernameId($ID)
 	{
-		$result = $this->runQuery("SELECT *	FROM account_detail WHERE username_id = {$ID}");
+		$result = $this->runQuery("SELECT *	FROM account_detail WHERE username_id LIKE '{$ID}'");
+
+		if (!$result)
+		{
+			echo "false";
+			return $result;
+		} 
 
 		$row = $result->fetch_assoc();
 		return new AccountDetail(
@@ -106,7 +112,7 @@ class AccountDetailDao extends DBConnection
 				birthday = '{$AccountDetail->getBirthday()}',
 				sex = '{$AccountDetail->getSex()}',
 				email = '{$AccountDetail->getEmail()}'
-			WHERE username_id = {$AccountDetail->getUsername_id()}"
+			WHERE username_id = '{$AccountDetail->getUsername_id()}'"
 		);
 	}
 

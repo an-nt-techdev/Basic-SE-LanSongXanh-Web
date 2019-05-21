@@ -26,13 +26,14 @@ if (isset($_POST['user']))
 	else 
 	{
 		$_SESSION['user'] = $user;
-		header("Location: http://localhost/LanXongXanh");
+		goto loadHome;
 	}
 }
 // Sign out
 elseif (isset($_GET['signOut'])) {
 	session_destroy();
-	header("Location: http://localhost/LanXongXanh");
+	header("Location: /LanSongXanh");
+	//goto loadHome;
 }
 else
 	// if have GET 'search'

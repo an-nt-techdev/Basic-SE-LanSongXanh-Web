@@ -20,7 +20,7 @@
     }
 
     protected function runQuery(string $sql) {
-		return	$result = $this->db->query($sql);
+		  return	$result = $this->db->query($sql);
     }
 
   }

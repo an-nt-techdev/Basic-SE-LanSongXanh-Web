@@ -43,7 +43,7 @@ class SingerDao extends DBConnection
 	
 	public function getSingerByName($Name)
 	{
-		$result = $this->runQuery("SELECT *	FROM singer WHERE name = {$Name}");
+		$result = $this->runQuery("SELECT *	FROM singer WHERE name = '{$Name}'");
 
 		$row = $result->fetch_assoc();
 		return new Singer(

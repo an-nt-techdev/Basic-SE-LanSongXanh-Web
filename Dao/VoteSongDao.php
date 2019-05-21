@@ -46,7 +46,7 @@ class VoteSongDao extends DBConnection
 	public function getVoteSongBySongId($Song_id)
 	{
         $result = $this->runQuery("SELECT *	FROM vote_song WHERE song_id = {$Song_id}");
-
+		
 		$row = $result->fetch_assoc();
 		return new VoteSong(
 			$row['song_id'],

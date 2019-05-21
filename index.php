@@ -6,6 +6,8 @@ $homeUrl = $_SERVER['REQUEST_URI'];
 
 session_start();
 
+$checkAccount = false;
+
 // Sign in
 if (isset($_POST['user']))
 {

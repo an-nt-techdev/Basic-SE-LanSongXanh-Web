@@ -81,7 +81,7 @@ class HistoryVoteDao extends DBConnection
 	public function insertHistoryVote($HistoryVote)
 	{
 		return $this->runQuery(
-			"INSERT INTO History_Vote(username_id, song_id, stars) 
+			"INSERT INTO history_vote(username_id, song_id, stars) 
 			VALUE (
 				'{$HistoryVote->getUsername_id()}',
 				'{$HistoryVote->getSong_id()}',

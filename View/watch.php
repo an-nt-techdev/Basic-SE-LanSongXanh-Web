@@ -89,7 +89,10 @@
 		
 		<?php require_once('layout/loadScript.php'); ?>
 		
-		<script src="View/js/script.js"></script>
+		<script>
+			var vote = $('.vote .fas.fa-star').length;
+		</script>
+		<script src="View/js/voteSong.js"></script>
 		
 	</body>
 </html>

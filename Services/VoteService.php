@@ -106,7 +106,7 @@ require_once SITE_ROOT."/Entities/TopMonth.php";
 
         public function addVoteSong($voteSong)
         {
-            $this->voteSongDao->insertVoteSong($voteSong);
+            return $this->voteSongDao->insertVoteSong($voteSong);
         }
 
         public function updateVoteSong($id)

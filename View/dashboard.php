@@ -33,6 +33,7 @@
                             <form class="form-inline my-2 my-lg-0" action=>
                                 <button class="btn btn-danger my-2 my-0" type="submit">Monthly</button>
                                 <button class="btn btn-danger my-2 my-0 mx-1" type="submit">Weekly</button>
+                                <a class="btn btn-danger my-2 my-0 mx-1" href="">Log Out</a>
                             </form>
                         </div>
                     </nav>

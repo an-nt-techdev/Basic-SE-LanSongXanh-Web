@@ -20,7 +20,7 @@
 -->
 <?php if (isset($_SESSION['user'])) { ?>
             <li class="nav-item py-1">
-                <h5 class="text-primary">Tài khoản: <?php echo $_SESSION['user']; ?></h5>
+                <h5 class="text-primary">Tài khoản: <span id="nameUser"><?php echo $_SESSION['user']; ?></span></h5>
             </li>
             <li class="nav-item py-1">
                 <a class="nav-link" href="?page=infor&user=1"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
@@ -54,7 +54,7 @@
     </div>
 
 
-
+<?php if (!isset($_SESSION['user'])) { ?>
     <!-- Modal Sign In -->
     <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
@@ -151,6 +151,6 @@
             </div>
         </div>
     </div>
-
+<?php } ?>
 
 </nav>

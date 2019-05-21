@@ -4,7 +4,6 @@
 //
 
 var star = $('.vote .fa-star');
-var vote = $('.vote .fas.fa-star').length;
 var n;
 
 $('.vote .fa-star').hover(function(){
@@ -48,16 +47,21 @@ $('.vote .fa-star').hover(function(){
 
 
 $('.vote .fa-star').click(function(){
+	if ($('#signInModal').length == 0) {
+		var xhttp;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var res = this.responseText;
+				alert("_" + res + "_");				
+				vote = parseInt($(this)[0].children[0].innerHTML);
+			}
+		};
+		
+		url = new URL(window.location.href);
 
-	vote = parseInt($(this)[0].children[0].innerHTML);
-
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			alert(this.responseText);
-		}
-	};
-	xhttp.open("GET", "getVote.php?point="+ $(this)[0].children[0].innerHTML, true);
-	xhttp.send();
+		xhttp.open("GET", "getVote.php?point=" + $(this)[0].children[0].innerHTML + "&user=" + $('#nameUser')[0].innerHTML + "&song=" + url.searchParams.get("v"), true);
+		xhttp.send();
+	}
+	else alert('Bạn cần đăng nhập để sử dụng chức năng bình chọn!!');
 });

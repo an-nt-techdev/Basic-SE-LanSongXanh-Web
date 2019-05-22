@@ -9,8 +9,7 @@
 
     for ($i = 0; $i <= count($list)-1; $i++)
     {
-        similar_text(strtoupper($list[$i]->getNameSong()), $search, $kq); 
-        if ($kq > 40) array_push($rs, $list[$i]);
+        if (strpos(strtoupper($list[$i]->getNameSong()), $search)!==false) array_push($rs, $list[$i]);
     }
 
     //echo count($rs);

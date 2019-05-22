@@ -93,6 +93,10 @@ class DashboardModel {
     // Account
     //
 
+    public function getAllAccount()
+    {
+        return $this->account->getAllAccount();
+    }
 
 }
 

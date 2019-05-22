@@ -52,27 +52,24 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">User</th>
-                                    <th scope="col">Tên</th>
-                                    <th scope="col">Ngày sinh</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Ranking</th>
+                                    <!-- <th scope="col">Ngày sinh</th>
                                     <th scope="col">Giới tính</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Tùy chọn</th>
+                                    <th scope="col">Tùy chọn</th> -->
                                 </tr>
                             </thead>
                             <tbody>
     <?php foreach ($listAccount as $account) { ?>
                                 <tr>
-                                    <th scope="row"><?php echo $account; ?></th>
-                                    <td><?php echo $account; ?></td>
-                                    <td><?php echo $account; ?></td>
-                                    <td><?php echo $account; ?></td>
-                                    <td><?php echo $account; ?></td>
-                                    <td><?php echo $account; ?></td>
-                                    <td>
+                                    <th scope="row"></th>
+                                    <td><?php echo $account->getUsername(); ?></td>
+                                    <td><?php echo $account->getRanking(); ?></td>
+                                    <!-- <td>
                                         <button class="btn btn-warning">Chỉnh sửa</button>
                                         <button class="btn btn-danger">Xóa</button>
-                                    </td>
+                                    </td> -->
                                 </tr>
     <?php } ?>
                             </tbody>

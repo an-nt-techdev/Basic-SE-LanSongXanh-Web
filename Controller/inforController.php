@@ -33,7 +33,7 @@
     // if user
     else if (isset($_GET['user'])) 
     {
-        $back = false;
+        $backHome = false;
         $kind = 'user';
         if (isset($_GET['u'])) 
         {
@@ -63,7 +63,8 @@
     if ($backHome)
     {
         backHome:
-        header("Location: http://localhost/LanSongXanh/");
+        header("Location: /LanSongXanh/");
+        //require_once SITE_ROOT.'/Controller/homeController.php';
     }
             
 ?>

@@ -22,9 +22,9 @@
 								
 								<table class="table table-hover table-striped rank">
 									<thead>
-										<th scope="col">Hạng</th>
+										<th scope="col" style="text-align:center;">Hạng</th>
 										<th scope="col">Tên bài hát</th>
-										<th scope="col">Điểm</th>
+										<th scope="col" style="text-align:center;">Điểm hiện tại</th>
 									</thead>
 									<tbody>
 									<?php 
@@ -34,12 +34,12 @@
 										for ($i = 0; $i <= 9; $i++) {
 										?>
 										<tr>
-											<th scope="row"><?php echo $l[$i]->getTop(); ?></th>
+											<th scope="row" style="text-align:center;"><?php echo $l[$i]->getTop(); ?></th>
 											<td>
 												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
 												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
 										</tr>
 										<?php } ?>
 									</tbody>
@@ -53,9 +53,9 @@
 								<h3 class="text-center">Top trong tháng</h3>
 								<table class="table table-hover table-striped rank">
 									<thead>
-										<th scope="col">Hạng</th>
+										<th scope="col" style="text-align:center;">Hạng</th>
 										<th scope="col">Tên bài hát</th>
-										<th scope="col">Điểm</th>
+										<th scope="col" style="text-align:center;">Điểm hiện tại</th>
 									</thead>
 									<tbody>
 									<?php 
@@ -65,12 +65,12 @@
 										for ($i = 10; $i <= 19; $i++) {
 										?>
 										<tr>
-											<th scope="row"><?php echo $l[$i]->getTop(); ?></th>
+											<th scope="row" style="text-align:center;"><?php echo $l[$i]->getTop(); ?></th>
 											<td>
 												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
 												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
 										</tr>
 										<?php } ?>
 									</tbody>

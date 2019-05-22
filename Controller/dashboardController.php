@@ -56,7 +56,7 @@ if (isset($_GET['k'])) {
     //
     // Dashboard Account
     //
-    else if ($kind == 'account') {}
+    else if ($kind == 'account') {goto getAll;}
     else { goto adSong; }
 }
 //
@@ -106,10 +106,13 @@ else {
 //
 // Get All Data
 //
+getAll:
+
 $listSong = $dashboard->getAllSong();
 $listSinger = $dashboard->getAllSinger();
 $listComposer = $dashboard->getAllComposer();
-$listAccount;
+$listAccount = $dashboard->getAllAccount();
+//echo $listAccount[2]->getUsername();
 
 //$tmp = (int)($listSong[0]->getSinger_id());
 //echo $dashboard->getSingerById($tmp);

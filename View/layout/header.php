@@ -3,7 +3,7 @@
         <i class="fas fa-bars"></i>
     </button>
     
-    <h3 class="col-md-3 my-2 text-center">Eagle Team</h3>
+    <h3 class="col-md-3 my-2 text-center">Làn Sóng Xanh</h3>
     
     <form action="?search=" class="col-md-6 m-2 px-3 form-group form-row" method="get">
         <div class="col">

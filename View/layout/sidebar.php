@@ -33,6 +33,9 @@
             </li>
             -->
             <li class="nav-item py-1">
+                <a class="nav-link" href="?page=ad"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a>
+            </li>
+            <li class="nav-item py-1">
                 <a class="nav-link" href="?signOut=1"><i class="fas fa-sign-out-alt mr-3"></i>Đăng xuất</a>
             </li>
 

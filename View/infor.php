@@ -93,7 +93,7 @@ else {?>
 												?>
 												<tr>
 													<th><p class="name-song"><a href="?v=<?php echo $song->getSong_id(); ?>"><?php echo $song->getNameSong(); ?></a></p></th>
-													<td class="score"><?php echo number_format($song->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+													<td class="score"><?php echo number_format($song->getPoint(),2); ?> <i class="fas fa-star"></i></td>
 												</tr>
 												<?php } ?>
 											</tbody>
@@ -128,7 +128,7 @@ else {?>
 												?>
 												<tr>
 													<th><p class="name-song"><a href="?v=<?php echo $song->getSong_id(); ?>"><?php echo $song->getNameSong(); ?></a></p></th>
-													<td class="score"><?php echo number_format($song->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+													<td class="score"><?php echo number_format($song->getPoint(),2); ?> <i class="fas fa-star"></i></td>
 												</tr>
 												<?php } ?>
 											</tbody>

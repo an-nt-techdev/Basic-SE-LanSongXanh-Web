@@ -39,7 +39,7 @@
 												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
 												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),2); ?> <i class="fas fa-star"></i></td>
 										</tr>
 										<?php } ?>
 									</tbody>
@@ -70,7 +70,7 @@
 												<p class="name-song"><a href="?v=<?php echo $l[$i]->getSong_id(); ?>"><?php echo $l[$i]->getNameSong(); ?></a></p>
 												<p class="singer-song"><a href="?page=infor&singer=<?php echo $l[$i]->getSinger_id(); ?>"><?php echo $l[$i]->getSinger(); ?></a></p>
 											</td>
-											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),1); ?> <i class="fas fa-star"></i></td>
+											<td class="score" style="text-align:center;"><?php echo number_format($l[$i]->getPoint(),2); ?> <i class="fas fa-star"></i></td>
 										</tr>
 										<?php } ?>
 									</tbody>

@@ -34,7 +34,7 @@
 							<h3 class="col-md-6 video-title"><?php echo $s->getNameSong(); ?> - <a class="result-search-link" href="?page=infor&singer=<?php echo $s->getSinger_id(); ?>"><?php echo $s->getSinger(); ?></a></h3>
 							<div class="col-md-4 video-vote">
 								<div class="">
-									<h4>Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
+									<h4>Điểm hiện tại: <span id="point-average"><?php echo number_format($s->getPoint(),1); ?></span> <i class="fas fa-star"></i></h4>
 <?php
 	$point = FALSE;
 	if (isset($_SESSION['user'])) {

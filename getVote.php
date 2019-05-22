@@ -8,7 +8,9 @@
     $song = $_GET['song'];
 
     $vote = new VoteService();
-    echo var_dump($vote->addHistoryVote(new HistoryVote($user, $song, $point)));
-    echo var_dump($vote->updateVoteSong($song));
+    $vote->addHistoryVote(new HistoryVote($user, $song, $point));
+    $vote->updateVoteSong($song);
 
+    $voteSong = $vote->getVoteSongById((int)$song);
+    echo var_dump($voteSong->getPoint());
 ?>

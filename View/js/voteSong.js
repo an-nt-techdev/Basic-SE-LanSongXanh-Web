@@ -58,6 +58,7 @@ $('.vote .fa-star').click(function(){
 			if (this.readyState == 4 && this.status == 200) {
 				vote = tmp;
 				$('#status-vote').text("Bạn đã bình chọn " + vote + " sao");
+				document.getElementById('point-average').innerHTML = this.responseText;
 			}
 		};
 		

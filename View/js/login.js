@@ -44,8 +44,12 @@ $("#changeFormSignIn").click(function(){
     $('#newAccountModal').modal('hide');
 });
 
-
-function check() {
+$('#form-search').submit(function(){
     var st = document.forms["form-search"]["search"].value;
-    if (st == "") return false;
-}
+    if (st === "") return false;
+});
+
+var h = $('#navbarSupportedContent').height() + 300;
+var sh = $('.result-search').height();
+
+if (sh < h) $('.result-search').css('height', h.toString());

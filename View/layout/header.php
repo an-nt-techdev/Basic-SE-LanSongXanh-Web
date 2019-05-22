@@ -5,7 +5,7 @@
     
     <h3 class="col-md-3 my-2 text-center">Làn Sóng Xanh</h3>
     
-    <form action="?search=" name="form-search" class="col-md-6 m-2 px-3 form-group form-row" method="get" onsubmit="return check()">
+    <form action="?search=" id="form-search" class="col-md-6 m-2 px-3 form-group form-row" method="get">
         <div class="col">
             <input type="text" class="align-center form-control" name="search" placeholder="Tìm kiếm bài hát...">
         </div>

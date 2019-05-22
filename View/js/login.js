@@ -43,3 +43,9 @@ $("#changeFormSignIn").click(function(){
     $('#signInModal').modal('show');
     $('#newAccountModal').modal('hide');
 });
+
+
+function check() {
+    var st = document.forms["form-search"]["search"].value;
+    if (st == "") return false;
+}

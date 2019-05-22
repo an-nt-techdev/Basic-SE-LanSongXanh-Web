@@ -45,7 +45,11 @@ class HistoryVoteDao extends DBConnection
 	
 	public function getHistoryVoteByUsernameIdAndSongId($Username_id, $Song_id)
 	{
-        $result = $this->runQuery("SELECT *	FROM History_Vote WHERE username_id = {$Username_id} AND song_id = {$Song_id}");
+        $result = $this->runQuery("SELECT *	FROM history_vote WHERE username_id = '{$Username_id}' AND song_id = {$Song_id}");
+								  
+		if (!$result) { echo $Username_id." ".$Song_id." ".var_dump($result);
+			return $result;
+		} 
 
 		$row = $result->fetch_assoc();
 		return new HistoryVote(

@@ -35,13 +35,45 @@
 							<div class="col-md-4 video-vote">
 								<div class="">
 									<h4>Điểm hiện tại: <?php echo number_format($s->getPoint(),1); ?> <i class="fas fa-star"></i></h4>
+<?php
+	$point = FALSE;
+	if (isset($_SESSION['user'])) {
+		$username_id = $_SESSION['user'];
+		require_once SITE_ROOT."/Services/VoteService.php";
+		$vote = new VoteService();
+		$point = $vote->getHistoryVoteByUsernameId($username_id, (int)$idSong);
+		$point = (int)$point->getStars();
+	
+		if ($point == FALSE) {
+?>
 									<h4 class="vote">Bình chọn: 
-										<i class="fas fa-star star-1"><span class="sr-only">1</span></i>
-										<i class="fas fa-star star-2"><span class="sr-only">2</span></i>
+										<i class="far fa-star star-1"><span class="sr-only">1</span></i>
+										<i class="far fa-star star-2"><span class="sr-only">2</span></i>
 										<i class="far fa-star star-3"><span class="sr-only">3</span></i>
 										<i class="far fa-star star-4"><span class="sr-only">4</span></i>
 										<i class="far fa-star star-5"><span class="sr-only">5</span></i>
 									</h4>
+									<p id="status-vote">Bạn chưa bình chọn bài hát này</p>
+<?php } else { ?>
+									<h4 class="vote">Bình chọn: 
+										<i class="<?php if ($point >= 1) echo "fas"; else echo "far";?> fa-star star-1"><span class="sr-only">1</span></i>
+										<i class="<?php if ($point >= 2) echo "fas"; else echo "far";?> fa-star star-2"><span class="sr-only">2</span></i>
+										<i class="<?php if ($point >= 3) echo "fas"; else echo "far";?> fa-star star-3"><span class="sr-only">3</span></i>
+										<i class="<?php if ($point >= 4) echo "fas"; else echo "far";?> fa-star star-4"><span class="sr-only">4</span></i>
+										<i class="<?php if ($point >= 5) echo "fas"; else echo "far";?> fa-star star-5"><span class="sr-only">5</span></i>
+									</h4>
+									<p id="status-vote">Bạn đã bình chọn <?php echo $point; ?> sao</p>
+<?php } 
+	}
+	else { ?>
+									<h4 class="vote">Bình chọn: 
+										<i class="far fa-star star-1"><span class="sr-only">1</span></i>
+										<i class="far fa-star star-2"><span class="sr-only">2</span></i>
+										<i class="far fa-star star-3"><span class="sr-only">3</span></i>
+										<i class="far fa-star star-4"><span class="sr-only">4</span></i>
+										<i class="far fa-star star-5"><span class="sr-only">5</span></i>
+									</h4>
+<?php } ?>
 								</div>
 							</div>
 						</div> 
@@ -92,7 +124,12 @@
 		<script>
 			var vote = $('.vote .fas.fa-star').length;
 		</script>
-		<script src="View/js/voteSong.js"></script>
+		
+		<?php 
+			if ($point == FALSE && isset($_SESSION['user'])) { 
+				echo '<script src="View/js/voteSong.js"></script>'; 
+			} 
+		?>
 		
 	</body>
 </html>

@@ -32,7 +32,7 @@ if (isset($_POST['user']))
 // Sign out
 elseif (isset($_GET['signOut'])) {
 	session_destroy();
-	header("Location: /LanSongXanh");
+	header("Location: /LanXongXanh");
 	//goto loadHome;
 }
 else

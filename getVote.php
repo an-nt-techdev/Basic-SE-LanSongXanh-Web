@@ -12,5 +12,5 @@
     $vote->updateVoteSong($song);
 
     $voteSong = $vote->getVoteSongById((int)$song);
-    echo var_dump($voteSong->getPoint());
+    echo $voteSong->getPoint();
 ?>

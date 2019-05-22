@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th5 22, 2019 lúc 06:03 AM
+-- Thời gian đã tạo: Th5 22, 2019 lúc 09:00 AM
 -- Phiên bản máy phục vụ: 5.7.24
 -- Phiên bản PHP: 7.2.14
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `composer` (
   `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `detail` longtext COLLATE utf8mb4_vietnamese_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `composer`
@@ -144,7 +144,8 @@ INSERT INTO `composer` (`id`, `name`, `image`, `detail`) VALUES
 (9, 'Vũ Thành An', 'View/images/Composer/VuThanhAn.jpg', 'Vũ Thành An (1943–) là một trong những nhạc sĩ nổi bật của miền Nam Việt Nam thời kỳ 1954 - 1975. Các \"Bài không tên\" là những tác phẩm nổi tiếng của ông. Hiện nay, ông là một phó tế của Giáo hội Công giáo Rôma, đã ngừng sáng tác nhạc tình ca mà chỉ sáng tác thánh ca.\r\n\r\nVũ Thành An sinh tại huyện Hải Hậu thuộc tỉnh Nam Định (về sau đổi thành quận Hải Hậu thuộc tỉnh Bùi Chu). Năm 1954 ông theo gia đình di cư vào miền Nam. Năm 1960, ông vào học trường trung học Nguyễn Trãi, có theo học nhạc sĩ Chung Quân cùng Ngô Thụy Miên, Đức Huy. Năm 1961 ông thi hỏng Tú tài và về trường Hưng Đạo học tiếp Đệ nhị. Năm 1963, Vũ Thành An thi đậu Tú tài toàn phần.\r\n\r\nSau đó ông được linh mục Trần Đức Huynh, giám đốc trường Hưng Đạo cho dạy lớp Đệ thất để có tiền học Đại học. Cuối năm 1963, Vũ Thành An vào làm phóng viên ở Đài phát thanh Sài Gòn, ở đó ông gặp nhà thơ Nguyễn Đình Toàn. Năm 1965, ông viết Tình khúc thứ nhất, thơ Nguyễn Đình Toàn và nổi tiếng ngay từ ca khúc đầu tay đó. Những năm tiếp theo, ông viết nhiều Bài không tên khác. Năm 1967, Vũ Thành An nhập ngũ khóa 25 Sĩ quan dự bị Thủ Đức và 1969 ông lập gia đình.\r\n\r\nNăm 1969, ông phát hành tập nhạc Những bài không tên. Các tác phẩm của Vũ Thành An được yêu thích ở khắp miền Nam khi đó. Người ta có thể nghe tại gần như hầu hết các quán cà phê nhạc của Sài Gòn và những thành phố lớn khác, tại các quân trường và trên các làn sóng phát thanh. Tên tuổi của Vũ Thành An cùng với Tình khúc thứ nhất, Em đến thăm anh đêm ba mươi và các Bài không tên gắn liền với giới trẻ thời bấy giờ. Vũ Thành An cùng với Trịnh Công Sơn, Ngô Thụy Miên, Từ Công Phụng, Lê Uyên Phương tạo thành một lớp nhạc sĩ mới đầy tài năng.\r\n\r\nNăm 1971, Vũ Thành An tốt nghiệp đại học Luật khoa Sài Gòn. Ông tiếp tục làm việc tại đài phát thanh Sài Gòn với cấp bậc sĩ quan, và trải qua nhiều chức vụ: Trưởng cơ sở dân vận Gia Định 1973, Trưởng phân khối văn hóa, Phụ tá trưởng khối chương trình, Trưởng khối chương trình và Trưởng phân khối kế hoạch hệ thống truyền thanh 1974.\r\n\r\nNgày 30 tháng 4 năm 1975, Vũ Thành An là người cuối cùng rời Đài phát thanh Sài Gòn, lúc 10 giờ 30 giờ sáng. Sau đó ông phải học tập cải tạo suốt mười năm dài từ 1975 đến 1985 tại miền Bắc. Theo lời Vũ Thành An, ông bắt đầu sáng tác Thánh ca, Những Bài Nhân Bản trong thời gian cải tạo từ năm 1981.\r\n\r\nNăm 1991, Vũ Thành An rời Việt Nam và định cư tại Hoa Kỳ. Năm 1996, ông ghi danh học chương trình Cao học Thần học của Tổng giáo phận Portland, Oregon. Năm 2000, Vũ Thành An được đào tạo làm chức Phó Tế và phụ trách Đài phát thanh Việt Nam Hải Ngoại ở Portland, Oregon. Vũ Thành An ngừng sáng tác tình khúc và chỉ tiếp tục soạn các bản thánh ca, và tham gia các công việc từ thiện.\r\n\r\nNăm 2002, trung tâm Thúy Nga thực hiện Paris By Night 64: Đêm văn nghệ thính phòng vinh danh ông cùng nhạc sĩ Tuấn Khanh và Từ Công Phụng'),
 (10, 'Minh Khang', 'View/images/Composer/MinhKhang.jpg', 'Nhạc sĩ Minh Khang sinh ngày 27 tháng 8 năm 1978 ở tại thành phố Hồ Chí Minh. Nhạc sĩ xếp hạng thứ 1576 trên thế giới và ở trong top 11 các nhạc sĩ nổi tiếng trong nước. Cuộc đời anh có khá nhiều đau khổ khi còn nhỏ.\r\n\r\nNhạc sĩ đã được khán giả biết đến qua rất nhiều sáng tác nổi tiếng như: cầu vồng khuyết, giọt nước mắt chảy ngược, bạc trắng tình đời, mưa sao băng, … Và là nhạc sĩ hòa âm phối khí cực đắt show tại thành phố Hồ Chí Minh.\r\n\r\nNhững sáng tác của anh theo xu hướng âm nhạc cho giới trẻ. Anh xem công việc sáng tác nhạc là niềm đam mê ăn vào máu thịt của bản thân mình.\r\n\r\nNhạc sĩ còn tâm đắc với các thể loại như Blues Jazz. Có những sáng tác đậm chất trữ tình như: cứ ngỡ đê mê, dòng sông không trôi, khói lam chiều đã được đông đảo khán giả đón nhận.\r\n\r\nVào năm 2005, nhạc sĩ đã thực hiện dự án âm nhạc xã hội, nó khá mất nhiều tiền bạc công sức và thời gian. Ca khúc “Đứa bé” với sự tham gia của nhiều nghệ sĩ nổi tiếng trong nước và ngoài nước đồng thời có sự tham gia của hơn 200 ca sĩ.\r\n\r\nDự án này nhằm gây quỹ từ thiện và được đông đảo khán giả đón nhận và gây được tiếng vang lớn. Quỹ từ thiện Đứa bé  được Thúy Hạnh quyên tặng 100 triệu đồng cho những hoàn cảnh khó khăn.\r\n\r\nSự nghiệp của anh một phần cũng gắn liền với ca khúc nổi tiếng Đứa bé, đã gây tiếng vang lớn trong lòng người nghe và cũng là gây quỹ từ thiện cho những đứa bé có hoàn cảnh khó khăn.\r\n\r\nCùng với đó Đối thoại Ký ức là dịp tổng kết chặng đường 20 năm trong nghề. Cùng với đó là 2 ca khúc Áo trắng ngời sáng tương lai, Mồ côi và Màu trắng, màu đen.'),
 (11, 'Trường Huy', 'View/images/Composer/TruongHuy.jpg', 'Tôi sinh ra trong một gia đình nghèo, có tuổi thơ vất vả, ngoài việc đi học còn phải đi làm thuê để phụ giúp gia đình. Vốn đam mê âm nhạc, tôi đã dành dụm được một số tiền để mua cây guitar và tự mày mò học. Những đêm trăng sáng, tôi ôm đàn ngồi trước hiên nhà, hát say sưa bên tiếng muỗi vo ve.\r\nTôi viết ca khúc đầu tay khi đang học lớp 10 có tựa đề Thiên thần nhỏ, phỏng theo truyện của Nguyễn Nhật Ánh. Bài hát tiếp theo Ngôi trường của tôi đã làm bạn bè cười phá lên vì có đoạn tả về hai hàng cây xanh tươi mà trường tôi thì chẳng có bóng dáng một cây nào. Khi sắp rời cấp III, tôi lại sáng tác Nhớ trường xưa với những cảm xúc hồn nhiên nhất.\r\nVới mơ ước được học và hiểu biết hơn về nhạc lý, sau một thời gian làm thêm, tôi quyết định đầu tư 2 chỉ vàng vào việc học. Thế nhưng khi mang tiền đến thì bị thày từ chối. Cũng may là tôi được thọ giáo nhạc sĩ Trường Sa. Đó là người thày đầu tiên đã dạy không công, giúp tôi tự tin trên con đường sáng tác. Tôi đã lấy tên đệm của thày và của mình thành Trường Huy để đề tựa dưới mỗi bài hát.\r\nNăm 1995, khi còn là sinh viên năm thứ hai Đại học Sư phạm TP HCM, trong một chuyến picnic, tôi xung phong hát 2 sáng tác mới Mắt buồn và Tình xa khuất. Không ngờ, trong số bạn bè hôm ấy, có người bạn là con của chủ hãng băng đĩa Kim Lợi. Anh đề nghị tôi đưa hai ca khúc về cho mẹ nghe thử và sau đó hãng này đã tung ra ca khúc Mắt buồn do Minh Tuyết trình bày. Tôi bắt đầu được giới âm nhạc chú ý. Năm 1997, tôi đoạt 2 giải B và C cuộc thi sáng tác ca khúc sinh viên do Hội Âm nhạc TP HCM tổ chức.\r\nNăm 1998, Phương Thanh hát Một thời đã xa đoạt Giọng hát vàng ASEAN và giúp nâng tầm các ca khúc của tôi. Sau đó, Cô bé mắt nai, Tình em mùa xuân, Cho em lời cuối... liên tục lọt vào Top Làn Sóng Xanh.\r\nNhiều khán giả hỏi rằng vì sao ca khúc của Huy thường đề cập đến chuyện thất tình, bị phụ tình... Thật ra, đây chỉ là sự tình cờ. Tôi thường dựa vào cảm xúc thật và sự đồng cảm với những người xung quanh để viết nhạc. Tuy nhiên, các bài hát buồn lại được khán giả biết đến nhiều hơn.\r\nGần 10 năm sáng tác, tôi không nghĩ viết nhạc để kiếm danh tiếng, với tôi, âm nhạc là hơi thở không thể thiếu trong cuộc đời. '),
-(12, 'Trịnh Nam Sơn', 'View/images/Singer/TrinhNamSon.jpg', 'Nhạc sĩ Trịnh Nam Sơn học sáng tác và hòa nhạc tại Dick Grove School Of Music và tốt nghiệp hạng danh dự vào năm 1986. Nhanh chóng được bạn trẻ trong và ngoài nước yêu thích với giọng hát thật ấm và truyền cảm, Anh đã từng lưu diễn khắp nơi trên đất Mỹ, Đông - Tây Âu, Canada, và đã từng gặp gỡ khán giả Việt Nam trong 2 chương trình Duyên dáng Việt Nam 12 & 13 do Báo Thanh Niên tổ chức.\r\n\r\nThuở nhỏ, Trịnh Nam Sơn hay theo cha đi câu cá chép ở hồ Xuân Hương rồi đem về thả trong chiếc hồ nhỏ trước sân nhà. Gia đình anh nghèo, nhưng anh biết ơn tuổi thơ cơ cực và đẹp đẽ với những buổi sáng thức dậy tràn ngập ánh mặt trời, ngắm những bông hoa păng-xê nở giữa các luống ngô khoai, những cơn mưa bong bóng phập phồng của Đà Lạt... Bởi các ca khúc Tình yêu cho Đà Lạt, Bong bóng mưa đã được chào đời từ chính nỗi hoài niệm về những ký ức đó.\r\n\r\nChặng đường âm nhạc của Trịnh Nam Sơn là một chuỗi dài nghiệt ngã. Ngày đầu đặt chân lên đất Mỹ, vốn liếng âm nhạc của anh chỉ vừa bằng một tay chơi guitar nghiệp dư, thậm chí anh còn phải đánh vần từng giai điệu. Thế rồi anh quyết tâm phải học đến nơi đến chốn về guitar. Anh đăng ký theo học sáng tác tại trường nhạc khí nổi tiếng Dick Grove, Mỹ.\r\n\r\nTừng tham gia các đại hòa tấu ở Mỹ, Trịnh Nam Sơn hy vọng sẽ có mặt trong những chương trình hòa tấu ở VN. Anh nói: \"Tôi rất mong được làm những đêm nhạc hòa tấu kết hợp nửa cổ điển, nửa hiện đại tại VN. Bước đầu có thể hơi gian nan nhưng nó sẽ mang lại màu sắc mới phong phú cho âm nhạc.\r\n\r\nHiện anh là người chuyên viết nhạc nền cho phim quảng cáo, phim truyện, sáng tác nhạc không lời và có thêm nghề phụ là lập trình tin học. Con gái 21 tuổi của anh đang theo học ngành báo chí.\r\n\r\nNgoài ca nhạc, Trịnh Nam Sơn hiện là lập trình viên cho một số hãng phim và thỉnh thoảng viết nhạc cho một số phim tài liệu cùng một số nhạc nền cho phim.\r\n\r\nDĩ vãng là tác phẩm đầu tay của Trịnh Nam Sơn. Ban đầu đây là tác phẩm nhạc khí anh viết khi đang theo học về khí nhạc và chỉ huy dàn nhạc tại trường Dick Grove School of Music ở Hollywood. Tính đến nay, anh đã viết mấy chục bản khí nhạc và hai bản nhạc phim tài liệu.\r\n\r\nSau này, khi muốn phổ biến Dĩ vãng, Trịnh Nam Sơn đã nhờ mấy người bạn là nhà thơ viết giúp cho phần lời, nhưng họ nói không có thời gian. Anh đành tự viết lời Việt. Sau đó, anh nhờ đạo diễn Lưu Huỳnh, lúc đó cũng học cùng trường với Trịnh Nam Sơn, nhưng học về đạo diễn làm giúp một video ca nhạc.\r\n\r\nLúc gửi gắm tác phẩm của mình cho Lưu Huỳnh, anh cũng chưa nghĩ là mình sẽ hát, mà định mời ca sỹ. Khổ nỗi, lúc đó, người ta chưa biết đến Trịnh Nam Sơn là ai, nên anh mời hết người nọ, đến người kia đều bị từ chối. Thế là, anh quyết định tự hát.\r\n\r\nKhông những thế, anh còn tự đánh ghi ta, đệm đàn piano và thổi kèn saxophone cho bài hát của mình. Với sự nhiệt tình giúp đỡ của Lưu Huỳnh, album đã được quay khá công phu. Dĩ vãng được thu vào băng nhựa VHS là công nghệ mới nhất thời đó.\r\n\r\nKhi quay xong, Trịnh Nam Sơn cũng chưa nghĩ đến chuyện lỗ lãi. Chỉ đơn giản nghĩ rằng, làm thế nào để giới thiệu album này tới nhiều người. Hồi đó, chưa có nhiều phương tiện quảng bá như bây giờ.\r\n\r\nTrịnh Nam Sơn đã đi gõ cửa hết trung tâm sản xuất băng đĩa này, đến trung tâm sản xuất băng đĩa kia của cộng đồng người Việt tại Hải ngoại, nhưng đều nhận được những cái lắc đầu. Không nản chí, anh quyết định tự đi phát hành. Anh thiết kế poster đĩa nhạc của mình rồi đi dán khắp nơi.\r\n\r\nRồi Dĩ vãng cũng được ra mắt, tại một quán café. Đến giờ, Trịnh Nam Sơn vẫn còn nhớ mãi ngày đó. Anh thuê một quán café nhỏ, thuê dàn âm thanh xịn và đến đó trình diễn. Anh kể, khán giả có mặt ở đây rất ấn tượng, nhưng rồi, cái tên Trịnh Nam Sơn và Dĩ vãng vẫn nhạt nhòa với số đông.\r\n\r\nThời đó, quảng cáo hữu hiệu nhất là tới tiệm bán máy video, cho họ mượn băng để thử máy. Những người đi mua đầu video thấy lạ với một clip ca nhạc có hình ảnh chất lượng cao hơn rất nhiều so với băng video thông thường.\r\n\r\nVà mọi người bắt đầu để ý tới nhạc của Trịnh Nam Sơn. Cuối cùng, trời không phụ lòng người, hãng thu thanh Khánh Hà đã mua bản quyền và sản xuất đĩa nhạc, nhờ đó mà Dĩ vãng được đưa đến công chúng.\r\n\r\nSau này, Trịnh Nam Sơn và Khánh Hà thường xuyên hợp tác với nhau. Khánh Hà cũng thường xuyên hát bài của Trịnh Nam Sơn trong nhiều năm ở hải ngoại. Năm 91, Trịnh Nam Sơn tiếp tục ra đĩa nhạc Về đây em rất được yêu chuộng tại hải ngoại và tới cuối năm 91 là Con đường màu xanh.\r\n\r\nKhoảng 94, khi nhạc Việt Nam bắt đầu bị cạnh tranh bởi nhạc Hoa lời Việt, nhạc Âu Mỹ lời dịch, Trịnh Nam Sơn chuyển sang làm tư vấn bất động sản và chỉ còn “dạo chơi trong vườn hoa âm nhạc”.');
+(12, 'Trịnh Nam Sơn', 'View/images/Singer/TrinhNamSon.jpg', 'Nhạc sĩ Trịnh Nam Sơn học sáng tác và hòa nhạc tại Dick Grove School Of Music và tốt nghiệp hạng danh dự vào năm 1986. Nhanh chóng được bạn trẻ trong và ngoài nước yêu thích với giọng hát thật ấm và truyền cảm, Anh đã từng lưu diễn khắp nơi trên đất Mỹ, Đông - Tây Âu, Canada, và đã từng gặp gỡ khán giả Việt Nam trong 2 chương trình Duyên dáng Việt Nam 12 & 13 do Báo Thanh Niên tổ chức.\r\n\r\nThuở nhỏ, Trịnh Nam Sơn hay theo cha đi câu cá chép ở hồ Xuân Hương rồi đem về thả trong chiếc hồ nhỏ trước sân nhà. Gia đình anh nghèo, nhưng anh biết ơn tuổi thơ cơ cực và đẹp đẽ với những buổi sáng thức dậy tràn ngập ánh mặt trời, ngắm những bông hoa păng-xê nở giữa các luống ngô khoai, những cơn mưa bong bóng phập phồng của Đà Lạt... Bởi các ca khúc Tình yêu cho Đà Lạt, Bong bóng mưa đã được chào đời từ chính nỗi hoài niệm về những ký ức đó.\r\n\r\nChặng đường âm nhạc của Trịnh Nam Sơn là một chuỗi dài nghiệt ngã. Ngày đầu đặt chân lên đất Mỹ, vốn liếng âm nhạc của anh chỉ vừa bằng một tay chơi guitar nghiệp dư, thậm chí anh còn phải đánh vần từng giai điệu. Thế rồi anh quyết tâm phải học đến nơi đến chốn về guitar. Anh đăng ký theo học sáng tác tại trường nhạc khí nổi tiếng Dick Grove, Mỹ.\r\n\r\nTừng tham gia các đại hòa tấu ở Mỹ, Trịnh Nam Sơn hy vọng sẽ có mặt trong những chương trình hòa tấu ở VN. Anh nói: \"Tôi rất mong được làm những đêm nhạc hòa tấu kết hợp nửa cổ điển, nửa hiện đại tại VN. Bước đầu có thể hơi gian nan nhưng nó sẽ mang lại màu sắc mới phong phú cho âm nhạc.\r\n\r\nHiện anh là người chuyên viết nhạc nền cho phim quảng cáo, phim truyện, sáng tác nhạc không lời và có thêm nghề phụ là lập trình tin học. Con gái 21 tuổi của anh đang theo học ngành báo chí.\r\n\r\nNgoài ca nhạc, Trịnh Nam Sơn hiện là lập trình viên cho một số hãng phim và thỉnh thoảng viết nhạc cho một số phim tài liệu cùng một số nhạc nền cho phim.\r\n\r\nDĩ vãng là tác phẩm đầu tay của Trịnh Nam Sơn. Ban đầu đây là tác phẩm nhạc khí anh viết khi đang theo học về khí nhạc và chỉ huy dàn nhạc tại trường Dick Grove School of Music ở Hollywood. Tính đến nay, anh đã viết mấy chục bản khí nhạc và hai bản nhạc phim tài liệu.\r\n\r\nSau này, khi muốn phổ biến Dĩ vãng, Trịnh Nam Sơn đã nhờ mấy người bạn là nhà thơ viết giúp cho phần lời, nhưng họ nói không có thời gian. Anh đành tự viết lời Việt. Sau đó, anh nhờ đạo diễn Lưu Huỳnh, lúc đó cũng học cùng trường với Trịnh Nam Sơn, nhưng học về đạo diễn làm giúp một video ca nhạc.\r\n\r\nLúc gửi gắm tác phẩm của mình cho Lưu Huỳnh, anh cũng chưa nghĩ là mình sẽ hát, mà định mời ca sỹ. Khổ nỗi, lúc đó, người ta chưa biết đến Trịnh Nam Sơn là ai, nên anh mời hết người nọ, đến người kia đều bị từ chối. Thế là, anh quyết định tự hát.\r\n\r\nKhông những thế, anh còn tự đánh ghi ta, đệm đàn piano và thổi kèn saxophone cho bài hát của mình. Với sự nhiệt tình giúp đỡ của Lưu Huỳnh, album đã được quay khá công phu. Dĩ vãng được thu vào băng nhựa VHS là công nghệ mới nhất thời đó.\r\n\r\nKhi quay xong, Trịnh Nam Sơn cũng chưa nghĩ đến chuyện lỗ lãi. Chỉ đơn giản nghĩ rằng, làm thế nào để giới thiệu album này tới nhiều người. Hồi đó, chưa có nhiều phương tiện quảng bá như bây giờ.\r\n\r\nTrịnh Nam Sơn đã đi gõ cửa hết trung tâm sản xuất băng đĩa này, đến trung tâm sản xuất băng đĩa kia của cộng đồng người Việt tại Hải ngoại, nhưng đều nhận được những cái lắc đầu. Không nản chí, anh quyết định tự đi phát hành. Anh thiết kế poster đĩa nhạc của mình rồi đi dán khắp nơi.\r\n\r\nRồi Dĩ vãng cũng được ra mắt, tại một quán café. Đến giờ, Trịnh Nam Sơn vẫn còn nhớ mãi ngày đó. Anh thuê một quán café nhỏ, thuê dàn âm thanh xịn và đến đó trình diễn. Anh kể, khán giả có mặt ở đây rất ấn tượng, nhưng rồi, cái tên Trịnh Nam Sơn và Dĩ vãng vẫn nhạt nhòa với số đông.\r\n\r\nThời đó, quảng cáo hữu hiệu nhất là tới tiệm bán máy video, cho họ mượn băng để thử máy. Những người đi mua đầu video thấy lạ với một clip ca nhạc có hình ảnh chất lượng cao hơn rất nhiều so với băng video thông thường.\r\n\r\nVà mọi người bắt đầu để ý tới nhạc của Trịnh Nam Sơn. Cuối cùng, trời không phụ lòng người, hãng thu thanh Khánh Hà đã mua bản quyền và sản xuất đĩa nhạc, nhờ đó mà Dĩ vãng được đưa đến công chúng.\r\n\r\nSau này, Trịnh Nam Sơn và Khánh Hà thường xuyên hợp tác với nhau. Khánh Hà cũng thường xuyên hát bài của Trịnh Nam Sơn trong nhiều năm ở hải ngoại. Năm 91, Trịnh Nam Sơn tiếp tục ra đĩa nhạc Về đây em rất được yêu chuộng tại hải ngoại và tới cuối năm 91 là Con đường màu xanh.\r\n\r\nKhoảng 94, khi nhạc Việt Nam bắt đầu bị cạnh tranh bởi nhạc Hoa lời Việt, nhạc Âu Mỹ lời dịch, Trịnh Nam Sơn chuyển sang làm tư vấn bất động sản và chỉ còn “dạo chơi trong vườn hoa âm nhạc”.'),
+(13, 'Quốc An', 'View/images/Composer/QuocAn.jpg', 'Nhạc sĩ Quốc An tên đầy đủ là Lưu Quốc An, sinh ngày 21/4/1973 tại TP.HCM.\r\n\r\nKhởi nghiệp từ một nhạc công guitar, hiện nay Quốc An được biết đến như một trong những nhạc sĩ trẻ có nhiều ca khúc được các bạn trẻ yêu thích nhất, đặc biệt là giới học sinh - sinh viên. \r\n\r\n8 tuổi, Quốc An bắt đầu học guitar cổ điển. 14, 15 tuổi chơi nhạc cho các Nhà Văn hoá Thiếu nhi quận Tân Bình và Nhà Văn hoá Thanh thiếu niên quận 10. Tốt nghiệp PTTH, anh theo học guitar 3 năm tại Trường Cao đẳng Văn hoá Nghệ thuật TP.HCM. \r\n\r\nTừ những ngày còn là sinh viên, Quốc An đã cùng bạn bè thành lập ban nhạc Students, tham gia cuộc thi unplugged dành riêng cho các ban nhạc sinh viên. Sau này ban nhạc đổi tên thành Waterfall, chuyên biểu diễn các nhạc phẩm nước ngoài tại các khách sạn Caravelle, New World. Không muốn chỉ chơi lại các nhạc phẩm nước ngoài, Quốc An mày mò sáng tác và cho ra đời ca khúc đầu tay với tựa đề Nụ hôn đầu tiên. \r\n\r\nNăm 2001, Quốc An viết Cây đàn sinh viên dựa theo ý thơ của Thuận Thiên, thu âm lần đầu tiên tại Vafaco qua giọng hát Mỹ Tâm. Sau đó, nhiều ca sĩ khác đã thể hiện bài hát này như Việt Quang, nhóm 1088 và bài hát được phổ biến rộng rãi khi thường xuyên xuất hiện trong các chương trình sinh hoạt văn hoá văn nghệ của giới sinh viên. Tên tuổi Quốc An bắt đầu được nhiều người biết đến. \r\n\r\nSau thành công của Cây đàn sinh viên, Quốc An liên tục có những ca khúc gây được sự chú ý như Hát với dòng sông, Hát cho người ở lại, Trái tim buồn, Xin đừng quên tôi… Các sáng tác của anh được nhiều ca sĩ trẻ lựa chọn thể hiện trong album riêng. Năm 2002, Quốc An được trao giải 1 trong 10 nhạc sĩ được yêu thích nhất của chương trình Làn Sóng Xanh do Đài Tiếng nói Nhân dân TP.HCM tổ chức. \r\n\r\nMùa hè năm 2002, Quốc An cùng với những người bạn nhạc sĩ trẻ như Hoài An, Nguyễn Nhất Huy, Võ Thiện Thanh, Công Tuấn thành lập ban nhạc KTX, chuyên biểu diễn phục vụ sinh viên. Ban nhạc đã cùng Mỹ Tâm, Cẩm Ly thực hiện những tour biểu diễn tại các trường đại học trong địa bàn TP.HCM. \r\n\r\nTuy ban nhạc chỉ duy trì hoạt động trong 1 năm nhưng chính những hoạt động này đã giúp khán giả trẻ có cơ hội được giao lưu, gặp gỡ trực tiếp với các nhạc sĩ mà họ yêu mến và chính Quốc An cũng như những người bạn của anh có thêm chất liệu và cảm hứng cho những sáng tác của mình. \r\n\r\nHiện nay, ngoài công việc sáng tác, Quốc An còn làm biên tập viên cho các hãng băng đĩa, trong đó có Bến Thành Audio. Bên cạnh đó, anh cũng đang hướng dẫn, giúp đỡ một số ca sĩ trẻ thực hiện album riêng như Cao Phương Anh, Tuấn Lực, Bá Thắng, Lâm Vũ..., tạo điều kiện cho họ sớm tiếp cận với công chúng.');
 
 -- --------------------------------------------------------
 
@@ -160,6 +161,72 @@ CREATE TABLE IF NOT EXISTS `history_vote` (
   PRIMARY KEY (`username_id`,`song_id`),
   KEY `Song_Id` (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `history_vote`
+--
+
+INSERT INTO `history_vote` (`username_id`, `song_id`, `stars`) VALUES
+('admin', 3, 4),
+('admin', 4, 4),
+('admin', 5, 4),
+('admin', 6, 5),
+('admin', 7, 4),
+('admin', 8, 4),
+('admin', 9, 5),
+('admin', 10, 5),
+('admin', 11, 5),
+('admin', 12, 4),
+('admin', 13, 5),
+('admin', 14, 3),
+('admin', 15, 4),
+('admin', 16, 5),
+('admin', 17, 4),
+('admin', 18, 4),
+('admin', 19, 5),
+('admin', 20, 4),
+('admin', 21, 5),
+('admin', 23, 2),
+('admin', 24, 3),
+('admin', 25, 4),
+('admin', 26, 5),
+('admin', 27, 5),
+('admin', 28, 5),
+('admin', 30, 3),
+('admin', 31, 5),
+('admin', 32, 4),
+('admin', 33, 4),
+('admin', 34, 4),
+('admin', 35, 5),
+('admin', 36, 3),
+('admin', 37, 5),
+('admin', 38, 5),
+('dvip1999', 3, 5),
+('dvip1999', 4, 5),
+('dvip1999', 5, 4),
+('dvip1999', 6, 5),
+('dvip1999', 7, 5),
+('dvip1999', 8, 4),
+('dvip1999', 9, 5),
+('dvip1999', 10, 4),
+('dvip1999', 11, 5),
+('dvip1999', 12, 4),
+('dvip1999', 13, 4),
+('dvip1999', 14, 4),
+('dvip1999', 15, 5),
+('dvip1999', 16, 5),
+('dvip1999', 17, 4),
+('dvip1999', 18, 5),
+('dvip1999', 19, 5),
+('dvip1999', 20, 5),
+('dvip1999', 21, 5),
+('dvip1999', 23, 3),
+('dvip1999', 24, 4),
+('dvip1999', 25, 5),
+('dvip1999', 26, 5),
+('dvip1999', 27, 4),
+('dvip1999', 28, 5),
+('Master_Tester', 3, 5);
 
 -- --------------------------------------------------------
 
@@ -238,7 +305,7 @@ CREATE TABLE IF NOT EXISTS `song` (
   PRIMARY KEY (`id`),
   KEY `Singer_Id` (`singer_id`),
   KEY `Composer_Id` (`composer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `song`
@@ -269,7 +336,16 @@ INSERT INTO `song` (`id`, `namesong`, `composer_id`, `singer_id`, `link`) VALUES
 (25, 'Tình Khúc Vàng', 4, 1, 'IPu2k259W6U'),
 (26, 'Người về cuối phố', 7, 3, 'JI-46CMYeJ8'),
 (27, 'Bờ bến lạ', 7, 3, 'I1wb-B_giWA'),
-(28, 'Đường xưa', 8, 10, 'WbGndV5fjR0');
+(28, 'Đường xưa', 8, 10, 'WbGndV5fjR0'),
+(30, 'Dĩ vãng', 12, 11, 'RbsQ5sZPuCc'),
+(31, 'Con đường màu xanh', 12, 11, 'Txzah3uMrNQ'),
+(32, 'Nhớ', 12, 11, 'mdWQwhzoJ4U'),
+(33, 'Nuối tiếc', 12, 11, 'TwnWr6951fs'),
+(34, 'Hát với dòng sông', 13, 6, 'SrOzK8_fXB4'),
+(35, 'Mùa hè yêu thương', 13, 6, '-6878qytEiE'),
+(36, 'Tình phiêu lãng', 13, 5, 'vdhl3CIN2oI'),
+(37, 'Mẹ tôi', 13, 1, '1A29RPrmmkU'),
+(38, 'Cây đàn sinh viên', 13, 6, 'n2y3DnBfxK8');
 
 -- --------------------------------------------------------
 
@@ -350,31 +426,40 @@ CREATE TABLE IF NOT EXISTS `vote_song` (
 --
 
 INSERT INTO `vote_song` (`song_id`, `stars`, `point`) VALUES
-(3, 0, 0),
-(4, 0, 0),
-(5, 0, 0),
-(6, 0, 0),
-(7, 0, 0),
-(8, 0, 0),
-(9, 0, 0),
-(10, 0, 0),
-(11, 0, 0),
-(12, 0, 0),
-(13, 0, 0),
-(14, 0, 0),
-(15, 0, 0),
-(16, 0, 0),
-(17, 0, 0),
-(18, 0, 0),
-(19, 0, 0),
-(20, 0, 0),
-(21, 0, 0),
-(23, 0, 0),
-(24, 0, 0),
-(25, 0, 0),
-(26, 0, 0),
-(27, 0, 0),
-(28, 0, 0);
+(3, 4, 4.66667),
+(4, 4, 4.5),
+(5, 4, 4),
+(6, 5, 5),
+(7, 4, 4.5),
+(8, 4, 4),
+(9, 5, 5),
+(10, 4, 4.5),
+(11, 5, 5),
+(12, 4, 4),
+(13, 4, 4.5),
+(14, 3, 3.5),
+(15, 4, 4.5),
+(16, 5, 5),
+(17, 4, 4),
+(18, 4, 4.5),
+(19, 5, 5),
+(20, 4, 4.5),
+(21, 5, 5),
+(23, 2, 2.5),
+(24, 3, 3.5),
+(25, 4, 4.5),
+(26, 5, 5),
+(27, 4, 4.5),
+(28, 5, 5),
+(30, 3, 3),
+(31, 5, 5),
+(32, 4, 4),
+(33, 4, 4),
+(34, 4, 4),
+(35, 5, 5),
+(36, 3, 3),
+(37, 5, 5),
+(38, 5, 5);
 
 --
 -- Các ràng buộc cho các bảng đã đổ

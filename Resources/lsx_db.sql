@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th5 22, 2019 lúc 05:30 AM
+-- Thời gian đã tạo: Th5 22, 2019 lúc 06:03 AM
 -- Phiên bản máy phục vụ: 5.7.24
 -- Phiên bản PHP: 7.2.14
 
@@ -45,7 +45,26 @@ INSERT INTO `account` (`username`, `password`, `ranking`) VALUES
 ('dvip1999', 'thienan99', 'Diamond'),
 ('Master_Tester', '123', 'Member'),
 ('tester_1', '123', 'Member'),
-('tester_24', '123', 'Member');
+('tester_10', '123', 'Member'),
+('tester_11', '123', 'Member'),
+('tester_12', '123', 'Member'),
+('tester_13', '123', 'Member'),
+('tester_14', '123', 'Member'),
+('tester_15', '123', 'Member'),
+('tester_16', '123', 'Member'),
+('tester_17', '123', 'Member'),
+('tester_18', '123', 'Member'),
+('tester_19', '123', 'Member'),
+('tester_2', '123', 'Member'),
+('tester_20', '123', 'Member'),
+('tester_24', '123', 'Member'),
+('tester_3', '123', 'Member'),
+('tester_4', '123', 'Member'),
+('tester_5', '123', 'Member'),
+('tester_6', '123', 'Member'),
+('tester_7', '123', 'Member'),
+('tester_8', '123', 'Member'),
+('tester_9', '123', 'Member');
 
 -- --------------------------------------------------------
 
@@ -73,7 +92,26 @@ INSERT INTO `account_detail` (`username_id`, `name`, `birthday`, `sex`, `email`)
 ('dvip1999', 'Nguyễn Thiên Ân', '1999-05-01', 0, 'ndsg1964@gmail.com'),
 ('Master_Tester', 'Trùm', '2019-06-01', 1, 'lalala@gmail.com'),
 ('tester_1', 'Tôi đi tìm tôi', '2019-05-01', 0, 'toiditimtoi@gmail.com'),
-('tester_24', 'Cay rồi nha', '2019-05-24', 0, 'hello@gmail.com');
+('tester_10', 'Tôi đi tìm tôi', '2019-05-10', 1, 'test10@gmail.com'),
+('tester_11', 'Tôi đi tìm tôi', '2019-05-11', 0, 'test11@gmail.com'),
+('tester_12', 'Tôi đi tìm tôi', '2019-05-12', 1, 'test@gmail.com12'),
+('tester_13', 'Tôi đi tìm tôi', '2019-05-13', 0, 'test@gmail.com13'),
+('tester_14', 'Tôi đi tìm tôi', '2019-05-14', 1, 'test@gmail.com14'),
+('tester_15', 'Tôi đi tìm tôi', '2019-05-15', 0, 'test@gmail.com15'),
+('tester_16', 'Tôi đi tìm tôi', '2019-05-16', 1, 'test@gmail.com16'),
+('tester_17', 'Tôi đi tìm tôi', '2019-05-17', 0, 'test@gmail.com17'),
+('tester_18', 'Tôi đi tìm tôi', '2019-05-18', 1, 'test@gmail.com18'),
+('tester_19', 'Tôi đi tìm tôi', '2019-05-19', 0, 'test@gmail.com19'),
+('tester_2', 'huan', '2019-05-02', 0, 'huan@gmail.com'),
+('tester_20', 'Tôi đi tìm tôi', '2019-05-20', 1, 'test@gmail.com20'),
+('tester_24', 'Cay rồi nha', '2019-05-24', 0, 'hello@gmail.com'),
+('tester_3', 'khoa', '2019-05-03', 0, 'khoa@gmail.com'),
+('tester_4', 'trâm anh của Huấn', '2019-05-04', 1, 'test@gmail.com'),
+('tester_5', 'Bạn học mẫu giáo của Huấn', '2019-05-05', 1, 'test1@gmail.com'),
+('tester_6', 'bé răng khểnh của Khoa', '2019-05-06', 1, 'test2@gmail.com'),
+('tester_7', 'hết tên để đặt', '2019-05-07', 0, 'test3@gmail.com'),
+('tester_8', 'Tôi đi tìm tôi', '2019-05-08', 1, 'test8@gmail.com'),
+('tester_9', 'Tôi đi tìm tôi', '2019-05-09', 0, 'test9@gmail.com');
 
 -- --------------------------------------------------------
 

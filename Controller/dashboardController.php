@@ -88,6 +88,13 @@ else {
     if (isset($_POST['name']))
     {
         $dashboard->addSong(new Song(0, $_POST['name'], $_POST['composer'], $_POST['singer'], $_POST['link']));
+        require_once SITE_ROOT."/Services/VoteService.php";
+        require_once SITE_ROOT."/Services/SongService.php";
+        require_once SITE_ROOT."/Entities/VoteSong.php";
+        $vote = new VoteService();
+        $s = new SongService();
+        $tmp = $s->getSongByName($_POST['name']);
+        $vote->addVoteSong(new VoteSong($tmp->getId(), 0, 0));
     }
     // Remove song
     else if (isset($_GET['removeId']))

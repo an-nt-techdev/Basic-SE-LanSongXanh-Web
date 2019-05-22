@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th5 20, 2019 lúc 05:27 PM
+-- Thời gian đã tạo: Th5 22, 2019 lúc 05:30 AM
 -- Phiên bản máy phục vụ: 5.7.24
 -- Phiên bản PHP: 7.2.14
 
@@ -42,7 +42,10 @@ CREATE TABLE IF NOT EXISTS `account` (
 
 INSERT INTO `account` (`username`, `password`, `ranking`) VALUES
 ('admin', 'admin', 'ADMIN'),
-('dvip1999', 'thienan99', 'Diamond');
+('dvip1999', 'thienan99', 'Diamond'),
+('Master_Tester', '123', 'Member'),
+('tester_1', '123', 'Member'),
+('tester_24', '123', 'Member');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,10 @@ CREATE TABLE IF NOT EXISTS `account_detail` (
 
 INSERT INTO `account_detail` (`username_id`, `name`, `birthday`, `sex`, `email`) VALUES
 ('admin', 'Quản trị viên', '2019-05-15', 0, 'adminLSX@gmail.com'),
-('dvip1999', 'Nguyễn Thiên Ân', '1999-05-01', 0, 'ndsg1964@gmail.com');
+('dvip1999', 'Nguyễn Thiên Ân', '1999-05-01', 0, 'ndsg1964@gmail.com'),
+('Master_Tester', 'Trùm', '2019-06-01', 1, 'lalala@gmail.com'),
+('tester_1', 'Tôi đi tìm tôi', '2019-05-01', 0, 'toiditimtoi@gmail.com'),
+('tester_24', 'Cay rồi nha', '2019-05-24', 0, 'hello@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -117,14 +123,6 @@ CREATE TABLE IF NOT EXISTS `history_vote` (
   KEY `Song_Id` (`song_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
---
--- Đang đổ dữ liệu cho bảng `history_vote`
---
-
-INSERT INTO `history_vote` (`username_id`, `song_id`, `stars`) VALUES
-('dvip1999', 6, 5),
-('dvip1999', 20, 5);
-
 -- --------------------------------------------------------
 
 --
@@ -167,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `singer` (
   `image` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `detail` longtext COLLATE utf8mb4_vietnamese_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `singer`
@@ -254,16 +252,16 @@ CREATE TABLE IF NOT EXISTS `top_month` (
 --
 
 INSERT INTO `top_month` (`top`, `song_id`) VALUES
-(1, 11),
-(2, 12),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+(1, 3),
+(2, 4),
+(3, 5),
+(4, 6),
+(5, 7),
+(6, 8),
+(7, 9),
+(8, 10),
+(9, 11),
+(10, 12);
 
 -- --------------------------------------------------------
 
@@ -284,16 +282,16 @@ CREATE TABLE IF NOT EXISTS `top_week` (
 --
 
 INSERT INTO `top_week` (`top`, `song_id`) VALUES
-(1, 11),
-(2, 12),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+(1, 3),
+(2, 4),
+(3, 5),
+(4, 6),
+(5, 7),
+(6, 8),
+(7, 9),
+(8, 10),
+(9, 11),
+(10, 12);
 
 -- --------------------------------------------------------
 
@@ -314,16 +312,31 @@ CREATE TABLE IF NOT EXISTS `vote_song` (
 --
 
 INSERT INTO `vote_song` (`song_id`, `stars`, `point`) VALUES
-(3, 5, 5),
-(4, 5, 5),
-(5, 4, 4.5),
-(6, 5, 5),
-(7, 5, 5),
-(8, 3, 3.8),
-(9, 5, 5),
-(10, 4, 4.7),
-(11, 5, 5),
-(12, 5, 5);
+(3, 0, 0),
+(4, 0, 0),
+(5, 0, 0),
+(6, 0, 0),
+(7, 0, 0),
+(8, 0, 0),
+(9, 0, 0),
+(10, 0, 0),
+(11, 0, 0),
+(12, 0, 0),
+(13, 0, 0),
+(14, 0, 0),
+(15, 0, 0),
+(16, 0, 0),
+(17, 0, 0),
+(18, 0, 0),
+(19, 0, 0),
+(20, 0, 0),
+(21, 0, 0),
+(23, 0, 0),
+(24, 0, 0),
+(25, 0, 0),
+(26, 0, 0),
+(27, 0, 0),
+(28, 0, 0);
 
 --
 -- Các ràng buộc cho các bảng đã đổ

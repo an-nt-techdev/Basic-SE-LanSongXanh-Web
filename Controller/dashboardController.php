@@ -69,10 +69,12 @@ else if (isset($_GET['statistic']))
     if ($_GET['statistic'] == "week")
     {    
         $ser->saveTopWeek();
+        header("Location: /LanSongXanh/?page=ad");
     }
     else if ($_GET['statistic'] == "month")
     {
         $ser->saveTopMonth();
+        header("Location: /LanSongXanh/?page=ad");
     }
 }
 //

@@ -2,29 +2,30 @@
     <div class="collapse navbar-collapse align-self-start position-fixed" id="navbarSupportedContent">
         <ul class="navbar-nav flex-column bg-black">
             <li class="nav-item py-1">
-                <a class="nav-link active" href="."><i class="fas fa-home mr-3"></i>Trang chủ</a>
+                <a class="nav-link <?php if(isset($p))if($p=='home') echo 'active'?>" href="."><i class="fas fa-home mr-3"></i>Trang chủ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=rank"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
+                <a href="?page=rank" class="nav-link <?php if(isset($_GET['page']))if($_GET['page']=='rank')echo 'active' ?>"><i class="far fa-list-alt mr-3"></i>Bảng xếp hạng</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=singer"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
+                <a class="nav-link <?php if(isset($_GET['page']))if($_GET['page']=='singer')echo 'active' ?>" href="?page=singer"><i class="fas fa-user-friends mr-3"></i>Ca sĩ</a>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=composer"><i class="fas fa-users mr-3"></i>Nhạc sĩ</a>
+                <a class="nav-link <?php if(isset($_GET['page']))if($_GET['page']=='composer')echo 'active' ?>" href="?page=composer"><i class="fas fa-users mr-3"></i>Nhạc sĩ</a>
             </li>
 <!--
             <li class="nav-item py-1">
                 <a class="nav-link" href="?page=contact"><i class="fas fa-phone mr-3"></i>Liên hệ</a>
             </li>
 -->
+
 <?php if (isset($_SESSION['user'])) { ?>
 
             <li class="nav-item py-1">
                 <h5 class="text-primary">Tài khoản: <span id="nameUser"><?php echo $_SESSION['user']; ?></span></h5>
             </li>
             <li class="nav-item py-1">
-                <a class="nav-link" href="?page=infor&user=<?php echo $_SESSION['user']; ?>"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
+                <a class="nav-link <?php if(isset($_GET['page']))if($_GET['page']=='infor')echo 'active' ?>" href="?page=infor&user=<?php echo $_SESSION['user']; ?>"><i class="fas fa-user mr-3"></i>Thông tin cá nhân</a>
             </li>
             <!--
             <li class="nav-item py-1">

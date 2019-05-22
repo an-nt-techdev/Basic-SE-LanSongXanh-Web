@@ -117,23 +117,24 @@ else
 						require_once SITE_ROOT."/Controller/inforController.php";
 						break;
 
-					case 'rank': 
+					case 'rank':
 						require_once SITE_ROOT."/Controller/rankController.php";
 						break;
 
-					case 'contact': 
+					case 'contact':
 						require_once SITE_ROOT."/Controller/contactController.php";
 						break;
 
-					case 'singer': 
+					case 'singer':
 						require_once SITE_ROOT."/Controller/artistController.php";
 						break;
 
-					case 'composer': 
+					case 'composer':
 						require_once SITE_ROOT."/Controller/artistController.php";
 						break;
 
 					default:
+
 						goto loadHome;
 				}
 			}

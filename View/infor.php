@@ -71,7 +71,7 @@ else {?>
 
 <?php if ($kind != 'user' && $kind == 'singer') {?>
 							<article class="bg-white border rounded p-3 mt-3">
-								<h3>Những bài hát của <?php echo $data->getName(); ?>:</h3>
+								<h3>Những ca khúc của <?php echo $data->getName(); ?>:</h3>
 								<section class="col-xl-13 py-3">
 									<article class="bg-white border rounded p-3">
 										<!-- <h3 class="text-center">Top trong tuần</h3> -->
@@ -106,7 +106,7 @@ else {?>
 	else if ($kind == 'composer') {
 ?>
 							<article class="bg-white border rounded p-3 mt-3">
-								<h3>Những bài hát của <?php echo $data->getName(); ?>:</h3>
+								<h3>Những sáng tác của nhạc sĩ <?php echo $data->getName(); ?>:</h3>
 								<section class="col-xl-13 py-3">
 									<article class="bg-white border rounded p-3">
 										<!-- <h3 class="text-center">Top trong tuần</h3> -->

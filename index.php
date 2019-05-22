@@ -109,7 +109,12 @@ else
 			if (isset($_GET['page'])) {
 				$page = $_GET['page'];
 				switch ($page) {
-					case 'ad': 
+					case 'ad':
+						if (!isset($_SESSION['user']) || $_SESSION['user']!='admin') 
+						{
+							header("Location: /LanSongXanh");
+						}
+						
 						require_once SITE_ROOT."/Controller/dashboardController.php";
 						break;
 						

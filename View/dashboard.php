@@ -33,8 +33,8 @@
                             <!-- <form class="form-inline my-2 my-lg-0" action="?page=ad&statistic=week"> -->
                                 <a class="btn btn-danger my-2 my-0 mx-1" href="?page=ad&statistic=month">Monthly</a>
                                 <a class="btn btn-danger my-2 my-0 mx-1" href="?page=ad&statistic=week">Weekly</a>
-                                <a class="btn btn-danger my-2 my-0 mx-1" href=".">Log Out</a>
-                            <!-- </form> -->
+                            <!--    <a class="btn btn-danger my-2 my-0 mx-1" href=".">Log Out</a>
+                             </form> -->
                         </div>
                     </nav>
                 </div>

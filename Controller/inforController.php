@@ -63,7 +63,7 @@
     if ($backHome)
     {
         backHome:
-        //header("Location: http://localhost/LanXongXanh/");
+        header("Location: http://localhost/LanSongXanh/");
     }
             
 ?>

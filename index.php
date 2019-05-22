@@ -85,14 +85,14 @@ else if (isset($_GET['signin']))
 		else 
 		{
 			$_SESSION['user'] = $user;
-			header("Location: /LanXongXanh");
+			header("Location: /LanSongXanh");
 		}
 	}
 }
 // Sign out
 else if (isset($_GET['signOut'])) {
 	session_destroy();
-	header("Location: /LanXongXanh");
+	header("Location: /LanSongXanh");
 }
 else
 	// if have GET 'search'

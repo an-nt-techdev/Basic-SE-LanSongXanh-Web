@@ -21,6 +21,11 @@ require_once SITE_ROOT."/Dao/PlaylistDetailDao.php";
 
         //ACCOUNT FUNCTION
 
+        public function getAllAccount()
+        {
+            return $this->accountDao->getAllAccount();
+        }
+
         public function getAccount($username)
         {
             return $this->accountDao->getAccountByUsername($username);
@@ -31,9 +36,13 @@ require_once SITE_ROOT."/Dao/PlaylistDetailDao.php";
             return $this->accountDetailDao->getAccountDetailByUsernameId($username);
         }
 
-        public function addAccount($account, $accountDetail)
+        public function addAccount($account)
         {
             $this->accountDao->insertAccount($account);
+        }
+
+        public function addAccountDetail($accountDetail)
+        {
             $this->accountDetailDao->insertAccountDetail($accountDetail);
         }
 

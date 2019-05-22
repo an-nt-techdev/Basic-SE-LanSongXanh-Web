@@ -30,11 +30,11 @@
                                 </li>
                             </ul>
 
-                            <form class="form-inline my-2 my-lg-0" action=>
-                                <button class="btn btn-danger my-2 my-0" type="submit">Monthly</button>
-                                <button class="btn btn-danger my-2 my-0 mx-1" type="submit">Weekly</button>
+                            <!-- <form class="form-inline my-2 my-lg-0" action="?page=ad&statistic=week"> -->
+                                <a class="btn btn-danger my-2 my-0 mx-1" href="?page=ad&statistic=month">Monthly</a>
+                                <a class="btn btn-danger my-2 my-0 mx-1" href="?page=ad&statistic=week">Weekly</a>
                                 <a class="btn btn-danger my-2 my-0 mx-1" href="">Log Out</a>
-                            </form>
+                            <!-- </form> -->
                         </div>
                     </nav>
                 </div>
